@@ -1,0 +1,151 @@
+C:\Users\swissi\eclipse-workspace1\backend-Test-C
+Started by remote host 172.17.0.1
+Started by remote host 172.17.0.1
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/C-Test-Project
+using credential 10ecbea8-a0b7-4119-9404-90959b76bd3d
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url http://172.24.0.3:3000/swissi/Test-C-Repo6.git # timeout=10
+Fetching upstream changes from http://172.24.0.3:3000/swissi/Test-C-Repo6.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress http://172.24.0.3:3000/swissi/Test-C-Repo6.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision d1679965c53d42e29f67fe52aaaa758272b3a3a3 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d1679965c53d42e29f67fe52aaaa758272b3a3a3
+Commit message: "Erste Commit"
+ > git rev-list --no-walk d1679965c53d42e29f67fe52aaaa758272b3a3a3 # timeout=10
+[C-Test-Project] $ /bin/sh -xe /tmp/jenkins7314015215777002821.sh
++ make
+find ./ -name *.o -exec rm -v {} \;
+removed './src/ulam.o'
+removed './test/ppr_tb_test_ulam.o'
+find ./ -name *.gcno -exec rm -v {} \;
+removed './src/ulam.gcno'
+removed './test/ppr_tb_test_ulam.gcno'
+find ./ -name *.gcda -exec rm -v {} \;
+removed './src/ulam.gcda'
+removed './test/ppr_tb_test_ulam.gcda'
+rm ulam
+rm: cannot remove 'ulam': No such file or directory
+makefile:27: recipe for target 'clean' failed
+make: [clean] Error 1 (ignored)
+rm ppr_tb_test_ulam.c
+rm *_result.xml
+rm: cannot remove '*_result.xml': No such file or directory
+makefile:27: recipe for target 'clean' failed
+make: [clean] Error 1 (ignored)
+rm doxygen_*
+rm: cannot remove 'doxygen_*': No such file or directory
+makefile:27: recipe for target 'clean' failed
+make: [clean] Error 1 (ignored)
+rm -rf html
+rm -rf latex
+g++ -g -Wall -coverage -lcppunit -I./src -I./test -c src/ulam.c -o src/ulam.o
+g++ -g -Wall -coverage -lcppunit -I./src -I./test -c test/ppr_tb_test_ulam.c -o test/ppr_tb_test_ulam.o
+g++ -g -Wall -coverage ./src/ulam.o ./test/ppr_tb_test_ulam.o -o ppr_tb_test_ulam.c -lcppunit
+./ppr_tb_test_ulam.c
+%SUITE_STARTING% test_ulam
+%SUITE_STARTED%
+%TEST_STARTED%  testUlam_max (test_ulam)
+========================================================
+Ueberpruefe Testfaelle ( U L A M _ M A X ): 
+========================================================
+Testfall 1 ulam_max: Ungueltiger Wert fuer Parameter a_0
+[OK]
+
+[OK]
+
+Testfall 2 ulam_max: Gueltige Werte fuer Parameter a_0
+[OK]
+
+[OK]
+
+[OK]
+
+[OK]
+
+[OK]
+
+%TEST_FINISHED% time=0 testUlam_max (test_ulam)
+%TEST_STARTED%  testUlam_twins (test_ulam)
+========================================================
+Ueberpruefe Testfaelle ( U L A M _ T W I N S ): 
+========================================================
+Testfall 3 ulam_twins: Ungueltiger Wert fuer Parameter limit
+[OK]
+
+Testfall 4 ulam_twins: ULAM-Zwilling nicht vollstaendig im Intervall enthalten
+[OK]
+
+Testfall 5 ulam_twins: Gueltige Werte fuer Parameter limit
+[OK]
+
+%TEST_FINISHED% time=0 testUlam_twins (test_ulam)
+%TEST_STARTED%  testUlam_multiples (test_ulam)
+========================================================
+Ueberpruefe Testfaelle ( U L A M _ M U L T I P L E S ): 
+========================================================
+Testfall 6 ulam_multiples: Ungueltiger Wert fuer Parameter limit
+[OK]
+
+Testfall 7 ulam_multiples: Ungueltiger Wert fuer Parameter number
+[OK]
+
+Testfall 8 ulam_multiples: Mehrling fuer number=2 nicht vollstaendig im Intervall enthalten
+[OK]
+
+Testfall 9 ulam_multiples: Mehrling fuer number=4 nicht vollstaendig im Intervall enthalten
+[OK]
+
+Testfall 10 ulam_multiples: Gueltige Werte fuer Parameter limit und number
+[OK]
+
+[OK]
+
+[OK]
+
+[OK]
+
+%TEST_FINISHED% time=0 testUlam_multiples (test_ulam)
+%SUITE_FINISHED% time=0
+doxygen doxygen.conf src > /dev/null
+doxygen doxygen.conf > /dev/null
+gcovr -r . --html --html-details -o example-html-details.html
+cppcheck -v --enable=all --xml --xml-version=2 test/ppr_tb_test_ulam.c 2> cppcheck-result.xml
+Checking test/ppr_tb_test_ulam.c ...
+Defines: 
+Includes:
+Platform:unknown
+Checking test/ppr_tb_test_ulam.c: TESTBENCH...
+gcovr --xml --output=gcover_result.xml src/
+Traceback (most recent call last):
+  File "/usr/bin/gcovr", line 2312, in <module>
+    process_datafile(file_, covdata, options)
+  File "/usr/bin/gcovr", line 891, in process_datafile
+    process_gcov_data(fname, covdata, abs_filename, options)
+  File "/usr/bin/gcovr", line 500, in process_gcov_data
+    root_dir = os.path.abspath(options.root)
+  File "/usr/lib/python2.7/posixpath.py", line 360, in abspath
+    if not isabs(path):
+  File "/usr/lib/python2.7/posixpath.py", line 54, in isabs
+    return s.startswith('/')
+AttributeError: 'NoneType' object has no attribute 'startswith'
+makefile:46: recipe for target 'report' failed
+make: *** [report] Error 1
+Build step 'Execute shell' marked build as failure
+[Cpptest] Skipping publisher since build result is FAILURE
+[Cobertura] Publishing Cobertura coverage report...
+
+Build failed. Publishing Doxygen skipped.
+[htmlpublisher] Archiving HTML reports...
+[htmlpublisher] Archiving at BUILD level /var/jenkins_home/workspace/C-Test-Project to /var/jenkins_home/jobs/C-Test-Project/builds/184/htmlreports/HTML_20Report
+INFO: Starting to record.
+INFO: Processing CppUnit-1.12.1 (default)
+ERROR: Step ‘Publish xUnit test result report’ failed: [CppUnit-1.12.1 (default)] - No test report file(s) were found with the pattern 'test_result.xml' relative to '/var/jenkins_home/workspace/C-Test-Project' for the testing framework 'CppUnit-1.12.1 (default)'.
+Did you enter a pattern relative to (and within) the workspace directory?
+Did you generate the result report(s) for 'CppUnit-1.12.1 (default)'?"
+Finished: FAILURE

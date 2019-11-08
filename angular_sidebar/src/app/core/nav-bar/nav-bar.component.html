@@ -1,0 +1,43 @@
+<div class="main-container sidebar-animation" [ngStyle]="{'left.px': generalService.getSidebarWidth()}">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+
+
+
+      <div data-region="drawer-toggle" class="d-inline-block mr-3" id="yui_3_17_2_1_1560251501080_39">
+        <button aria-expanded="true" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left mr-1 btn-light bg-gray" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav" id="yui_3_17_2_1_1560251501080_38" (click)="generalService.toggleSidebar()"><i class="icon fa fa-bars fa-fw " aria-hidden="true"></i><span class="sr-only">Website-Übersicht</span></button>
+      </div>
+
+      <a href="https://moodle.w-hs.de" class="navbar-brand
+                    d-none d-sm-inline
+                    ">
+        <span class="site-name d-none d-md-inline">Moodle</span>
+      </a>
+
+
+
+
+
+      <!-- <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                   data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                   aria-label="Toggle navigation">
+                   <i class="fa fa-align-left"></i>
+               </button> -->
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav ml-auto">
+          <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+          <a class="dropdown-item menu-action" role="menuitem" data-title="logout,moodle" aria-labelledby="actionmenuaction-6" (click)="logout()">
+            <i class="icon fa fa-sign-out fa-fw " aria-hidden="true"></i>
+            <span class="menu-action-text" id="actionmenuaction-6">
+                                                Logout
+                                            </span>
+          </a>
+          <li *ngIf="isLogout" class="nav-item d-flex align-items-center">
+            <div class="usermenu"><span class="login">Sie sind nicht angemeldet. (<a href="https://moodle.w-hs.de/login/index.php">Login</a>)</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

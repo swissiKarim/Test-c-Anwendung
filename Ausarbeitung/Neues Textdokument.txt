@@ -1,0 +1,47 @@
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=17.5cm, height=13cm]{SpringBootArchitectur.jpg}
+		\caption{Back-End Schichtenarchitektur } 
+		\label{Back-End Schichtenarchitektur } 
+	\end{center}
+\end{figure}
+Bei der Erstellung des Backend-Teils, das nach der Layer-Architektur aufgebaut ist, wurde das Framework Spring-Boot verwendet. In diesem Fall besteht diese Layer-Architektur aus drei Schichten und sind wie folgt :
+\begin{itemize}
+	\item Application layer (als controller layer bezeichnet): 
+    \item Domain layer  (als service layer bezeichnet):
+    \item Persistence layer (als DAO layer bezeichnet):
+\end{itemize}
+Basierend auf dem oben Gesagten wird die Model View Controller-Struktur mit Spring Boot implementiert.
+\paragraph{Registrieren/Login:} 
+Eines der Dinge, die ich in dieser Test-C-Plattform zur Verfügung gestellt habe, ist, die Ergebnisse  jeder erfolgreichen und fehlgeschlagenen Testversuche für jeden Benutzer einzeln aufzuzeichnen und dem Admin zu ermöglichen, den ganz Verlauf der Testversuche zu sehen. Infolgedessen ist es notwendig geworden, jeden Benutzer des Programms zu unterscheiden und zu kennen. Dies führte mich zu der Entscheidung, dass jeder Benutzer ein eigenes Konto haben sollte. Daher sollte die Test C-Plattform dem Benutzer den Service bieten, ein eigenes Konto zu erstellen und sich dann anzumelden.
+Um den Registrierungs- und Anmeldedienst im Backend zu erstellen, habe ich Folgendes ausgeführt:
+\newline
+Im ersten Schritt habe ich ein User-Klassenmodell erstellt. Diese User-klasse wird als @Entity bezeichnet, und die hat eine Datenbank-Tabellenbeziehung, daher lautet der Tabellenname user @Table(name='user'). Jeder Benutzer (user-Objekt) muss eine ID, einen Namen, einen Benutzernamen, ein Passwort und eine Rolle haben. Die ID sollte ein automatisch generiertes Attribut sein @GeneratedValue. Die 'Rolle' hat als Type die Enum-Klasse 'Role', die nur zwei Attribute USER und ADMIN enthält. In Bezug auf die Generierung von Getter und Setter habe ich die Lombok-Annotation @Data verwendet, um den Code übersichtlich zu halten.
+\newline
+Jetzt wird die Modellklassendatenbank mit Liquibase errichtet. Dazu erstelle ich eine neue XML-Datei 'db.changelog.xml'. Diese Datei enthält Liquibase-Skripte.Liquibase stellt über JDBC eine Verbindung zu einem bestimmten Datenbankschema her und führt beliebig Liquibase-Skripte (sogenannte ChangeLogs) aus. Diese ChangeLogs enthalten eine oder mehrere logisch autonome Datenbankänderungen (ChangeSets genannt) und jedes changeSet-Tag wird durch die Kombination des Tags 'id' und des Tags 'author' eindeutig identifiziert. Unter <changeset> kann json-, xml- oder sql-format ausgeführt werden, in diesem Fall habe ich das SQL-Format verwendet, um die User-Tabelle zu erstellen. Ich habe auch das Rollback-Tag verwendet, das beschreibt, wie man eine Änderung mit SQL-Anweisungen zurücksetzt.Diese Liquibase-Changelog-Datei wird aufgerufen, wenn die Anwendung ausgeführt wird.
+	\begin{lstlisting}
+	<databaseChangeLog ".........">
+	<changeSet id="1" author="swissi">
+	<sql>
+	CREATE TABLE user (
+	id BIGINT NOT NULL AUTO_INCREMENT,
+	username VARCHAR(255) NOT NULL,
+	password VARCHAR(255) NOT NULL,
+	name VARCHAR(255) NOT NULL,
+	role VARCHAR(255) NOT NULL,
+	CONSTRAINT PK_id PRIMARY KEY (id)
+	);
+	</sql>
+	<rollback>
+	DROP TABLE user;
+	</rollback>
+	</changeSet>
+	</databaseChangeLog>
+	\end{lstlisting}
+Nun kommt die Erstellung von dem User-Repository-Interface, dies wird durch 'extends JpaRepository<User,Long>' das JpaRepository erweitern. Mit dem JpaRepositro Spring wird grundlegende CRUD-Datenbankoperationen wie 'save', 'findbyId', 'findAll' und 'delete'  usw. automatisch verarbeitet.
+		\begin{lstlisting}
+	public interface UserRepository extends JpaRepository<User, Long> {
+	
+	Optional<User> findByUsername(String username);
+	}
+	\end{lstlisting}

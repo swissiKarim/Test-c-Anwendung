@@ -1,0 +1,79 @@
+
+<div class="center">
+  <nb-card >
+    <nb-card-header>Aufgabenblatt-Info</nb-card-header>
+    <nb-card class="col-md-12 col-lg-12 col-xxxl-12">
+        <nb-card-body>
+          <nb-stepper orientation="horizontal">
+            <nb-step [label]="labelOne" > 
+              <ng-template #labelOne>Erster Schritt</ng-template>
+              <h3>Upload von konfigurationsDateien #1</h3>
+              <button nbButton disabled nbStepperNext>prev</button>
+              <button nbButton nbStepperNext (click)="changeCurrency('src')">next</button>
+            </nb-step>
+            <nb-step [label]="labelTwo">
+              <ng-template #labelTwo>Zweiter Schritt</ng-template>
+              <h3>Upload von Src-Dateien #2</h3>
+              <button nbButton nbStepperPrevious (click)="changeCurrency('/')">prev</button>
+              <button nbButton nbStepperNext (click)="changeCurrency('test')">next</button>
+            </nb-step>
+           
+            <nb-step label="Dritter Schritt">
+                <ng-template #DritterSchrittr>Dritter Schritt</ng-template>
+              <h3>Upload von Test-Dateien #3</h3>
+              <button nbButton nbStepperPrevious (click)="changeCurrency('src')">prev</button>
+              <button nbButton nbStepperNext>next</button>
+            </nb-step>
+            <nb-step [label]="labelFour">
+              <ng-template #labelFour>Vierter Schritt</ng-template>
+              <h3 >Aufgabenblattdateien sind bereits hochgeladen #4</h3>
+              <button nbButton nbStepperPrevious>prev</button>
+              <button nbButton disabled nbStepperNext>next</button>
+            </nb-step>
+          </nb-stepper>
+        </nb-card-body>
+      </nb-card>
+    <nb-card-body>
+      <div class="form-group">
+        <input #newAufgabenblatt type="text" nbInput fullWidth status="info"  placeholder="Aufgabenblatt-N..">
+      </div>
+      <div class="center">
+        <nb-card>
+          <nb-card-header>Upload Datum</nb-card-header>
+          <nb-card-body>
+            <input nbInput
+                   placeholder=" Datum"
+                   [nbDatepicker]="formpicker">
+            <nb-datepicker #formpicker></nb-datepicker>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </nb-card-body>
+    <nb-card [nbSpinner]=spinner nbSpinnerStatus="success">
+        <nb-card-body class="center">
+        </nb-card-body>
+      </nb-card>
+    <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
+      <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
+    </div>
+    <div  class="files-list" *ngFor="let file of files;let i=index">
+      <img src="../../../assets/images/c-128.png">
+      <p>{{file.name}}</p>
+      <!-- <div class="dropdown ghost-dropdown" ngbDropdown>
+        <button type="button" ngbDropdownToggle class="btn"
+                [ngClass]="{
+                  'btn-success': currentTheme === 'default',
+                  'btn-primary': currentTheme !== 'default'}">
+          {{ selectedCurrency }}
+        </button>
+      <ul class="dropdown-menu" ngbDropdownMenu>
+          <li class="dropdown-item" *ngFor="let currency of currencies;" (click)="changeCurrency(currency)" >{{ currency }}</li>
+        </ul>
+      </div>-->
+      <div><button type="button" class="btn btn-success" (click)="pushtoserve(newAufgabenblatt.value , i)">Upload</button></div>
+      <button class="delete-file" (click)="deleteAttachment(i)">
+        <img src="../../../assets/images/Recycle_Bin_Full.png">
+      </button>
+    </div>
+    
+  </nb-card>

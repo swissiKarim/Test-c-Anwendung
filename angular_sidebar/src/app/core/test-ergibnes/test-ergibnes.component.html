@@ -1,0 +1,35 @@
+
+<div class="main-container sidebar-animation" [ngStyle]="{'margin-left.px': uploadService.getSidebarWidth()}">
+  <div id="page" class="card text-center">
+
+
+    <div class="col-12 pt-3 pb-3" id="yui_3_17_2_1_1560256447708_38">
+      <div class="card">
+        <div class="card-body">
+          <div class="card text-center">
+            <div class="card-header">
+
+              <div class="p-3 mb-2 bg-primary text-white">Test_Ergebnis</div>
+            </div>
+            <circle-progress
+              [percent]="100"
+              [radius]="100"
+              [outerStrokeWidth]="16"
+              [innerStrokeWidth]="8"
+              [outerStrokeColor]="'#78C000'"
+              [innerStrokeColor]="'#C7E596'"
+              [animation]="true"
+              [animationDuration]="10000"
+             *ngIf="!showSpinner"></circle-progress>
+            <div *ngIf="showSpinner" style="white-space:pre;"><pre>{{ this.resp}}</pre></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+

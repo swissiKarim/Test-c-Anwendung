@@ -1,0 +1,47 @@
+<div class="main-container sidebar-animation" [ngStyle]="{'margin-left.px': uploadService.getSidebarWidth()}">
+  <div id="page" class="card text-center">
+
+
+    <div class="col-12 pt-3 pb-3" id="yui_3_17_2_1_1560256447708_38">
+      <div class="card">
+        <div class="card-body">
+          <div class="card text-center">
+            <div class="card-header">
+              <div class="p-3 mb-2 bg-primary text-white">Hochladen</div>
+            </div>
+            <div class="card-body">
+              <section> <div *ngIf="currentFileUpload" class="progress">
+                <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+                     aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+                  {{progress.percentage}}%</div>
+              </div></section>
+            <p></p>
+              <section>
+              <label class="btn btn-default">
+                <input type="file" (change)="selectFile($event)">
+              </label>
+
+              <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+              </section>
+              <ngx-ui-loader [loaderId]="'loader-01'"></ngx-ui-loader>
+
+            </div>
+            <div class="card-footer text-muted">
+              <section>
+                <button type="button" class="btn btn-primary" (click)="totestumgeb()" >Test</button>
+              </section>
+              <section>
+                <button type="button" class="btn btn-danger"  (click)="logout()">Abbrechen</button>
+              </section>
+
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>

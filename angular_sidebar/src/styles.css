@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*
+    DEMO STYLE
+*/
+
+/* bootstrap style*/
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/* fontawesome style */
+@import "~font-awesome/css/font-awesome.css";
+
+/* add popping font */
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+/* import original style */
+@import "./assets/nasri-style.css";
+
+/* custom css */
+/** custom animations **/
+.sidebar-animation {
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+}
+

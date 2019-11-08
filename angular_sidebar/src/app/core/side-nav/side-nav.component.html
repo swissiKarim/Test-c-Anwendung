@@ -1,0 +1,45 @@
+
+  <div id="nav-drawer" data-region="drawer" class="d-print-none moodle-has-zindex" aria-hidden="false" tabindex="-1" [ngStyle]="{'width.px': generalService.sidebarWidth,
+                  'left.px': generalService.getSidebarWidth() - generalService.sidebarWidth}">
+
+    <nav class="list-group" >
+      <a class="list-group-item list-group-item-action"    routerLink="/dashboard" [routerLinkActive]="'active'" >
+        <div class="m-l-0">
+          <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-tachometer fa-fw " aria-hidden="true"></i>
+                        </span>
+            <span class="media-body ">Dashboard</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="list-group-item list-group-item-action"  routerLink="/uploadview" [routerLinkActive]="'active'" >
+        <div class="m-l-0">
+          <div class="media">
+
+            <span class="media-body ">Aufgabe_hochladen</span>
+          </div>
+        </div>
+      </a>
+      <i class="fa fa-arrows-v fa-3x" align="center" aria-hidden="true"></i>
+
+      <a class="list-group-item list-group-item-action " routerLink="/testergibnes" [routerLinkActive]="'active'">
+        <div class="m-l-0">
+          <div class="media">
+                        <span class="media-left">
+                            <i class="icon fa fa-cogs fa-fw " aria-hidden="true"></i>
+                        </span>
+            <span class="media-body " >Test_Ergebnis</span>
+          </div>
+        </div>
+      </a>
+
+
+
+
+
+
+    </nav>
+  </div>
+

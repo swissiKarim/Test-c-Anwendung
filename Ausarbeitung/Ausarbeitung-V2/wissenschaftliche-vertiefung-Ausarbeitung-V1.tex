@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage{lettrine}
+\usepackage[latin1]{inputenc}
+\usepackage[german]{babel}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[table]{xcolor}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{slashbox}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{lipsum}
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{0.3cm}{0.3cm}
+\titlespacing{\subsection}{0pt}{0.3cm}{0.3cm}
+\titlespacing{\subsubsection}{0pt}{0.3cm}{0.3cm}
+\usepackage{mathrsfs}
+\usepackage{multibib}
+\usepackage[subfigure]{tocloft}
+\renewcommand{\cftfigfont}{Abbildung }
+\renewcommand{\cfttabfont}{Table }
+\renewcommand{\cftfigaftersnum}{ :}
+\renewcommand{\cfttabaftersnum}{ :}
+\usepackage{acronym}
+\usepackage{algorithm2e}
+\usepackage{color}
+\definecolor{gris10}{gray}{0.9} %si on veut utiliser une nuance de la couleur grise
+\definecolor{bleufonce}{rgb}{0,0,0.55}
+\usepackage[top=25mm, bottom=25mm, left=25mm , right=25mm]{geometry}
+\linespread{1.2} %interligne
+%\setlength{\parindent}{0 pt} %pas d'indentation
+\setlength{\parskip}{1.5ex plus 1ex minus 0.5ex}
+\addto\captionsfrench{%
+  \renewcommand{\listfigurename}{Liste des figures}%
+}
+
+\setcounter{tocdepth} {2}
+\setcounter{secnumdepth} {3}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{} % supprime les en-t\^etes et pieds pr\'ed\'efinis
+\fancyhead[LE,RO]{\bfseries\thepage}% Left Even, Right Odd
+\fancyhead[LO]{\bfseries\rightmark} % Left Odd
+\fancyhead[RE]{\bfseries\leftmark} % Right Even
+\renewcommand{\headrulewidth}{0.5pt}% filet en haut de page
+\addtolength{\headheight}{0.5pt} % espace pour le filet
+\renewcommand{\footrulewidth}{0pt} % pas de filet en bas
+\fancypagestyle{plain}{ % pages de tetes de chapitre
+\fancyhead{} % supprime l'entete
+\renewcommand{\headrulewidth}{0pt} % et le filet
+\fancyfoot[C]{\bfseries\thepage} %contient uniquement le num de page en pieds de page
+}
+\title{Wissenschaftliche-Vertiefung-Ausarbeitung}
+\date{01.07.2019} 
+\author{Mohamed Karim Swissi  }
+\begin{document}
+	\tableofcontents
+	\newpage
+	
+	\section{Motivation}
+	\section{Einleitung}
+	\subsection{Aufgabenbeschreibung}
+	Am Anfang stand die Idee, dass ich mich immer tiefer mit Automatisierung beschäftige. Deshalb fiel die Wahl auf ein Projekt in diese Richtung.
+	Im Rahmen dieser wissenschaftliche Vertiefung Modul wird ein auf Docker basierendes Testsystem entwickelt.
+	Dieses Test-Framework soll die studenten helfen, ihre Übungsaufgaben automatisiert zu testen.
+	\newline
+	Der Student lädt seinen Quellcode über eine Web-Benutzeroberfläche hoch, dieser Service steht den Studenten nach der Registrierung auf der Testplattform zur Verfügung.Für mich ist die Studenten Registrierung in der Tat eine Erstellung eines eigenen Remote-Testraums, der dadurch der Testprozess verwaltet wird, und das, was ich in dieser Ausarbeitung im Detail erklären werde. Nach Abschluss des Testprozesses erhält der Student einen Bericht mit dem Ergebnis seines Tests. Darüber hinaus sollte dieses Test-Framework der Lehrkraft  die Möglichkeit geben, die individuellen Testaufgaben der Studenten zu kontrollieren.
+	\subsection{Herangehensweise}
+	In diesem Abschnitt werde ich die Techniken und Technologien vorstellen, die in diesem Projekt verwendet werden. Daher wurde das Konzept des Code-Testens erläutert. Ebenso wird das in diesem Projekt verwendete Unit-Test-System besprochen. Anschließend werden die Rolle des Jenkins-Tools im Projekt und die Bedeutung dieses Tools für die Automatisierung des Testprozesses erläutert, dann folgt eine ausführliche Erläuterung der Verwendung von Docker im Projekt. Abschließend eine Erläuterung von Git-Hosting und Jgit, die einen der wichtigsten Teile des Projekts darstellen.
+	\newline
+	Im Hauptabschnitt wird dann die Erstellung der Testplattform erläutert. Es wird die Architektur beschrieben, und die Entscheidungen, die getroffen wurde, indem die Techniken ausgewählt wurde, mit denen das Projekt die Anforderungen erfüllt. Außerdem werden der Ablauf des Testverfahrens und die internen Prozesse des Bestandteils der Testplattform vorgestellt. Dann werden die Installationsanweisungen und Verzerrungen der Testplattform klarstellen.
+	

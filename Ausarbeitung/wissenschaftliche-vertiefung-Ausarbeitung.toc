@@ -1,0 +1,48 @@
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Motivation}{2}% 
+\contentsline {section}{\numberline {2}Einleitung}{2}% 
+\contentsline {subsection}{\numberline {2.1}Aufgabenbeschreibung}{2}% 
+\contentsline {subsection}{\numberline {2.2}Herangehensweise}{2}% 
+\contentsline {section}{\numberline {3}Grundlagen}{2}% 
+\contentsline {subsection}{\numberline {3.1}Code Testing}{2}% 
+\contentsline {subsubsection}{\numberline {3.1.1}Manual testing( Statisches)}{3}% 
+\contentsline {subsubsection}{\numberline {3.1.2}Automated Testing(Dynamisches)}{3}% 
+\contentsline {subsection}{\numberline {3.2}Das Unit Testsystem}{3}% 
+\contentsline {subsection}{\numberline {3.3}Jenkins}{3}% 
+\contentsline {subsubsection}{\numberline {3.3.1}Einf\IeC {\"u}hrung}{3}% 
+\contentsline {subsubsection}{\numberline {3.3.2}Jenkins buildflow}{3}% 
+\contentsline {subsubsection}{\numberline {3.3.3}Jenkins pipeline}{3}% 
+\contentsline {subsubsection}{\numberline {3.3.4}Jenkins multijob}{3}% 
+\contentsline {subsubsection}{\numberline {3.3.5}Jenkinsfile}{3}% 
+\contentsline {subsection}{\numberline {3.4}Docker}{3}% 
+\contentsline {subsubsection}{\numberline {3.4.1}Einf\IeC {\"u}hrung}{3}% 
+\contentsline {subsubsection}{\numberline {3.4.2}Docker Architektur}{3}% 
+\contentsline {subsubsection}{\numberline {3.4.3}Docker Images}{5}% 
+\contentsline {subsubsection}{\numberline {3.4.4}Docker Container}{5}% 
+\contentsline {subsubsection}{\numberline {3.4.5}Docker Volumes}{5}% 
+\contentsline {subsubsection}{\numberline {3.4.6}Data Container}{5}% 
+\contentsline {subsubsection}{\numberline {3.4.7}Docker Compose}{5}% 
+\contentsline {subsubsection}{\numberline {3.4.8}DockerFile}{5}% 
+\contentsline {subsection}{\numberline {3.5}Git-Hosting mit Gogs}{5}% 
+\contentsline {subsubsection}{\numberline {3.5.1}Einf\IeC {\"u}hrung}{5}% 
+\contentsline {subsubsection}{\numberline {3.5.2}Datenbankeinstellung}{5}% 
+\contentsline {subsubsection}{\numberline {3.5.3}JGit}{5}% 
+\contentsline {subsubsection}{\numberline {3.5.4}Webhook}{5}% 
+\contentsline {section}{\numberline {4}Test-C Plattform}{5}% 
+\contentsline {subsection}{\numberline {4.1}Einf\IeC {\"u}hrung}{5}% 
+\contentsline {subsection}{\numberline {4.2}Architektur}{5}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Client-Seite (Front-End)}{6}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Remote TestUmgebung}{7}% 
+\contentsline {subsubsection}{\numberline {4.2.3}Serverseite (Back-End)}{10}% 
+\contentsline {paragraph}{\nonumberline Benutzererkennung}{10}% 
+\contentsline {paragraph}{\nonumberline Erstellung eines neuen Aufgabenblatts}{11}% 
+\contentsline {paragraph}{\nonumberline C-Datei-Upload}{12}% 
+\contentsline {paragraph}{\nonumberline Jgit-Operationen}{14}% 
+\contentsline {subsubsection}{\numberline {4.2.4}Interne Prozesse}{14}% 
+\contentsline {subsection}{\numberline {4.3}Alternativen}{14}% 
+\contentsline {subsection}{\numberline {4.4}Ablauf des Testverfahrens}{14}% 
+\contentsline {subsection}{\numberline {4.5}Installationsanleitung}{14}% 
+\contentsline {subsection}{\numberline {4.6}Verwendung}{14}% 
+\contentsline {section}{\numberline {5}Zusammenfassung}{14}% 
+\contentsline {section}{\numberline {6}Quellcodeverzeichnis}{14}% 
+\contentsline {section}{\numberline {7}Quellenverzeichnis}{14}% 
