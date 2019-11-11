@@ -35,14 +35,18 @@
 \contentsline {subsubsection}{\numberline {4.2.2}Remote TestUmgebung}{7}% 
 \contentsline {subsubsection}{\numberline {4.2.3}Serverseite (Back-End)}{10}% 
 \contentsline {paragraph}{\nonumberline Benutzererkennung}{10}% 
-\contentsline {paragraph}{\nonumberline Erstellung eines neuen Aufgabenblatts}{11}% 
-\contentsline {paragraph}{\nonumberline C-Datei-Upload}{12}% 
-\contentsline {paragraph}{\nonumberline Jgit-Operationen}{14}% 
-\contentsline {subsubsection}{\numberline {4.2.4}Interne Prozesse}{14}% 
-\contentsline {subsection}{\numberline {4.3}Alternativen}{14}% 
-\contentsline {subsection}{\numberline {4.4}Ablauf des Testverfahrens}{14}% 
-\contentsline {subsection}{\numberline {4.5}Installationsanleitung}{14}% 
-\contentsline {subsection}{\numberline {4.6}Verwendung}{14}% 
-\contentsline {section}{\numberline {5}Zusammenfassung}{14}% 
-\contentsline {section}{\numberline {6}Quellcodeverzeichnis}{14}% 
-\contentsline {section}{\numberline {7}Quellenverzeichnis}{14}% 
+\contentsline {paragraph}{\nonumberline Erstellung eines neuen Aufgabenblatts (Admin)}{11}% 
+\contentsline {paragraph}{\nonumberline Schaffung von Jenkins Job (Admin)}{12}% 
+\contentsline {paragraph}{\nonumberline Zum Testen notwendigen Dateien hochzuladen}{13}% 
+\contentsline {paragraph}{\nonumberline Die zum Ausf\IeC {\"u}hren des Tests erforderlichen Dateien}{16}% 
+\contentsline {paragraph}{\nonumberline Student-L\IeC {\"o}sungsdatei hochladen}{17}% 
+\contentsline {paragraph}{\nonumberline C-Datei-Upload}{17}% 
+\contentsline {paragraph}{\nonumberline Jgit-Operationen}{19}% 
+\contentsline {subsubsection}{\numberline {4.2.4}Interne Prozesse}{19}% 
+\contentsline {subsection}{\numberline {4.3}Alternativen}{19}% 
+\contentsline {subsection}{\numberline {4.4}Ablauf des Testverfahrens}{19}% 
+\contentsline {subsection}{\numberline {4.5}Installationsanleitung}{19}% 
+\contentsline {subsection}{\numberline {4.6}Verwendung}{19}% 
+\contentsline {section}{\numberline {5}Zusammenfassung}{19}% 
+\contentsline {section}{\numberline {6}Quellcodeverzeichnis}{20}% 
+\contentsline {section}{\numberline {7}Quellenverzeichnis}{20}% 

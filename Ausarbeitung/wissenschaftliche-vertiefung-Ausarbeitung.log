@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.2)  7 NOV 2019 19:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.2)  11 NOV 2019 22:22
 entering extended mode
 **./wissenschaftliche-vertiefung-Ausarbeitung.tex
 (wissenschaftliche-vertiefung-Ausarbeitung.tex
@@ -226,6 +226,33 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/dirtree\dirtree.s
+ty"
+Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
+
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/dirtree\dirtree
+.tex" `dirtree' v0.32, 2012/12/11 (jcc)
+\DT@offset=\dimen106
+\DT@width=\dimen107
+\DT@sep=\dimen108
+\DT@all=\dimen109
+\DT@rulewidth=\dimen110
+\DT@dotwidth=\dimen111
+\DTbaselineskip=\dimen112
+\DT@counti=\count98
+\DT@countii=\count99
+\DT@countiii=\count100
+\DT@countiv=\count101
+\DT@indent=\dimen113
+\DT@parskip=\dimen114
+\DT@baselineskip=\dimen115
+)
+File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
+)
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/marvosym\marvosym
+.sty"
+Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
+)
 
 Class scrartcl Warning: Usage of package `fancyhdr' together
 (scrartcl)              with a KOMA-Script class is not recommended.
@@ -238,7 +265,7 @@ Class scrartcl Warning: Usage of package `fancyhdr' together
 (scrartcl)              `\addtokomafont' for the page style elements need
 (scrartcl)              explicite user intervention to work.
 (scrartcl)              Nevertheless, using requested
-(scrartcl)              package `fancyhdr' on input line 13.
+(scrartcl)              package `fancyhdr' on input line 14.
 
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr
@@ -257,11 +284,11 @@ s
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 16.
+less on input line 17.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 18.
+less on input line 19.
 
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.st
@@ -291,41 +318,41 @@ Package ifvtex Info: VTeX not detected.
 .sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count98
-\Gm@cntv=\count99
-\c@Gm@tempcnt=\count100
-\Gm@bindingoffset=\dimen106
-\Gm@wd@mp=\dimen107
-\Gm@odd@mp=\dimen108
-\Gm@even@mp=\dimen109
-\Gm@layoutwidth=\dimen110
-\Gm@layoutheight=\dimen111
-\Gm@layouthoffset=\dimen112
-\Gm@layoutvoffset=\dimen113
+\Gm@cnth=\count102
+\Gm@cntv=\count103
+\c@Gm@tempcnt=\count104
+\Gm@bindingoffset=\dimen116
+\Gm@wd@mp=\dimen117
+\Gm@odd@mp=\dimen118
+\Gm@even@mp=\dimen119
+\Gm@layoutwidth=\dimen120
+\Gm@layoutheight=\dimen121
+\Gm@layouthoffset=\dimen122
+\Gm@layoutvoffset=\dimen123
 \Gm@dimlist=\toks18
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry
 .cfg"))
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings
 .sty"
-\lst@mode=\count101
+\lst@mode=\count105
 \lst@gtempboxa=\box29
 \lst@token=\toks19
-\lst@length=\count102
-\lst@currlwidth=\dimen114
-\lst@column=\count103
-\lst@pos=\count104
-\lst@lostspace=\dimen115
-\lst@width=\dimen116
-\lst@newlines=\count105
-\lst@lineno=\count106
-\lst@maxwidth=\dimen117
+\lst@length=\count106
+\lst@currlwidth=\dimen124
+\lst@column=\count107
+\lst@pos=\count108
+\lst@lostspace=\dimen125
+\lst@width=\dimen126
+\lst@newlines=\count109
+\lst@lineno=\count110
+\lst@maxwidth=\dimen127
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.
 sty"
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-\c@lstnumber=\count107
-\lst@skipnumbers=\count108
+\c@lstnumber=\count111
+\lst@skipnumbers=\count112
 \lst@framebox=\box30
 )
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings
@@ -350,32 +377,32 @@ LaTeX Warning: Unused global option(s):
 (wissenschaftliche-vertiefung-Ausarbeitung.aux)
 \openout1 = `wissenschaftliche-vertiefung-Ausarbeitung.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-
 pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count109
-\scratchdimen=\dimen118
+\scratchcounter=\count113
+\scratchdimen=\dimen128
 \scratchbox=\box31
-\nofMPsegments=\count110
-\nofMParguments=\count111
+\nofMPsegments=\count114
+\nofMParguments=\count115
 \everyMPshowfont=\toks20
-\MPscratchCnt=\count112
-\MPscratchDim=\dimen119
-\MPnumerator=\count113
-\makeMPintoPDFobject=\count114
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen129
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks21
 )
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf
@@ -465,8 +492,8 @@ G,.JBIG2,.JB2,.eps]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count115
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 82.
+\c@lstlisting=\count119
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 83.
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmss.fd"
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -484,22 +511,22 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1{C:/Users/swissi/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ] [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 107.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 108.
 
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 107.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 108.
 <Figure-1-Docker-container-architecture.jpg, id=13, 232.99847pt x 140.78197pt>
 File: Figure-1-Docker-container-architecture.jpg Graphic file (type jpg)
 <use Figure-1-Docker-container-architecture.jpg>
 Package pdftex.def Info: Figure-1-Docker-container-architecture.jpg  used on in
-put line 132.
+put line 133.
 (pdftex.def)             Requested size: 465.99579pt x 281.56323pt.
 
-Overfull \hbox (10.75162pt too wide) in paragraph at lines 132--133
+Overfull \hbox (10.75162pt too wide) in paragraph at lines 133--134
 [][] 
  []
 
@@ -507,10 +534,10 @@ Overfull \hbox (10.75162pt too wide) in paragraph at lines 132--133
 <Test-C-Plattform-Arch.jpg, id=21, 1436.36626pt x 756.8275pt>
 File: Test-C-Plattform-Arch.jpg Graphic file (type jpg)
 <use Test-C-Plattform-Arch.jpg>
-Package pdftex.def Info: Test-C-Plattform-Arch.jpg  used on input line 162.
+Package pdftex.def Info: Test-C-Plattform-Arch.jpg  used on input line 163.
 (pdftex.def)             Requested size: 497.91396pt x 369.89021pt.
 
-Overfull \hbox (42.66978pt too wide) in paragraph at lines 162--163
+Overfull \hbox (42.66978pt too wide) in paragraph at lines 163--164
  [] 
  []
 
@@ -520,10 +547,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <FrontEnd.png, id=22, 683.55376pt x 221.82875pt>
 File: FrontEnd.png Graphic file (type png)
 <use FrontEnd.png>
-Package pdftex.def Info: FrontEnd.png  used on input line 175.
+Package pdftex.def Info: FrontEnd.png  used on input line 176.
 (pdftex.def)             Requested size: 497.93665pt x 199.16675pt.
 
-Overfull \hbox (42.69247pt too wide) in paragraph at lines 175--176
+Overfull \hbox (42.69247pt too wide) in paragraph at lines 176--177
  [] 
  []
 
@@ -532,46 +559,81 @@ Overfull \hbox (42.69247pt too wide) in paragraph at lines 175--176
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (8.65923pt too wide) in paragraph at lines 184--196
+Overfull \hbox (8.65923pt too wide) in paragraph at lines 185--197
 \T1/cmr/m/n/10.95 Die Remote-Testumgebung be-steht aus drei mit-ein-an-der ver-
 bun-de-nen Docker-Containern (Jenkins-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--196
+Underfull \hbox (badness 10000) in paragraph at lines 185--197
 
  []
 
 [6 <./Test-C-Plattform-Arch.jpg>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 196.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 197.
 
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-[7 <./FrontEnd.png>] [8] [9] [10] [11]
-<UplaodFileArchi.jpg, id=49, 703.62875pt x 987.69pt>
-File: UplaodFileArchi.jpg Graphic file (type jpg)
-<use UplaodFileArchi.jpg>
-Package pdftex.def Info: UplaodFileArchi.jpg  used on input line 358.
-(pdftex.def)             Requested size: 483.6899pt x 483.68599pt.
+[7 <./FrontEnd.png>] [8] [9]
+<Ldap-Auth.jpg, id=42, 924.45375pt x 733.74126pt>
+File: Ldap-Auth.jpg Graphic file (type jpg)
+<use Ldap-Auth.jpg>
+Package pdftex.def Info: Ldap-Auth.jpg  used on input line 329.
+(pdftex.def)             Requested size: 497.92805pt x 398.34161pt.
 
-Overfull \hbox (28.44572pt too wide) in paragraph at lines 358--359
+Overfull \hbox (42.68388pt too wide) in paragraph at lines 329--330
  [] 
  []
 
-[12 <./UplaodFileArchi.jpg>] [13]
-(wissenschaftliche-vertiefung-Ausarbeitung.lof)
+[10] [11 <./Ldap-Auth.jpg>] [12]
+<Git-Konzept.jpg, id=53, 602.25pt x 725.71124pt>
+File: Git-Konzept.jpg Graphic file (type jpg)
+<use Git-Konzept.jpg>
+Package pdftex.def Info: Git-Konzept.jpg  used on input line 405.
+(pdftex.def)             Requested size: 398.35004pt x 398.34512pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13] [14 <./Git-Konzept.jpg>]
+Overfull \hbox (26.69484pt too wide) in paragraph at lines 438--441
+\T1/cmr/m/n/10.95 zum Test von Aufgabenblatt-1 hoch-ge-la-den wer-den, wer-den 
+sie un-ter 'aufgabenblaetter/Aufgabenblatt-
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 483--493
+
+ []
+
+[16]
+<UplaodFileArchi.jpg, id=67, 703.62875pt x 987.69pt>
+File: UplaodFileArchi.jpg Graphic file (type jpg)
+<use UplaodFileArchi.jpg>
+Package pdftex.def Info: UplaodFileArchi.jpg  used on input line 513.
+(pdftex.def)             Requested size: 483.6899pt x 483.68599pt.
+
+Overfull \hbox (28.44572pt too wide) in paragraph at lines 513--514
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17] [18 <./UplaodFileArchi.jpg>]
+(wissenschaftliche-vertiefung-Ausarbeitung.lof [19])
 \tf@lof=\write4
 \openout4 = `wissenschaftliche-vertiefung-Ausarbeitung.lof'.
 
- [14]
+ [20]
 (wissenschaftliche-vertiefung-Ausarbeitung.aux) ) 
 Here is how much of TeX's memory you used:
- 7758 strings out of 492895
- 125164 string characters out of 3123269
- 522800 words of memory out of 3000000
- 11564 multiletter control sequences out of 15000+200000
+ 8191 strings out of 492895
+ 130281 string characters out of 3123269
+ 525442 words of memory out of 3000000
+ 11984 multiletter control sequences out of 15000+200000
  12412 words of font info for 32 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  51i,12n,51p,9149b,1862s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -585,10 +647,10 @@ en/ec/dpi600\ecsx1095.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/lj
 four/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\
 fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk><C:/Users/swissi/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on wissenschaftliche-vertiefung-Ausarbeitung.pdf (14 pages, 4625
-38 bytes).
+Output written on wissenschaftliche-vertiefung-Ausarbeitung.pdf (20 pages, 6108
+37 bytes).
 PDF statistics:
- 449 PDF objects out of 1000 (max. 8388607)
+ 499 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

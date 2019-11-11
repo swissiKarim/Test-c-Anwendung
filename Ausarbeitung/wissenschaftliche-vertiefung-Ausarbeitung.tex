@@ -4,11 +4,12 @@
 \usepackage[T1]{fontenc}
 \usepackage{csquotes}
 \usepackage{graphicx}
+\usepackage{dirtree}
 \renewcommand{\figurename}{Abbildung}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth} {2}
 \setcounter{secnumdepth} {3}
-
+\usepackage{marvosym}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
@@ -323,10 +324,17 @@ Unter Verwendung der obigen Abhängigkeiten werden Sicherheitsrichtlinienkonfigu
 Es wird nun davon ausgegangen, dass der Benutzer gültige Daten eingegeben hat. dh diese Daten sind identisch mit den in der LDAP-Datenbank gespeicherten Daten. Dann wird ein Token generiert und als Antwort auf die Authentifikation-Anfrage zurückgesendet. Dieses Token wird dann vom Frontend verwendet und mit jeder Anfrage gesendet.
 \newline
 Wird eine Anfrage geschickt, wird vom Backend dann überprüft, ob das Token gültig ist. Ist das der Fall, wird dann die Anfrage an den entsprechenden Controller weitergeleitet und damit die passende Funktion ausgeführt.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=17.5cm, height=14cm]{Ldap-Auth.jpg}
+		\caption{Ldap-Auth } 
+		\label{ Ldap-Auth } 
+	\end{center}
+\end{figure}
 
-\paragraph{Erstellung eines neuen Aufgabenblatts}
-Wie oben erklärt wurde, wird beim Erstellen eines neuen Aufgabenblatts ursprünglich ein neuer Testbereich erstellt, an dem die Studenten ihre Aufgabenlösungsdateien testen können. Mit anderen Worten, das Erstellen eines neuen Aufgabenblatts hängt vom Erstellen eines neuen Git-Repository ab, das denselben Namen wie das Aufgabenblatt hat z. B. (Aufgabenblatt-1) über die Gogs-Schnittstelle, die dem Administrator zur Verfügung steht und in der alle zum Testen erforderlichen Dateien gespeichert sind. Anschließend wird ein Jenkins Multibranch-Pipeline-Job erstellt, der auch denselben Namen wie das Aufgabenblatt hat.
-\newline
+\paragraph{Erstellung eines neuen Aufgabenblatts (Admin)}
+Wie oben erläutert, ist die Erstellung eines neuen Aufgabenblatts in der Tat eine Einrichtung eines neuen Testbereichs, an dem die Studenten ihre Aufgabenlösungsdateien testen können. Mit anderen Worten, das Erstellen eines neuen Aufgabenblatts hängt vom Erstellen eines neuen Git-Repository ab, das denselben Namen wie das Aufgabenblatt hat. Zum Beispiel (Aufgabenblatt-1) über die Gogs-Oberfläche, die dem Administrator zur Verfügung steht. In diesem Git-Gogs-Repository werden alle zum Testen erforderlichen Dateien gespeichert. Anschließend wird ein Jenkins Multibranch-Pipeline-Job erstellt, der auch denselben Namen wie das Aufgabenblatt hat.
+\paragraph{Schaffung von Jenkins Job (Admin)}
 Für die Erstellung von Multibranch-Pipeline-Job bietet Jenkins eine REST-API an, die viele Dienste bereitstellt, z. B. das Erstellen und Löschen von Job und viele andere Dinge. Um diese Jenkins-API zu verwenden, muss eine Maven-Abhängigkeit in pom.xml hinzugefügt werden.
 \begin{lstlisting}[language=XML,caption=pom.xml - Jenkins-Api]
 <dependency>
@@ -337,7 +345,7 @@ Für die Erstellung von Multibranch-Pipeline-Job bietet Jenkins eine REST-API an
 \end{lstlisting}
 Zur Verdeutlichung wird erläutert, wie mit Jenkins-Api einen neuen Job erstellt werden kann. Um einen Job in Jenkins zu erstellen, müssen dem Job  ein Name und eine Reihe von Einstellungen nach Bedarf  zugewiesen werden.
 \newline
-Der Jobname wird als Zeichenfolge für die Jenkins-Api-Methode angegeben und die Einstellungen werden jedoch als XML-Datei dargestellt.
+Der Jobname wird als String  für die Jenkins-Api-Methode angegeben und die Einstellungen (Konfigurationen) werden jedoch als XML-Datei dargestellt.
 \begin{lstlisting}[language=JAVA,caption=JenkinsServiceImp - createJob]
 @Override
 public void createJob(String jobName, String jobXml) throws JenkinsException {
@@ -349,6 +357,155 @@ throw new JenkinsException(e);
 } 
 }
 \end{lstlisting}
+Die Idee dabei ist, dass in diesem Fall jeder Jenkins-Job die gleichen Einstellungen wie die anderen hat. Unabhängig davon, für welches Aufgabenblatt der Job erstellt wurde. Daher ist es ausreichend, bei jeder Erstellung eines Jenkins-Jobs dieselbe Konfigurationsdatei (XML-Datei) zu verwenden. Natürlich mit einigen Änderungen, die behoben werden, wie die Git Repository URL. Zu diesem Zweck wird ein Java-XML-Parser eingesetzt. Es sind viele Java XML-Parser verfügbar. In diesem Fall wird der DOM-Parser benutzt. Der DOM-Parser lädt die XML-Datei in den Speicher und gibt er dem Programmierer dann die Möglichkeit die XML-Datei Knoten für Knoten durchlaufen, um das sie zu analysieren. DOM-Parser eignet sich für kleine Dateien. Mit zunehmender Dateigröße verlangsamt sich die Leistung und der Arbeitsspeicher wird erhöht.
+\begin{lstlisting}[language=JAVA,caption=modifyXmlFil]
+public String modifyXmlFile(String jobname) throws ParserConfigurationException, SAXException, IOException {
+DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+
+try {
+DocumentBuilder builder = factory.newDocumentBuilder();
+File file = new File("config.xml");
+Document doc = builder.parse(file);
+Element element = doc.getDocumentElement();
+NodeList nodes = element.getChildNodes();
+NodeList  sources = nodes.item(19).getChildNodes();
+Node  data =  sources.item(1);
+Node  branchSource =  data.getChildNodes().item(1);
+Node  source =  branchSource.getChildNodes().item(1);
+NodeList sourceNodes = source.getChildNodes();
+Node remote = sourceNodes.item(3);
+remote.setTextContent("http://172.23.0.3:3000/swissi/"+jobname+".git");
+DOMSource domSource = new DOMSource(doc);
+StringWriter writer = new StringWriter();
+StreamResult result = new StreamResult(writer);
+TransformerFactory tf = TransformerFactory.newInstance();
+Transformer transformer = tf.newTransformer();
+transformer.transform(domSource, result);
+return writer.toString();    
+} catch (Exception ex) {
+ex.printStackTrace();
+return null;
+}
+
+}
+\end{lstlisting} 
+Was jetzt fehlt, um den neuen Testberich zu vervollständigen ist, die zum Testen notwendigen Dateien hochzuladen. Diese Dateien und ihre Rolle beim Abschließen des Testprozesses werden später ausführlich besprochen, aber jetzt geht es darum, wie sie hochgeladen und an die Remote-Testumgebung gesendet werden.
+
+\paragraph{Zum Testen notwendigen Dateien hochzuladen}
+Nach dem Hochladen werden die Dateien in ihrem jeweiligen Git-Repository gespeichert. Um dies zu veranschaulichen, ist es wünschenswert, paar Git-Konzepte zu erwähnen.
+\newline
+Git hat zwei Repository-Typen: lokal und remote. Das lokales Repository wird aus einem Remote-Repository erstellt (Clone). Das Senden (Pushing) von Dateien und Code-Änderungen vom lokalen Repository bis zum Remote-Repository erfolgt in mehreren Schritten: 
+\begin{itemize}
+	\item Add: Dadurch werden neue oder aktualisierte Dateien in die „Stage“ oder den „Index“ kopiert.
+	\item Commit: Dadurch werden die bereitgestellten Dateien in das lokale Repository kopiert.
+	\item Push: Dadurch werden Ihre Dateien vom lokalen Repo auf das Remote-Repo kopiert (nur die Änderungen, die die Remote-Repos nicht haben).
+\end{itemize}
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=14cm, height=14cm]{Git-Konzept.jpg}
+		\caption{Git-Konzepte} 
+		\label{ Git-Konzepte} 
+	\end{center}
+\end{figure}
+Nun wird erklärt, wie das oben Genannte Git-Konzepte in diesem Fall angewendet wird. 
+\newline
+Um Git aus einem Java-Programm zu verwenden, gibt es eine voll funktionsfähige Git-Bibliothek namens JGit. JGit ist eine relativ vollständige Implementierung von Git, die ursprünglich in Java geschrieben wurde und in der Java-Community weit verbreitet ist.
+Es gibt verschiedene Möglichkeiten, ein Projekt mit JGit zu verbinden und Code dagegen zu schreiben. Am einfachsten ist wahrscheinlich die Verwendung von Maven - die Integration erfolgt durch Hinzufügen des folgenden Snippets zum <dependencies>Tag in der pom.xml-Datei:
+\begin{lstlisting}[language=XML,caption=JGit-dependency ]
+<dependency>
+<groupId>org.eclipse.jgit</groupId>
+<artifactId>org.eclipse.jgit</artifactId>
+<version>3.5.0.201409260305-r</version>
+</dependency>
+\end{lstlisting} 
+Angenommen, der Administrator hat ein Remote-Git-Repository für ein bestimmtes Aufgabenblatt erstellt. Aus diesem Remote-Repository wird durch Git.cloneRepository () ein lokales Repository gemacht.
+\begin{lstlisting}[language=JAVA,caption=clone Repository ]
+public static Git cloneRepo(String repositoryUrl, String gitLocalRepositoryPath, String tfsUser, String password) throws GitAPIException, IOException {
+   Path path = Paths.get(gitLocalRepositoryPath);
+  if (!Files.exists(path)) {
+  CloneCommand cloneCommand = Git.cloneRepository().setURI(repositoryUrl).setDirectory(new File(gitLocalRepositoryPath));
+  UsernamePasswordCredentialsProvider user = new UsernamePasswordCredentialsProvider(tfsUser, password);
+  cloneCommand.setCredentialsProvider(user);
+  Git repository = cloneCommand.call();
+  return repository;
+  }else{Git repository = Git.open(new File(gitLocalRepositoryPath));
+   System.out.println("exist" + repository.toString());
+
+  return repository;
+}
+}
+\end{lstlisting} 
+Dieses lokale Repository wird sich in einem BackEnd-Ordner namens 'aufgabenblaetter' befindet. Die zum Ausführen des Tests erforderlichen Dateien werden nach dem Upload in diesem BackEnd-Ordner in seinem eigenen lokalen Repository gespeichert. Wenn beispielsweise Dateien zum Test von Aufgabenblatt-1 hochgeladen werden, werden sie unter 'aufgabenblaetter/Aufgabenblatt-1' gespeichert.
+\newline
+Jetzt erfolgt der Versand (Push) von Dateien vom lokalen Repository zum Remote-Repository. Wie bereits erwähnt, besteht dieser Prozess aus drei Schritten. Zunächst werden die Änderungen mit der von der Git-Bibliothek bereitgestellten add-Methode zum Staging-Bereich hinzugefügt.
+\begin{lstlisting}[language=JAVA,caption=Add File To Index ]
+public static boolean addFileToIndex(Git repository) throws IOException, GitAPIException {
+try {
+repository.add().addFilepattern(".").call();
+return true;
+} catch (Exception e) {
+System.out.println(e.getMessage());
+}
+return false;
+}
+\end{lstlisting} 
+Zweitens wird ein neues Commit mit dem aktuellen Inhalt des Index erstellt.
+\begin{lstlisting}[language=JAVA,caption=commit Changes ]
+	public static boolean commitChanges(Git repository, String commitMessage) throws GitAPIException, IOException {
+repository.commit()
+.setAll(true)
+.setMessage("Commit changes to all files")
+.call();
+
+System.out.println("Committed all changes to repository at ");
+return true;
+}
+\end{lstlisting} 
+Drittens werden Commits vom lokalen Repository an das Remote-Repository übertragen.
+\begin{lstlisting}[language=JAVA,caption=Push Changes ]
+public static boolean pushChanges(Git repository) throws GitAPIException, URISyntaxException, IOException {
+try
+{
+PushCommand pushCommand = repository.push();
+pushCommand.setCredentialsProvider(new UsernamePasswordCredentialsProvider("swissi", "Mh123456"));
+pushCommand.call();
+return true;
+}
+catch (GitAPIException e)
+{
+throw new RuntimeException(e);
+}
+}
+\end{lstlisting} 
+
+ 
+\paragraph{Die zum Ausführen des Tests erforderlichen Dateien}
+Jedes Git-Repository, das die Quellcodeverwaltung für ein bestimmtes Aufgabenblatt in der Remote-Testumgebung darstellt, hat die folgende Form und als Beispiel den folgenden Inhalt.
+\newline
+\dirtree{%
+	.1 Aufgabenblatt-N.
+	.2 makefile.
+	.2 Jenkinsfile.
+	.2 src.
+	.3 ulam.c .
+	.2 test.
+	.3 ppr-tb-test-ulam.c.
+}
+
+Jedes Repository, unabhängig davon, welchem Aufgabenblatt es zugewiesen ist, enthält immer ein Makefile, ein Jenkinsfile, einen src-Ordner und einen test-Ordner.
+\begin{itemize}
+    \item \textbf{Src-Ordner: } Dies ist der unter-Repository-Ordner, in den der Student seine Aufgabenblattlösung hochladen wird. Dieser Vorgang wird nachstehend ausführlich erörtert.
+	\item \textbf{Test-Ordner: } Hier wird die Datei mit den Testfällen vom Administrator hochgeladen.
+	\item \textbf{Makefile: }  Wie bereits erwähnt, gibt es eine vom Administrator hochgeladene Testdatei und eine andere vom Studenten hochgeladene Lösungsdatei. Dies bedeutet, dass mehrere Quelldateien kompiliert werden müssen, um das Projekt zu bauen und ein Testergebnis zu erhalten. Um diesen Prozess zu erleichtern und solches Hindernis zu überwinden wird in diesem Fall ein Makefile benutzt.
+	\newline
+	Ein Makefile wird mit dem UNIX-Dienstprogramm 'make' verwendet, um zu bestimmen, welche Teile eines Programms kompiliert werden sollen. Ein Makefile ist im Grunde ein Skript, mit dem das Dienstprogramm make die geeigneten Programmdateien auswählt, die kompiliert und miteinander verknüpft werden sollen. Das Dienstprogramm make protokolliert die letzten Aktualisierungen von Dateien, sodass nur die Dateien aktualisiert werden, die Änderungen enthalten. Es müssen jedoch auch alle Dateien kompiliert werden, die von den aktualisierten Dateien abhängig sind, was sehr zeitaufwändig sein kann. Mit Hilfe von makefile automatisiert das Dienstprogramm make diese Kompilierung, um sicherzustellen, dass alle aktualisierten Dateien - und nur diese - kompiliert werden und dass die neuesten Versionen der Dateien mit dem Hauptprogramm verknüpft sind.
+	\newline
+	Ein Makefile enthält drei Arten von Informationen für das make-Programm: ein Ziel oder auch target genannt wird, das normalerweise der Name einer Datei, die von einem Programm generiert wird. Beispiele ausführbare Dateien oder Objektdateien. Es enthält auch Abhängigkeiten und Regeln (Befehle), die angeben, wie das Ziel aus den Quellen erstellt werden soll. 
+	 
+	\item \textbf{Jenkinsfile: } Ist eine Textdatei, die die Definition einer Jenkins-Pipeline enthält und in die Quellcodeverwaltung eingecheckt wird. Die Rolle dieser Datei wird nachfolgend erläutert.
+	\end{itemize}
+Bevor zu den folgenden Abschnitten übergangen wird, wird erläutert,wie der Student seine Lösungsdatei hochladen kann.
+\paragraph{Student-Lösungsdatei hochladen}
 \paragraph{C-Datei-Upload}
 Nachdem der Benutzer sein eigenes Konto erstellt und sich bei diesem Konto angemeldet hat, wird die zu testende Datei hochgeladen. Um diesen Service anbieten zu können, habe ich implementiert, was auf der Abbildung 4 gezeigt wird.
 \begin{figure}[h!]
