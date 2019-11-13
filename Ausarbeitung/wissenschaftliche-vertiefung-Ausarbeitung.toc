@@ -40,13 +40,12 @@
 \contentsline {paragraph}{\nonumberline Zum Testen notwendigen Dateien hochzuladen}{13}% 
 \contentsline {paragraph}{\nonumberline Die zum Ausf\IeC {\"u}hren des Tests erforderlichen Dateien}{16}% 
 \contentsline {paragraph}{\nonumberline Student-L\IeC {\"o}sungsdatei hochladen}{17}% 
-\contentsline {paragraph}{\nonumberline C-Datei-Upload}{17}% 
-\contentsline {paragraph}{\nonumberline Jgit-Operationen}{19}% 
-\contentsline {subsubsection}{\numberline {4.2.4}Interne Prozesse}{19}% 
-\contentsline {subsection}{\numberline {4.3}Alternativen}{19}% 
-\contentsline {subsection}{\numberline {4.4}Ablauf des Testverfahrens}{19}% 
-\contentsline {subsection}{\numberline {4.5}Installationsanleitung}{19}% 
-\contentsline {subsection}{\numberline {4.6}Verwendung}{19}% 
-\contentsline {section}{\numberline {5}Zusammenfassung}{19}% 
-\contentsline {section}{\numberline {6}Quellcodeverzeichnis}{20}% 
-\contentsline {section}{\numberline {7}Quellenverzeichnis}{20}% 
+\contentsline {paragraph}{\nonumberline Test Starten (jenkins Job Build)}{19}% 
+\contentsline {subsubsection}{\numberline {4.2.4}Interne Prozesse}{21}% 
+\contentsline {subsection}{\numberline {4.3}Alternativen}{21}% 
+\contentsline {subsection}{\numberline {4.4}Ablauf des Testverfahrens}{21}% 
+\contentsline {subsection}{\numberline {4.5}Installationsanleitung}{21}% 
+\contentsline {subsection}{\numberline {4.6}Verwendung}{21}% 
+\contentsline {section}{\numberline {5}Zusammenfassung}{21}% 
+\contentsline {section}{\numberline {6}Quellcodeverzeichnis}{21}% 
+\contentsline {section}{\numberline {7}Quellenverzeichnis}{21}% 

@@ -5,6 +5,8 @@
 \usepackage{csquotes}
 \usepackage{graphicx}
 \usepackage{dirtree}
+\usepackage{svg}
+\usepackage{amsmath}
 \renewcommand{\figurename}{Abbildung}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth} {2}
@@ -326,7 +328,7 @@ Es wird nun davon ausgegangen, dass der Benutzer gültige Daten eingegeben hat. 
 Wird eine Anfrage geschickt, wird vom Backend dann überprüft, ob das Token gültig ist. Ist das der Fall, wird dann die Anfrage an den entsprechenden Controller weitergeleitet und damit die passende Funktion ausgeführt.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=17.5cm, height=14cm]{Ldap-Auth.jpg}
+		\includegraphics[width=15cm, height=17cm]{Ldap-Auth.jpg}
 		\caption{Ldap-Auth } 
 		\label{ Ldap-Auth } 
 	\end{center}
@@ -506,52 +508,64 @@ Jedes Repository, unabhängig davon, welchem Aufgabenblatt es zugewiesen ist, en
 	\end{itemize}
 Bevor zu den folgenden Abschnitten übergangen wird, wird erläutert,wie der Student seine Lösungsdatei hochladen kann.
 \paragraph{Student-Lösungsdatei hochladen}
-\paragraph{C-Datei-Upload}
-Nachdem der Benutzer sein eigenes Konto erstellt und sich bei diesem Konto angemeldet hat, wird die zu testende Datei hochgeladen. Um diesen Service anbieten zu können, habe ich implementiert, was auf der Abbildung 4 gezeigt wird.
+Der Student lädt die zu testende Datei über die Frontend-Seite. Er wählt die Datei aus und drückt dann die Upload-Taste. Das Backend erhält also eine Anfrage zum Hochladen von Dateien. Um diese Aufgabe auszuführen, muss das BackEnd die folgenden Schritte ausführen: Angenommen, der Benutzer möchte seine Aufgabenblatt-1-Lösung zum ersten Mal testen. Anschließend wird aus dem lokalen Git-Repository von Aufgabenblatt-1 ein Branch mit dem Benutzernamen als Namen erstellt. Dann wird Die Datei durch Ausführen der Methoden Jgit-add und -commit an den angegebenen Branch gesendet. Der Benutzer hat nun die Möglichkeit, entweder den Test abzubrechen, was bedeutet, dass die hochgeladene Datei gelöscht wird, oder fortzufahren und den Testknopf zu drücken. Angenommen, der Benutzer hat den Test abgeschlossen und die Testtaste gedrückt. Dann wird der Student-Branch durch eine Jgit-Push-Methode an das Remote-Repository übertragen. Zur weiteren Verdeutlichung wird eine grafische Darstellung angezeigt, die diesen Vorgang erläutert.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=17cm, height=17cm]{UplaodFileArchi.jpg}
-		\caption{Back-End UplaodFile Architektur} 
-		\label{Back-End UplaodFile Architektur} 
+		\includegraphics[width=15cm, height=17cm]{Loesungupload.jpg}
+		\caption{Hochladen von Lösungsdatei} 
+		\label{ Hochladen von Lösungsdatei } 
+	\end{center}
+\end{figure}
+
+Für jedes Aufgabenblatt wird ein lokales und ein remote Git-Repository erstellt. Für jeden Student wird aus jedem Aufgabenblatt-Repository ein Branch erzeugt. 
+\newline
+Es wird beispielsweise davon ausgegangen, dass der Administrator drei Aufgabenblätter hinzufügt. Das heißt, es werden drei Git-Repositorys erstellt, von denen jedes ein Arbeitsblatt darstellt. Drei Studenten möchten ihre Lösungen testen. Zwei von ihnen haben die drei Übungsblätter gelöst und einer hat nur das erste und das zweite Aufgabenblatt gelöst. Anschließend werden aus den für die Aufgabenblätter 1 und 2 erzeugten Git-Repositorys drei Branchs erstellt. Weil die drei Studenten die ersten beiden Übungsblätter gelöst und getestet haben. Aus dem dritten Repositroy werden jedoch nur zwei Branchs erzeugt, da nur zwei Studenten ihre Aufgabenblatt-3-Lösung getestet haben.
+\newline
+Nun wird besprochen, wie nach Erhalt der Lösungsdatei der Test Prossez automatisch gestartet und das Ergebnis dem Student angezeigt wird.
+
+\paragraph{Test Starten (jenkins Job Build)}
+Wie bereits erwähnt, wird für jedes Repository automatisch ein Jenkins-Multibranch-Pipeline-Projekt generiert. Ein Multibranch-Pipeline-Projekt durchsucht einfach das Quellcode-Repository und erstellt automatisch einen Pipeline-Job für jedes Branch, das eine Jenkinsfile-Datei enthält. 
+\newline
+Eine Jenkinsfile-Datei ist eine Textdatei, die die Pipeline als Code enthält, der den gesamten Job-Workflow festschreibt. Daher lädt der Administrator diese Datei bei jeder Erstellung eines neuen Aufgabenblatts hoch. Dieser Vorgang ist in der folgenden Grafik dargestellt.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=13cm, height=14cm]{GogsJenkins.jpg}
+		\caption{Multibranch Pipeline Projekt} 
+		\label{ Multibranch Pipeline Projek } 
 	\end{center}
 \end{figure}
 \newline
-Das FrontEnd lädt eine C-Datei an einen temporären Speicherort im Speicher hoch. Darüber hinaus sendet das FrontEnd auch damit einige Informationen wie FileName und Aufgabenblatt-Nummer, daher empfängt das BackEnd die Datei in Form Multipartfile. Deshalb habe ich eine FileStorageProperties-Klasse erstellt, die als @ConfigurationProperties für die hochgeladene Datei festgelegt wird. Diese Klasse enthält als Attribute das Upload-Verzeichnis von der C-Datei und diese wird danach als fileStorageLocation Path missbraucht.
-\begin{lstlisting}
-@Autowired
-public FileStorageService(FileStorageProperties fileStorageProperties) {
-this.fileStorageLocation = Paths.get(fileStorageProperties.getUploadDir())
-.toAbsolutePath().normalize();
-}
-\end{lstlisting}
-Eine Post-Anfrage wird in dem Controller durch die Methode Uplaodfile generiert. Letzterere verwendet die in FileStorageService implementierte storeFile-Methode, um die Datei als Multipartfile  von fileStorageLocation nach targetLocation zu kopieren oder die vorhandene Datei mit demselben Namen zu ersetzen, dafür habe ich verwenden die abstrakte  Copy-Methode von java.nio.file.Files.
-\begin{lstlisting}
- public String storeFile(MultipartFile file) {
-// get File Name
-String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-
-try {
-// Ueberpruefen, ob der Dateiname ungueltige Zeichen enthaelt
-if(fileName.contains("..")) {
-throw new FileStorageException("Sorry! Filename contains invalid path sequence " + fileName);
-}
-
-// Datei an den targetlocation kopieren (Vorhandene Datei mit demselben Namen ersetzen)
-Path targetLocation = this.fileStorageLocation.resolve(fileName);
-Files.copy(file.getInputStream(), targetLocation, StandardCopyOption.REPLACE_EXISTING);
-
-return fileName;
-} catch (IOException ex) {
-throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);
-}
-}
-\end{lstlisting}
-Die UploadFile-Methode gibt ein UploadFileResponse-Objekt als Antwort zurück. Dieses enthält Informationen über die hochgeladene Datei, wie Dateiname und Aufgabenblattnummer.
+In diesem Fall besteht die Job-Pipeline nur aus einer Phase (stage), in der das Makefile ausgeführt werden sollte, um den Testprozess zu starten. Genau das, was in der Jenkinsfile-Datei steht.
+\begin{lstlisting}[language=JAVA,caption=Jenkinsfile (Job-Pipeline-Skript) ]
+pipeline{
+agent any
+stages {   
+   stage ('Test with make file') {
+       steps {
+         sh 'make'
+             }
+                                 }
+       }
+      }
+\end{lstlisting} 
+'make' ist der Befehl zum Ausführen von makefile.
 \newline
-Nachdem die zu testende C-Datei mit ihren Informationen als Multipartfile in TargetLocation verfügbar geworden ist, besteht der nächste Schritt darin, diese Datei an ein Initialisiertes Verzeichnis als Git-Repository kopieren.
-
-\paragraph{Jgit-Operationen}
-
+Jetzt werden sich die Ideen neu gruppieren und klar aufbauen. Der 'Student-1' hat die zu testende Datei hochgeladen. Zum Beispiel die Lösung von Übungsblatt-1. Wenn er seine Aufgabenblattlösung zum ersten Mal testet. Ein Branch namens 'Student-1' wird vom Aufgabenblatt-1-Repository erzeugt .Dann wird die Datei an diesem Branch übergeben. Wenn dies nicht der Fall ist und eine Branch vorhanden ist, wird es einfach verwendet. Dann wird Student-1-Branch auf Remote verschoben. Danach sendet das BackEnd eine Job-Build Anfrage an den Jenkins-Server. 
+\begin{lstlisting}[language=JAVA,caption=Job-Build Anfrage ]
+	public int buildJob(String jobName) throws JenkinsException {
+int buildNumber = 0;
+try{
+JenkinsServer jenkinsServer = new JenkinsServer(new URI(jenkinsUrl), jenkinsUser, jenkinsPassword);
+Map<String, Job> jobs = jenkinsServer.getJobs();
+JobWithDetails job = jobs.get(jobName).details();
+buildNumber = job.getNextBuildNumber();
+job.build(true);
+}catch (Exception e){
+throw new JenkinsException(e);
+}
+return buildNumber;
+}
+\end{lstlisting} 
 
 \subsubsection{Interne Prozesse}
 \subsection{Alternativen}

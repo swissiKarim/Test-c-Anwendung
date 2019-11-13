@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.2)  11 NOV 2019 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.2)  13 NOV 2019 23:50
 entering extended mode
 **./wissenschaftliche-vertiefung-Ausarbeitung.tex
 (wissenschaftliche-vertiefung-Ausarbeitung.tex
@@ -249,6 +249,149 @@ Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 )
 File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
 )
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/svg\svg.sty"
+
+LaTeX Warning: You have requested release `2019-10-01' of LaTeX,
+               but only release `2018-12-01' is available.
+
+Package: svg 2019/10/22 v2.02d (include SVG pictures)
+
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.
+sty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifluat
+ex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxetex
+.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdftex
+cmds.sty"
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infwar
+err.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmd
+s.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\shellesc.st
+y"
+Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 69.
+)
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/trimspaces\trimsp
+aces.sty"
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\svg@box=\box29
+\c@svg@param@lastpage=\count102
+\c@svg@param@currpage=\count103
+)
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty
+"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\colo
+r.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\transpar
+ent.sty"
+Package: transparent 2018/11/18 v1.3 Transparency via pdfTeX's color stack (HO)
+
+
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\auxhook.
+sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+))
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.s
+ty"
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip57
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.s
+ty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.st
+y"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen116
+))
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.st
+y"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen117
+)
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.st
+y"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count104
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count105
+\leftroot@=\count106
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count107
+\DOTSCASE@=\count108
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen118
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count109
+\c@MaxMatrixCols=\count110
+\dotsspace@=\muskip10
+\c@parentequation=\count111
+\dspbrk@lvl=\count112
+\tag@help=\toks19
+\row@=\count113
+\column@=\count114
+\maxfields@=\count115
+\andhelp@=\toks20
+\eqnshift@=\dimen119
+\alignsep@=\dimen120
+\tagshift@=\dimen121
+\tagwidth@=\dimen122
+\totwidth@=\dimen123
+\lineht@=\dimen124
+\@envbody=\toks21
+\multlinegap=\skip58
+\multlinetaggap=\skip59
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/marvosym\marvosym
 .sty"
 Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
@@ -265,95 +408,77 @@ Class scrartcl Warning: Usage of package `fancyhdr' together
 (scrartcl)              `\addtokomafont' for the page style elements need
 (scrartcl)              explicite user intervention to work.
 (scrartcl)              Nevertheless, using requested
-(scrartcl)              package `fancyhdr' on input line 14.
+(scrartcl)              package `fancyhdr' on input line 16.
 
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr
 .sty"
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip57
-\f@nch@O@elh=\skip58
-\f@nch@O@erh=\skip59
-\f@nch@O@olh=\skip60
-\f@nch@O@orh=\skip61
-\f@nch@O@elf=\skip62
-\f@nch@O@erf=\skip63
-\f@nch@O@olf=\skip64
-\f@nch@O@orf=\skip65
+\f@nch@headwidth=\skip60
+\f@nch@O@elh=\skip61
+\f@nch@O@erh=\skip62
+\f@nch@O@olh=\skip63
+\f@nch@O@orh=\skip64
+\f@nch@O@elf=\skip65
+\f@nch@O@erf=\skip66
+\f@nch@O@olf=\skip67
+\f@nch@O@orf=\skip68
 )
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 17.
-
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 19.
 
 
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.st
-y"
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 21.
 
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\colo
-r.cfg"
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 147.
-)
+
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry
 .sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
 
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.
-sty"
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
-)
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifvtex
 .sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxetex
-.sty"
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-\Gm@cnth=\count102
-\Gm@cntv=\count103
-\c@Gm@tempcnt=\count104
-\Gm@bindingoffset=\dimen116
-\Gm@wd@mp=\dimen117
-\Gm@odd@mp=\dimen118
-\Gm@even@mp=\dimen119
-\Gm@layoutwidth=\dimen120
-\Gm@layoutheight=\dimen121
-\Gm@layouthoffset=\dimen122
-\Gm@layoutvoffset=\dimen123
-\Gm@dimlist=\toks18
+\Gm@cnth=\count116
+\Gm@cntv=\count117
+\c@Gm@tempcnt=\count118
+\Gm@bindingoffset=\dimen125
+\Gm@wd@mp=\dimen126
+\Gm@odd@mp=\dimen127
+\Gm@even@mp=\dimen128
+\Gm@layoutwidth=\dimen129
+\Gm@layoutheight=\dimen130
+\Gm@layouthoffset=\dimen131
+\Gm@layoutvoffset=\dimen132
+\Gm@dimlist=\toks23
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry
 .cfg"))
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings
 .sty"
-\lst@mode=\count105
-\lst@gtempboxa=\box29
-\lst@token=\toks19
-\lst@length=\count106
-\lst@currlwidth=\dimen124
-\lst@column=\count107
-\lst@pos=\count108
-\lst@lostspace=\dimen125
-\lst@width=\dimen126
-\lst@newlines=\count109
-\lst@lineno=\count110
-\lst@maxwidth=\dimen127
+\lst@mode=\count119
+\lst@gtempboxa=\box32
+\lst@token=\toks24
+\lst@length=\count120
+\lst@currlwidth=\dimen133
+\lst@column=\count121
+\lst@pos=\count122
+\lst@lostspace=\dimen134
+\lst@width=\dimen135
+\lst@newlines=\count123
+\lst@lineno=\count124
+\lst@maxwidth=\dimen136
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.
 sty"
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-\c@lstnumber=\count111
-\lst@skipnumbers=\count112
-\lst@framebox=\box30
+\c@lstnumber=\count125
+\lst@skipnumbers=\count126
+\lst@framebox=\box33
 )
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings
 .cfg"
@@ -377,42 +502,38 @@ LaTeX Warning: Unused global option(s):
 (wissenschaftliche-vertiefung-Ausarbeitung.aux)
 \openout1 = `wissenschaftliche-vertiefung-Ausarbeitung.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-
 pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count113
-\scratchdimen=\dimen128
-\scratchbox=\box31
-\nofMPsegments=\count114
-\nofMParguments=\count115
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count116
-\MPscratchDim=\dimen129
-\MPnumerator=\count117
-\makeMPintoPDFobject=\count118
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count127
+\scratchdimen=\dimen137
+\scratchbox=\box34
+\nofMPsegments=\count128
+\nofMParguments=\count129
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count130
+\MPscratchDim=\dimen138
+\MPnumerator=\count131
+\makeMPintoPDFobject=\count132
+\everyMPtoPDFconversion=\toks26
 )
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf
 -base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infwar
-err.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.s
 ty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
@@ -420,11 +541,7 @@ Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvdefi
 nekeys.sty"
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmd
-s.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
+))
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoption
 s.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
@@ -436,21 +553,7 @@ Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcm
 ds.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifluat
-ex.sty"
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-))))
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdftex
-cmds.sty"
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
+)))
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
@@ -492,41 +595,34 @@ G,.JBIG2,.JB2,.eps]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count119
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 83.
+\c@lstlisting=\count133
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 85.
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmss.fd"
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-(wissenschaftliche-vertiefung-Ausarbeitung.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 4.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 4.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 4.
-)
+(wissenschaftliche-vertiefung-Ausarbeitung.toc)
 \tf@toc=\write3
 \openout3 = `wissenschaftliche-vertiefung-Ausarbeitung.toc'.
 
  [1{C:/Users/swissi/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ] [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 108.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 110.
 
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 108.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
 <Figure-1-Docker-container-architecture.jpg, id=13, 232.99847pt x 140.78197pt>
 File: Figure-1-Docker-container-architecture.jpg Graphic file (type jpg)
 <use Figure-1-Docker-container-architecture.jpg>
 Package pdftex.def Info: Figure-1-Docker-container-architecture.jpg  used on in
-put line 133.
+put line 135.
 (pdftex.def)             Requested size: 465.99579pt x 281.56323pt.
 
-Overfull \hbox (10.75162pt too wide) in paragraph at lines 133--134
+Overfull \hbox (10.75162pt too wide) in paragraph at lines 135--136
 [][] 
  []
 
@@ -534,10 +630,10 @@ Overfull \hbox (10.75162pt too wide) in paragraph at lines 133--134
 <Test-C-Plattform-Arch.jpg, id=21, 1436.36626pt x 756.8275pt>
 File: Test-C-Plattform-Arch.jpg Graphic file (type jpg)
 <use Test-C-Plattform-Arch.jpg>
-Package pdftex.def Info: Test-C-Plattform-Arch.jpg  used on input line 163.
+Package pdftex.def Info: Test-C-Plattform-Arch.jpg  used on input line 165.
 (pdftex.def)             Requested size: 497.91396pt x 369.89021pt.
 
-Overfull \hbox (42.66978pt too wide) in paragraph at lines 163--164
+Overfull \hbox (42.66978pt too wide) in paragraph at lines 165--166
  [] 
  []
 
@@ -547,10 +643,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <FrontEnd.png, id=22, 683.55376pt x 221.82875pt>
 File: FrontEnd.png Graphic file (type png)
 <use FrontEnd.png>
-Package pdftex.def Info: FrontEnd.png  used on input line 176.
+Package pdftex.def Info: FrontEnd.png  used on input line 178.
 (pdftex.def)             Requested size: 497.93665pt x 199.16675pt.
 
-Overfull \hbox (42.69247pt too wide) in paragraph at lines 176--177
+Overfull \hbox (42.69247pt too wide) in paragraph at lines 178--179
  [] 
  []
 
@@ -559,18 +655,18 @@ Overfull \hbox (42.69247pt too wide) in paragraph at lines 176--177
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (8.65923pt too wide) in paragraph at lines 185--197
+Overfull \hbox (8.65923pt too wide) in paragraph at lines 187--199
 \T1/cmr/m/n/10.95 Die Remote-Testumgebung be-steht aus drei mit-ein-an-der ver-
 bun-de-nen Docker-Containern (Jenkins-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--197
+Underfull \hbox (badness 10000) in paragraph at lines 187--199
 
  []
 
 [6 <./Test-C-Plattform-Arch.jpg>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 197.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 199.
 
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
@@ -580,77 +676,71 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 <Ldap-Auth.jpg, id=42, 924.45375pt x 733.74126pt>
 File: Ldap-Auth.jpg Graphic file (type jpg)
 <use Ldap-Auth.jpg>
-Package pdftex.def Info: Ldap-Auth.jpg  used on input line 329.
-(pdftex.def)             Requested size: 497.92805pt x 398.34161pt.
-
-Overfull \hbox (42.68388pt too wide) in paragraph at lines 329--330
- [] 
- []
-
-[10] [11 <./Ldap-Auth.jpg>] [12]
-<Git-Konzept.jpg, id=53, 602.25pt x 725.71124pt>
+Package pdftex.def Info: Ldap-Auth.jpg  used on input line 331.
+(pdftex.def)             Requested size: 426.79144pt x 483.69974pt.
+ [10] [11 <./Ldap-Auth.jpg>] [12] [13]
+<Git-Konzept.jpg, id=57, 602.25pt x 725.71124pt>
 File: Git-Konzept.jpg Graphic file (type jpg)
 <use Git-Konzept.jpg>
-Package pdftex.def Info: Git-Konzept.jpg  used on input line 405.
+Package pdftex.def Info: Git-Konzept.jpg  used on input line 407.
 (pdftex.def)             Requested size: 398.35004pt x 398.34512pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[13] [14 <./Git-Konzept.jpg>]
-Overfull \hbox (26.69484pt too wide) in paragraph at lines 438--441
+ [14 <./Git-Konzept.jpg>]
+Overfull \hbox (26.69606pt too wide) in paragraph at lines 440--443
 \T1/cmr/m/n/10.95 zum Test von Aufgabenblatt-1 hoch-ge-la-den wer-den, wer-den 
 sie un-ter 'aufgabenblaetter/Aufgabenblatt-
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 483--493
+Underfull \hbox (badness 10000) in paragraph at lines 485--495
 
  []
 
 [16]
-<UplaodFileArchi.jpg, id=67, 703.62875pt x 987.69pt>
-File: UplaodFileArchi.jpg Graphic file (type jpg)
-<use UplaodFileArchi.jpg>
-Package pdftex.def Info: UplaodFileArchi.jpg  used on input line 513.
-(pdftex.def)             Requested size: 483.6899pt x 483.68599pt.
+<Loesungupload.jpg, id=67, 874.26625pt x 1265.72874pt>
+File: Loesungupload.jpg Graphic file (type jpg)
+<use Loesungupload.jpg>
+Package pdftex.def Info: Loesungupload.jpg  used on input line 514.
+(pdftex.def)             Requested size: 426.79338pt x 483.6858pt.
+ [17] [18 <./Loesungupload.jpg>]
+<GogsJenkins.jpg, id=74, 854.19125pt x 914.41624pt>
+File: GogsJenkins.jpg Graphic file (type jpg)
+<use GogsJenkins.jpg>
+Package pdftex.def Info: GogsJenkins.jpg  used on input line 532.
+(pdftex.def)             Requested size: 369.8758pt x 398.33992pt.
 
-Overfull \hbox (28.44572pt too wide) in paragraph at lines 513--514
- [] 
+Overfull \hbox (3.71217pt too wide) in paragraph at lines 527--539
+\T1/cmr/m/n/10.95 ein Jenkins-Multibranch-Pipeline-Projekt ge-ne-riert. Ein Mul
+tibranch-Pipeline-Projekt durch-sucht
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[17] [18 <./UplaodFileArchi.jpg>]
-(wissenschaftliche-vertiefung-Ausarbeitung.lof [19])
+[19 <./GogsJenkins.jpg>] [20] (wissenschaftliche-vertiefung-Ausarbeitung.lof)
 \tf@lof=\write4
 \openout4 = `wissenschaftliche-vertiefung-Ausarbeitung.lof'.
 
- [20]
-(wissenschaftliche-vertiefung-Ausarbeitung.aux) ) 
+
+[21] (wissenschaftliche-vertiefung-Ausarbeitung.aux) ) 
 Here is how much of TeX's memory you used:
- 8191 strings out of 492895
- 130281 string characters out of 3123269
- 525442 words of memory out of 3000000
- 11984 multiletter control sequences out of 15000+200000
- 12412 words of font info for 32 fonts, out of 3000000 for 9000
+ 9598 strings out of 492895
+ 150489 string characters out of 3123269
+ 569499 words of memory out of 3000000
+ 13352 multiletter control sequences out of 15000+200000
+ 13086 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,12n,51p,9149b,1862s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\swissi\AppData\Loca
-l\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\swissi\A
-ppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Use
-rs\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.
-pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecrm1095.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknapp
-en/ec/dpi600\ecsx1095.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/lj
-four/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\
-fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk><C:/Users/swissi/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on wissenschaftliche-vertiefung-Ausarbeitung.pdf (20 pages, 6108
-37 bytes).
+ 48i,12n,51p,9149b,1866s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\swissi\AppData
+\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\swi
+ssi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C
+:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx
+1200.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecrm1095.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/j
+knappen/ec/dpi600\ecsx1095.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/
+pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\swissi\AppData\Local\MiKTeX
+\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk><C:/Users/swissi/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on wissenschaftliche-vertiefung-Ausarbeitung.pdf (21 pages, 8248
+77 bytes).
 PDF statistics:
  499 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
