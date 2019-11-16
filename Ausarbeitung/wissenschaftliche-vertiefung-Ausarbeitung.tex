@@ -1,19 +1,27 @@
-\documentclass[apaper4,12p]{scrartcl}
+\documentclass[a4paper,12pt,oneside]{book}
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{csquotes}
 \usepackage{graphicx}
+\usepackage{subfigure}
 \usepackage{dirtree}
 \usepackage{svg}
 \usepackage{amsmath}
-\renewcommand{\figurename}{Abbildung}
+
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth} {2}
 \setcounter{secnumdepth} {3}
 \usepackage{marvosym}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\usepackage[subfigure]{tocloft}
+\renewcommand{\cftfigfont}{Abbildung }
+\renewcommand{\cfttabfont}{Table }
+\renewcommand{\cftfigaftersnum}{ :}
+\renewcommand{\cfttabaftersnum}{ :}
+\usepackage{subfigure}
+\usepackage[T1]{fontenc}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 \fancyhf{} % supprime les en-t\^etes et pieds pr\'ed\'efinis
 \fancyhead[LE,RO]{\bfseries\thepage}% Left Even, Right Odd
@@ -29,16 +37,21 @@
 }
 
 \usepackage{color}
-
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{0.3cm}{0.3cm}
+\titlespacing{\subsection}{0pt}{0.3cm}{0.3cm}
+\titlespacing{\subsubsection}{0pt}{0.3cm}{0.3cm}
 \definecolor{gris10}{gray}{0.9} %si on veut utiliser une nuance de la couleur grise
 \definecolor{bleufonce}{rgb}{0,0,0.55}
 \usepackage[top=25mm, bottom=25mm, left=25mm , right=25mm]{geometry}
-\linespread{1.2} %interligne
+\linespread{1.3} %interligne
 %\setlength{\parindent}{0 pt} %pas d'indentation
 \setlength{\parskip}{1.5ex plus 1ex minus 0.5ex}
 \addto\captionsfrench{%
 	\renewcommand{\listfigurename}{Liste des figures}%
 }
+\setcounter{tocdepth} {2}
+\setcounter{secnumdepth} {3}
 \usepackage{listings}
 
 
@@ -78,39 +91,61 @@
 	identifierstyle=\color{maroon}
 }
 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{} % supprime les en-t\^etes et pieds pr\'ed\'efinis
+\fancyhead[LE,RO]{\bfseries\thepage}% Left Even, Right Odd
+\fancyhead[LO]{\bfseries\rightmark} % Left Odd
+\fancyhead[RE]{\bfseries\leftmark} % Right Even
+\renewcommand{\headrulewidth}{0.5pt}% filet en haut de page
+\addtolength{\headheight}{0.5pt} % espace pour le filet
+\renewcommand{\footrulewidth}{0pt} % pas de filet en bas
+\fancypagestyle{plain}{ % pages de tetes de chapitre
+	\fancyhead{} % supprime l'entete
+	\renewcommand{\headrulewidth}{0pt} % et le filet
+	\fancyfoot[C]{\bfseries\thepage} %contient uniquement le num de page en pieds de page
+}
 \title{Wissenschaftliche-Vertiefung-Ausarbeitung}
 \date{01.07.2019} 
 \author{Mohamed Karim Swissi  }
 \begin{document}
+
+	
 \tableofcontents
 \newpage
-
-\section{Motivation}
-\section{Einleitung}
-\subsection{Aufgabenbeschreibung}
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\listoffigures
+\addcontentsline{toc}{section}{listings}
+\lstlistoflistings
+\newpage
+\chapter{Motivation}
+\chapter{Einleitung}
+\section{Aufgabenbeschreibung}
 
 Am Anfang stand die Idee, dass ich mich immer tiefer mit Automatisierung beschäftige. Deshalb fiel die Wahl auf ein Projekt in diese Richtung.
 Im Rahmen dieser wissenschaftliche Vertiefung Modul wird ein auf Docker basierendes Testsystem entwickelt.
 Dieses Test-Framework soll die studenten helfen, ihre Übungsaufgaben automatisiert zu testen.
 \newline
 Der Student lädt seinen Quellcode über eine Web-Benutzeroberfläche hoch, dieser Service steht den Studenten nach der Registrierung auf der Testplattform zur Verfügung.Für mich ist die Studenten Registrierung in der Tat eine Erstellung eines eigenen Remote-Testraums, der dadurch der Testprozess verwaltet wird, und das, was ich in dieser Ausarbeitung im Detail erklären werde. Nach Abschluss des Testprozesses erhält der Student einen Bericht mit dem Ergebnis seines Tests. Darüber hinaus sollte dieses Test-Framework der Lehrkraft  die Möglichkeit geben, die individuellen Testaufgaben der Studenten zu kontrollieren.
-\subsection{Herangehensweise}
+\section{Herangehensweise}
 In diesem Abschnitt werde ich die Techniken und Technologien vorstellen, die in diesem Projekt verwendet werden. Daher wurde das Konzept des Code-Testens erläutert. Ebenso wird das in diesem Projekt verwendete Unit-Test-System besprochen. Anschließend werden die Rolle des Jenkins-Tools im Projekt und die Bedeutung dieses Tools für die Automatisierung des Testprozesses erläutert, dann folgt eine ausführliche Erläuterung der Verwendung von Docker im Projekt. Abschließend eine Erläuterung von Git-Hosting und Jgit, die einen der wichtigsten Teile des Projekts darstellen.
 \newline
 Im Hauptabschnitt wird dann die Erstellung der Testplattform erläutert. Es wird die Architektur beschrieben, und die Entscheidungen, die getroffen wurde, indem die Techniken ausgewählt wurde, mit denen das Projekt die Anforderungen erfüllt. Außerdem werden der Ablauf des Testverfahrens und die internen Prozesse des Bestandteils der Testplattform vorgestellt. Dann werden die Installationsanweisungen und Verzerrungen der Testplattform klarstellen.
 
-\section{Grundlagen}
-\subsection{Code Testing}
+\chapter{Grundlagen}
+\section{Code Testing}
 Beim Softwaretesten wird ein Programm oder eine Anwendung ausgeführt, um die Fehler zu ermitteln und um zu überprüfen, ob die erforderlichen Bedingungen erfüllt sind.
 \newline
 Softwaretestverfahren können in 2 Gruppen unterteilt werden:Statisches / Statisches Testen.
-\subsubsection{Manual testing( Statisches)}
+\subsection{Manual testing( Statisches)}
 Eine Softwaretesttechnik, bei der die Software getestet wird, ohne den Code auszuführen. Es besteht aus zwei Teilen:
 \begin{itemize}
 	\item Review - Wird normalerweise verwendet, um Fehler oder Unklarheiten in Dokumenten wie Anforderungen, Design, Testfällen usw. zu finden und zu beseitigen.
 	\item Statische Analyse - Der von Entwicklern geschriebene Code wird (normalerweise mithilfe von Werkzeugen) auf strukturelle Fehler analysiert. 
 \end{itemize}
-\subsubsection{Automated Testing(Dynamisches)}
+\subsection{Automated Testing(Dynamisches)}
 Beim dynamischen Testen wird die Software auf die Eingabewerte geprüft und die Ausgabewerte analysiert. Es gibt verschiedene Stufen dynamischer Testtechniken: 
 \begin{itemize}
 	\item Unit Testing
@@ -119,50 +154,16 @@ Beim dynamischen Testen wird die Software auf die Eingabewerte geprüft und die 
 	\item Acceptance Testing
 \end{itemize}
 In diesem Fall verwenden wir eines Dynamisches Testen, um die Programmieraufgaben der Studenten zu bewerten.
-\subsection{Das Unit Testsystem}
-\subsection{Jenkins}
-\subsubsection{Einführung}
-\subsubsection{Jenkins buildflow}
-\subsubsection{Jenkins pipeline}
-\subsubsection{Jenkins multijob}
-\subsubsection{Jenkinsfile}
-\subsection{Docker}
-\subsubsection{Einführung}
-\subsubsection{Docker Architektur}
-Nach meiner Erfahrung besteht eine der einfachsten Möglichkeiten, Docker zu verstehen und anzuwenden, darin, sich einen Überblick darüber zu verschaffen, wie die Docker-Plattform im Hintergrund aufgebaut ist.
-\newline
-\begin{figure}[htp]
-	\includegraphics[scale=2]{Figure-1-Docker-container-architecture}
-	\caption{Docker Architektur}
-	\label{img:grafik-dummy}
-\end{figure}
-In Abbildung 1 sehen Sie die Hauptkomponenten einer Docker-Installation:
-\begin{itemize}
-	\item Im Zentrum steht der Docker-Daemon, der für das Erstellen, Ausführen und Überwachen von Containern sowie für das Erstellen und Speichern von Images zuständig ist. Der Docker-Dämon wird vom Host-Betriebssystem verwaltet.
-    \item Der Docker-Client befindet sich auf der linken Seite und wird für die Kommunikation mit dem Docker-Daemon über HTTP verwendet. Ein Docker-Client kann mit mehr als einem Daemon kommunizieren, da sich der Docker-Client auf demselben Host wie der Daemon oder über eine Verbindung auf einem Remote-Host befinden kann. Der Docker-Client bietet eine Befehlszeilenschnittstelle (Command Line Interface, CLI), mit der Sie Anwendungsbefehle für einen Docker-Dämon erstellen, ausführen und stoppen können.
-    \item Docker-Registrys speichern und verteilen images, die Standardregistrierung heißt Docker Hub und hostet Tausende von öffentlichen Images. Viele Unternehmen führen eigene Register, in denen kommerzielle oder vertrauliche Images gespeichert werden können. Der Docker-Daemon lädt als Reaktion auf Docker-Pull-Requests Images von Registrys herunter. Es werden auch automatisch Images heruntergeladen, die in Docker-Run-Requests und in der FROM-Anweisung von Dockerfiles angegeben sind, wenn sie nicht lokal verfügbar sind.
-\end{itemize}
-Wenn in diesem Abschnitt etwas nicht verstanden wird, wie z. B. Bilder, Dockerfile ..., machen Sie sich keine Sorgen, da in den folgenden Abschnitten alles im Detail erläutert wird.
-\subsubsection{Docker Images}
-\subsubsection{Docker Container}
-\subsubsection{Docker Volumes}
-\subsubsection{Data Container}
-\subsubsection{Docker Compose}
-\subsubsection{DockerFile}
-\subsection{Git-Hosting mit Gogs}
-\subsubsection{Einführung}
-\subsubsection{Datenbankeinstellung}
-\subsubsection{JGit}
-\subsubsection{Webhook}
-\section{Test-C Plattform}
-\subsection{Einführung}
+
+\chapter{Test-C Plattform}
+\section{Einführung}
 In diesem Abschnitt wird die Test C-Plattform detailliert beschrieben, wobei zunächst die Zusammensetzung der gesamten Programmarchitektur erörtert wird, anhand derer die Programmkomponenten separat diskutiert werden können. Nach der Erklärung der Komponenten des Programms auf separate Weise, wird im Abschnitt (Interne Prozesse) genau erläutert, wie sie zusammenarbeiten.
 \newline
 Wenn der Leser das oben Genannte versteht, kann er verstehen, was ich im Abschnitt  (Ablauf des Testverfahrens) erläutert wird.
-\subsection{Architektur}
+\section{Architektur}
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=17.5cm, height=13cm]{Test-C-Plattform-Arch.jpg}
+		\includegraphics[width=16cm, height=16cm]{Test-C-Plattform-Arch.jpg}
 		\caption{Architektur Test-C-Plattform } 
 		\label{ Architektur Test-C-Plattform } 
 	\end{center}
@@ -172,7 +173,7 @@ Wie in der Abbildung 2 gezeigt, ist die Test-C-Plattformarchitektur in drei Haup
 Die Wahl der Technologien beruhte auf ihrer Modernität und ihrer Verbreitung auf dem Arbeitsmarkt. In Teil eins des Projekts (Client-Seite/Frontend) wurde die folgenden Techniken verwendet : Angular 7, NGX-Bootstrap, Html, Css, im zweiten Teil des Projekts (Serverseite / BackEnd) wurden Maven und Spring Boot, Spring Security und Ldap ... verwendet. Der dritte Teil des Projekts, in dem der Testprozess durch Jenkins abgeschlossen ist.
 \newline
 Im folgenden Abschnitt werde ich jeden Teil des Architektur separat erklären.
-\subsubsection{Client-Seite (Front-End)}
+\subsection{Client-Seite (Front-End)}
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=17.5cm, height=7cm]{FrontEnd.png}
@@ -183,7 +184,7 @@ Im folgenden Abschnitt werde ich jeden Teil des Architektur separat erklären.
 In diesem Projekt ist die Benutzeroberfläche in zwei Teile unterteilt: das Administrationsportal und das Studentenportal. Beide Portale wurden mit Angular 7, Html, Css und NGX-Bootstrap erstellt.
 Über das Administrations Portal kann der Admin Benutzer ein neues Aufgabenblatt erstellen, dies bedeutet, dass ein virtueller Bereich für den Aufgabenblatttest erstellt wird, in dem die Studenten ihre Lösungen für Aufgaben testen können. Der Administrator kann alle Testdateien für jedes Aufgabenblatt in den entsprechenden Testbereich hochladen. Der Administrator kann auch die Testbereiche anzeigen. Jeder Testbereich ist mit dem Namen des zu testenden Aufgabenblatts gekennzeichnet. Für jeden Testbereich werden die spezifischen Testdateien angezeigt und der Administrator kann davon Dateien löschen oder andere hinzufügen.
 Über das Studentenportal kann der Student die zu testende Lösungsdatei hochladen und dann an den Testbereich senden, der den Test automatisch durchführt und dem Studenten das Testergebnis anzeigt.
-\subsubsection{Remote TestUmgebung}
+\subsection{Remote TestUmgebung}
 Die Erklärung dieses Teils des Projekts vor der Erklärung des Mittelteils 'Serverseite' ist eine absichtliche Sache, damit der Leser einfach verstehen kann, was im Back-End passieren wird.
 \newline
 Die Remote-Testumgebung besteht aus drei miteinander verbundenen Docker-Containern (Jenkins-Container / Gogs-Container / PostgreSql-Container). Jeder Container verfügt über ein eigenes Datenvolumen zum Speichern der Daten. Dadurch wird vermieden, dass Informationen gelöscht werden, wenn der Container ausgeschaltet oder gelöscht wird.
@@ -550,7 +551,7 @@ stages {
 \end{lstlisting} 
 'make' ist der Befehl zum Ausführen von makefile.
 \newline
-Jetzt werden sich die Ideen neu gruppieren und klar aufbauen. Der 'Student-1' hat die zu testende Datei hochgeladen. Zum Beispiel die Lösung von Übungsblatt-1. Wenn er seine Aufgabenblattlösung zum ersten Mal testet. Ein Branch namens 'Student-1' wird vom Aufgabenblatt-1-Repository erzeugt .Dann wird die Datei an diesem Branch übergeben. Wenn dies nicht der Fall ist und eine Branch vorhanden ist, wird es einfach verwendet. Dann wird Student-1-Branch auf Remote verschoben. Danach sendet das BackEnd eine Job-Build Anfrage an den Jenkins-Server. 
+Jetzt werden sich die Ideen neu gruppieren und klar aufbauen. Der 'Student-1' hat die zu testende Datei hochgeladen. Zum Beispiel die Lösung von Übungsblatt-1. Wenn er seine Aufgabenblattlösung zum ersten Mal testet. Ein Branch namens 'Student-1' wird vom Aufgabenblatt-1-Repository erzeugt .Dann wird die Datei an diesem Branch übergeben.Wenn dies nicht der Fall ist und der Student diese Übungsblattlösung bereits getestet hat, ist eventuell ein Branch vorhanden, das einfach verwendet wird. Wenn der Benutzer die Testschaltfläche gedrückt hat, wird Student-1-Branch nach Remote verschoben, wenn es zum ersten Mal erstellt wurde. Wird jedoch bereits eine mit demselben Namen erzeugt, werden nur die Änderungen übertragen. Danach sendet das BackEnd eine Job-Build Anfrage mit dem Job-Namen 'Aufgabenblatt-1' an den Jenkins-Server. 
 \begin{lstlisting}[language=JAVA,caption=Job-Build Anfrage ]
 	public int buildJob(String jobName) throws JenkinsException {
 int buildNumber = 0;
@@ -566,14 +567,27 @@ throw new JenkinsException(e);
 return buildNumber;
 }
 \end{lstlisting} 
-
-\subsubsection{Interne Prozesse}
-\subsection{Alternativen}
-\subsection{Ablauf des Testverfahrens}
-\subsection{Installationsanleitung}
-\subsection{Verwendung}
-\section{Zusammenfassung}
-\listoffigures
-\section{Quellcodeverzeichnis}
-\section{Quellenverzeichnis}
+Wichtig: Wenn eine Lösungsdatei hochgeladen wurde, wird der Benutzer aufgefordert, den Namen des Aufgabenblatts einzugeben, zu dem die Lösungsdatei gehört. Somit kann das Backend unterscheiden, welches Git-Repository und welcher Jenkins-Job verwendet werden soll. Das beste Beispiel, um dies zu veranschaulichen, ist diese Build-Job-Methode (Listing 14), die den Namen des auszuführenden Jobs (JobName) als Parameter verwendet. In diesem Fall lautet der Jobname 'Aufgabenblatt-1', der von Student beim Hochladen der Datei angegeben wird.
+\newline
+Wenn Jenkins Server eine Build-Anfrage für einen Multibranch-Pipeline-Job erhält, sucht er nach neuen Branches im 'Git-Repository' oder nach Änderungen in alten Branches. Dann wird für jeden neuen Zweig (Branch) oder Zweig, der die Änderungen enthält, ein Build gebaut.
+\newline
+In diesem Fall ist das Erstellen eines Jenkins-Builds in der Tat eine Kompilierung des Makefiles. um den Testprozess abzuschließen.
+\newline
+Beim Kompilieren des Makefiles werden die Testdateien und die zu testenden Dateien vom GCC-Compiler in Objektdateien bzw. Programmmodule umgewandelt. Dann wird der Verknüpfungsschritt ausgeführt und eine Binärdatei (executable) erzeugt. In diesem Fall ist die Binärdatei das Testergebnis. Diesen Vorgang wird in der nächsten Grafik veranschaulicht.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=14cm, height=15cm]{Makefile.jpg}
+		\caption{Kompilieren des Programms} 
+		\label{Kompilieren des Programms} 
+	\end{center}
+\end{figure}
+\subsection{Interne Prozesse}
+\section{Alternativen}
+\section{Ablauf des Testverfahrens}
+\section{Installationsanleitung}
+\section{Verwendung}
+\chapter{Zusammenfassung}
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+\begin{thebibliography}{9}
+\end{thebibliography}
 \end{document}

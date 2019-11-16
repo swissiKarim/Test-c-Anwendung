@@ -1,1 +1,101 @@
 https://whatis.techtarget.com/definition/makefile
+
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{dirtree}
+\usepackage{svg}
+\usepackage{amsmath}
+\renewcommand{\figurename}{Abbildung}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth} {2}
+\setcounter{secnumdepth} {3}
+\usepackage{marvosym}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{} % supprime les en-t\^etes et pieds pr\'ed\'efinis
+\fancyhead[LE,RO]{\bfseries\thepage}% Left Even, Right Odd
+\fancyhead[LO]{\bfseries\rightmark} % Left Odd
+\fancyhead[RE]{\bfseries\leftmark} % Right Even
+\renewcommand{\headrulewidth}{0.5pt}% filet en haut de page
+\addtolength{\headheight}{0.5pt} % espace pour le filet
+\renewcommand{\footrulewidth}{0pt} % pas de filet en bas
+\fancypagestyle{plain}{ % pages de tetes de chapitre
+	\fancyhead{} % supprime l'entete
+	\renewcommand{\headrulewidth}{0pt} % et le filet
+	\fancyfoot[C]{\bfseries\thepage} %contient uniquement le num de page en pieds de page
+}
+
+\usepackage{color}
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{0.3cm}{0.3cm}
+\titlespacing{\subsection}{0pt}{0.3cm}{0.3cm}
+\titlespacing{\subsubsection}{0pt}{0.3cm}{0.3cm}
+\definecolor{gris10}{gray}{0.9} %si on veut utiliser une nuance de la couleur grise
+\definecolor{bleufonce}{rgb}{0,0,0.55}
+\usepackage[top=25mm, bottom=25mm, left=25mm , right=25mm]{geometry}
+\linespread{1.2} %interligne
+%\setlength{\parindent}{0 pt} %pas d'indentation
+\setlength{\parskip}{1.5ex plus 1ex minus 0.5ex}
+\addto\captionsfrench{%
+	\renewcommand{\listfigurename}{Liste des figures}%
+}
+\usepackage{listings}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language=java,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+
+\definecolor{maroon}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\lstdefinelanguage{XML}
+{
+	basicstyle=\ttfamily,
+	morestring=[s]{"}{"},
+	morecomment=[s]{?}{?},
+	morecomment=[s]{!--}{--},
+	commentstyle=\color{darkgreen},
+	moredelim=[s][\color{black}]{>}{<},
+	moredelim=[s][\color{red}]{\ }{=},
+	stringstyle=\color{blue},
+	identifierstyle=\color{maroon}
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{} % supprime les en-t\^etes et pieds pr\'ed\'efinis
+\fancyhead[LE,RO]{\bfseries\thepage}% Left Even, Right Odd
+\fancyhead[LO]{\bfseries\rightmark} % Left Odd
+\fancyhead[RE]{\bfseries\leftmark} % Right Even
+\renewcommand{\headrulewidth}{0.5pt}% filet en haut de page
+\addtolength{\headheight}{0.5pt} % espace pour le filet
+\renewcommand{\footrulewidth}{0pt} % pas de filet en bas
+\fancypagestyle{plain}{ % pages de tetes de chapitre
+	\fancyhead{} % supprime l'entete
+	\renewcommand{\headrulewidth}{0pt} % et le filet
+	\fancyfoot[C]{\bfseries\thepage} %contient uniquement le num de page en pieds de page
+}

@@ -1,126 +1,24 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.2)  13 NOV 2019 23:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.2)  16 NOV 2019 23:57
 entering extended mode
 **./wissenschaftliche-vertiefung-Ausarbeitung.tex
 (wissenschaftliche-vertiefung-Ausarbeitung.tex
 LaTeX2e <2018-12-01>
-
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrar
-tcl.cls"
-Document Class: scrartcl 2019/02/01 v3.26b KOMA-Script document class (article)
-
-
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrkb
-ase.sty"
-Package: scrkbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-dependent 
-basics and keyval usage)
-
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrba
-se.sty"
-Package: scrbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-independent
- basics and keyval usage)
-
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.s
-ty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks14
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\book.cls"
+Document Class: book 2018/09/03 v1.4i Standard LaTeX document class
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\bk12.clo"
+File: bk12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrlf
-ile.sty"
-Package: scrlfile 2019/02/01 v3.26b KOMA-Script package (loading files)
-)))
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\tocba
-sic.sty"
-Package: tocbasic 2019/02/01 v3.26b KOMA-Script package (handling toc-files)
-\scr@dte@tocline@numberwidth=\skip41
-\scr@dte@tocline@numbox=\box27
-)
-Package tocbasic Info: omitting babel extension for `toc'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 134.
-Class scrartcl Info: File `scrsize11pt.clo' used instead of
-(scrartcl)           file `scrsize11.clo' to setup font sizes on input line 216
-2.
-
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrsi
-ze11pt.clo"
-File: scrsize11pt.clo 2019/02/01 v3.26b KOMA-Script font size class option (11p
-t)
-)
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\typea
-rea.sty"
-Package: typearea 2019/02/01 v3.26b KOMA-Script package (type area)
-\ta@bcor=\skip42
-\ta@div=\count80
-\ta@hblk=\skip43
-\ta@vblk=\skip44
-\ta@temp=\skip45
-\footheight=\skip46
-Package typearea Info: These are the values describing the layout:
-(typearea)             DIV  = 10
-(typearea)             BCOR = 0.0pt
-(typearea)             \paperwidth      = 597.50793pt
-(typearea)              \textwidth      = 418.25555pt
-(typearea)              DIV departure   = -6%
-(typearea)              \evensidemargin = 17.3562pt
-(typearea)              \oddsidemargin  = 17.3562pt
-(typearea)             \paperheight     = 845.04694pt
-(typearea)              \textheight     = 595.80026pt
-(typearea)              \topmargin      = -25.16531pt
-(typearea)              \headheight     = 17.0pt
-(typearea)              \headsep        = 20.40001pt
-(typearea)              \topskip        = 11.0pt
-(typearea)              \footskip       = 47.6pt
-(typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 1715.
-)
-\c@part=\count81
+\c@part=\count80
+\c@chapter=\count81
 \c@section=\count82
 \c@subsection=\count83
 \c@subsubsection=\count84
 \c@paragraph=\count85
 \c@subparagraph=\count86
-\scr@dte@section@maxnumwidth=\skip47
-Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\section on input line 4489.
-Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\section on input line 4489.
-\scr@dte@part@maxnumwidth=\skip48
-Class scrartcl Info: using compatibility default `afterindent=false'
-(scrartcl)           for `\part on input line 4497.
-\scr@dte@subsection@maxnumwidth=\skip49
-Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subsection on input line 4507.
-Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subsection on input line 4507.
-\scr@dte@subsubsection@maxnumwidth=\skip50
-Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subsubsection on input line 4517.
-Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subsubsection on input line 4517.
-\scr@dte@paragraph@maxnumwidth=\skip51
-Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\paragraph on input line 4527.
-Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\paragraph on input line 4527.
-\scr@dte@subparagraph@maxnumwidth=\skip52
-Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subparagraph on input line 4537.
-Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subparagraph on input line 4537.
-\abovecaptionskip=\skip53
-\belowcaptionskip=\skip54
-\c@pti@nb@sid@b@x=\box28
-Package tocbasic Info: omitting babel extension for `lof'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 5781.
-\scr@dte@figure@maxnumwidth=\skip55
 \c@figure=\count87
-Package tocbasic Info: omitting babel extension for `lot'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 5793.
-\scr@dte@table@maxnumwidth=\skip56
 \c@table=\count88
-Class scrartcl Info: Redefining `\numberline' on input line 5957.
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty
@@ -164,8 +62,8 @@ Package babel Info: Making " an active character on input line 121.
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty
 "
 Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
 )
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
@@ -181,6 +79,11 @@ Package: csquotes 2019/05/10 v5.2e context-sensitive quotations (JAW)
 .sty"
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count91
+)
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.s
+ty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
 )
 \csq@reset=\count92
 \csq@gtype=\count93
@@ -226,26 +129,49 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfigure\subfigu
+re.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip43
+\subfigcapskip=\skip44
+\subfigcaptopadj=\dimen106
+\subfigbottomskip=\skip45
+\subfigcapmargin=\dimen107
+\subfiglabelskip=\skip46
+\c@subfigure=\count98
+\c@lofdepth=\count99
+\c@subtable=\count100
+\c@lotdepth=\count101
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfigure\subfigu
+re.cfg")
+\subfig@top=\skip47
+\subfig@bottom=\skip48
+)
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/dirtree\dirtree.s
 ty"
 Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/dirtree\dirtree
 .tex" `dirtree' v0.32, 2012/12/11 (jcc)
-\DT@offset=\dimen106
-\DT@width=\dimen107
-\DT@sep=\dimen108
-\DT@all=\dimen109
-\DT@rulewidth=\dimen110
-\DT@dotwidth=\dimen111
-\DTbaselineskip=\dimen112
-\DT@counti=\count98
-\DT@countii=\count99
-\DT@countiii=\count100
-\DT@countiv=\count101
-\DT@indent=\dimen113
-\DT@parskip=\dimen114
-\DT@baselineskip=\dimen115
+\DT@offset=\dimen108
+\DT@width=\dimen109
+\DT@sep=\dimen110
+\DT@all=\dimen111
+\DT@rulewidth=\dimen112
+\DT@dotwidth=\dimen113
+\DTbaselineskip=\dimen114
+\DT@counti=\count102
+\DT@countii=\count103
+\DT@countiii=\count104
+\DT@countiv=\count105
+\DT@indent=\dimen115
+\DT@parskip=\dimen116
+\DT@baselineskip=\dimen117
 )
 File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
 )
@@ -256,6 +182,15 @@ LaTeX Warning: You have requested release `2019-10-01' of LaTeX,
 
 Package: svg 2019/10/22 v2.02d (include SVG pictures)
 
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrba
+se.sty"
+Package: scrbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-independent
+ basics and keyval usage)
+
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scrlf
+ile.sty"
+Package: scrlfile 2019/02/01 v3.26b KOMA-Script package (loading files)
+))
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.
 sty"
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
@@ -296,9 +231,9 @@ Package shellesc Info: Restricted shell escape enabled on input line 69.
 aces.sty"
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
-\svg@box=\box29
-\c@svg@param@lastpage=\count102
-\c@svg@param@currpage=\count103
+\svg@box=\box27
+\c@svg@param@lastpage=\count106
+\c@svg@param@currpage=\count107
 )
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty
 "
@@ -331,7 +266,7 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.s
 ty"
 Package: amsmath 2018/12/01 v2.17b AMS math features
-\@mathmargin=\skip57
+\@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
 
@@ -343,51 +278,51 @@ Package: amstext 2000/06/29 v2.01 AMS text
 y"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
-\ex@=\dimen116
+\ex@=\dimen118
 ))
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.st
 y"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen117
+\pmbraise@=\dimen119
 )
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.st
 y"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count104
+\inf@bad=\count108
 LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count105
-\leftroot@=\count106
+\uproot@=\count109
+\leftroot@=\count110
 LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count107
-\DOTSCASE@=\count108
+\classnum@=\count111
+\DOTSCASE@=\count112
 LaTeX Info: Redefining \ldots on input line 482.
 LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
-\Mathstrutbox@=\box30
-\strutbox@=\box31
-\big@size=\dimen118
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen120
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count109
-\c@MaxMatrixCols=\count110
+\macc@depth=\count113
+\c@MaxMatrixCols=\count114
 \dotsspace@=\muskip10
-\c@parentequation=\count111
-\dspbrk@lvl=\count112
+\c@parentequation=\count115
+\dspbrk@lvl=\count116
 \tag@help=\toks19
-\row@=\count113
-\column@=\count114
-\maxfields@=\count115
+\row@=\count117
+\column@=\count118
+\maxfields@=\count119
 \andhelp@=\toks20
-\eqnshift@=\dimen119
-\alignsep@=\dimen120
-\tagshift@=\dimen121
-\tagwidth@=\dimen122
-\totwidth@=\dimen123
-\lineht@=\dimen124
+\eqnshift@=\dimen121
+\alignsep@=\dimen122
+\tagshift@=\dimen123
+\tagwidth@=\dimen124
+\totwidth@=\dimen125
+\lineht@=\dimen126
 \@envbody=\toks21
-\multlinegap=\skip58
-\multlinetaggap=\skip59
+\multlinegap=\skip50
+\multlinetaggap=\skip51
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
@@ -396,44 +331,93 @@ LaTeX Info: Redefining \] on input line 2845.
 .sty"
 Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
 )
-
-Class scrartcl Warning: Usage of package `fancyhdr' together
-(scrartcl)              with a KOMA-Script class is not recommended.
-(scrartcl)              I'd suggest to use 
-(scrartcl)              package `scrlayer' or `scrlayer-scrpage', because
-(scrartcl)              they support KOMA-Script classes.
-(scrartcl)              With `fancyhdr' several features of class `scrartcl'
-(scrartcl)              like options `headsepline', `footsepline' or command
-(scrartcl)              `\MakeMarkcase' and the commands `\setkomafont' and
-(scrartcl)              `\addtokomafont' for the page style elements need
-(scrartcl)              explicite user intervention to work.
-(scrartcl)              Nevertheless, using requested
-(scrartcl)              package `fancyhdr' on input line 16.
-
-
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr
 .sty"
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip60
-\f@nch@O@elh=\skip61
-\f@nch@O@erh=\skip62
-\f@nch@O@olh=\skip63
-\f@nch@O@orh=\skip64
-\f@nch@O@elf=\skip65
-\f@nch@O@erf=\skip66
-\f@nch@O@olf=\skip67
-\f@nch@O@orf=\skip68
+\f@nch@headwidth=\skip52
+\f@nch@O@elh=\skip53
+\f@nch@O@erh=\skip54
+\f@nch@O@olh=\skip55
+\f@nch@O@orh=\skip56
+\f@nch@O@elf=\skip57
+\f@nch@O@erf=\skip58
+\f@nch@O@olf=\skip59
+\f@nch@O@orf=\skip60
 )
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tocloft\tocloft.s
+ty"
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip61
+\cftbeforetoctitleskip=\skip62
+\cftaftertoctitleskip=\skip63
+\cftbeforepartskip=\skip64
+\cftpartnumwidth=\skip65
+\cftpartindent=\skip66
+\cftbeforechapskip=\skip67
+\cftchapindent=\skip68
+\cftchapnumwidth=\skip69
+\cftbeforesecskip=\skip70
+\cftsecindent=\skip71
+\cftsecnumwidth=\skip72
+\cftbeforesubsecskip=\skip73
+\cftsubsecindent=\skip74
+\cftsubsecnumwidth=\skip75
+\cftbeforesubsubsecskip=\skip76
+\cftsubsubsecindent=\skip77
+\cftsubsubsecnumwidth=\skip78
+\cftbeforeparaskip=\skip79
+\cftparaindent=\skip80
+\cftparanumwidth=\skip81
+\cftbeforesubparaskip=\skip82
+\cftsubparaindent=\skip83
+\cftsubparanumwidth=\skip84
+\cftbeforeloftitleskip=\skip85
+\cftafterloftitleskip=\skip86
+\cftbeforefigskip=\skip87
+\cftfigindent=\skip88
+\cftfignumwidth=\skip89
+\cftbeforelottitleskip=\skip90
+\cftafterlottitleskip=\skip91
+\cftbeforetabskip=\skip92
+\cfttabindent=\skip93
+\cfttabnumwidth=\skip94
+\cftbeforesubfigskip=\skip95
+\cftsubfigindent=\skip96
+\cftsubfignumwidth=\skip97
+\cftbeforesubtabskip=\skip98
+\cftsubtabindent=\skip99
+\cftsubtabnumwidth=\skip100
+)
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def"
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 19.
+less on input line 27.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 21.
+less on input line 29.
 
 
+("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/titlesec\titlesec
+.sty"
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box30
+\beforetitleunit=\skip101
+\aftertitleunit=\skip102
+\ttl@plus=\dimen127
+\ttl@minus=\dimen128
+\ttl@toksa=\toks23
+\titlewidth=\dimen129
+\titlewidthlast=\dimen130
+\titlewidthfirst=\dimen131
+)
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry
 .sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
@@ -443,42 +427,42 @@ Package: geometry 2018/04/16 v5.8 Page Geometry
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-\Gm@cnth=\count116
-\Gm@cntv=\count117
-\c@Gm@tempcnt=\count118
-\Gm@bindingoffset=\dimen125
-\Gm@wd@mp=\dimen126
-\Gm@odd@mp=\dimen127
-\Gm@even@mp=\dimen128
-\Gm@layoutwidth=\dimen129
-\Gm@layoutheight=\dimen130
-\Gm@layouthoffset=\dimen131
-\Gm@layoutvoffset=\dimen132
-\Gm@dimlist=\toks23
+\Gm@cnth=\count120
+\Gm@cntv=\count121
+\c@Gm@tempcnt=\count122
+\Gm@bindingoffset=\dimen132
+\Gm@wd@mp=\dimen133
+\Gm@odd@mp=\dimen134
+\Gm@even@mp=\dimen135
+\Gm@layoutwidth=\dimen136
+\Gm@layoutheight=\dimen137
+\Gm@layouthoffset=\dimen138
+\Gm@layoutvoffset=\dimen139
+\Gm@dimlist=\toks24
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry
 .cfg"))
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings
 .sty"
-\lst@mode=\count119
-\lst@gtempboxa=\box32
-\lst@token=\toks24
-\lst@length=\count120
-\lst@currlwidth=\dimen133
-\lst@column=\count121
-\lst@pos=\count122
-\lst@lostspace=\dimen134
-\lst@width=\dimen135
-\lst@newlines=\count123
-\lst@lineno=\count124
-\lst@maxwidth=\dimen136
+\lst@mode=\count123
+\lst@gtempboxa=\box31
+\lst@token=\toks25
+\lst@length=\count124
+\lst@currlwidth=\dimen140
+\lst@column=\count125
+\lst@pos=\count126
+\lst@lostspace=\dimen141
+\lst@width=\dimen142
+\lst@newlines=\count127
+\lst@lineno=\count128
+\lst@maxwidth=\dimen143
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.
 sty"
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-\c@lstnumber=\count125
-\lst@skipnumbers=\count126
-\lst@framebox=\box33
+\c@lstnumber=\count129
+\lst@skipnumbers=\count130
+\lst@framebox=\box32
 )
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings
 .cfg"
@@ -490,45 +474,48 @@ Package: listings 2019/02/27 1.8b (Carsten Heinz)
 .sty"
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 99.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 101.
+
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
-
-
-LaTeX Warning: Unused global option(s):
-    [apaper4,12p].
-
 (wissenschaftliche-vertiefung-Ausarbeitung.aux)
 \openout1 = `wissenschaftliche-vertiefung-Ausarbeitung.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-
 pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count127
-\scratchdimen=\dimen137
-\scratchbox=\box34
-\nofMPsegments=\count128
-\nofMParguments=\count129
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count130
-\MPscratchDim=\dimen138
-\MPnumerator=\count131
-\makeMPintoPDFobject=\count132
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count131
+\scratchdimen=\dimen144
+\scratchbox=\box33
+\nofMPsegments=\count132
+\nofMParguments=\count133
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count134
+\MPscratchDim=\dimen145
+\MPnumerator=\count135
+\makeMPintoPDFobject=\count136
+\everyMPtoPDFconversion=\toks27
 )
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf
 -base.sty"
@@ -565,27 +552,27 @@ G,.JBIG2,.JB2,.eps]
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24417pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 702.78317pt, 71.13188pt)
-* \paperwidth=597.50793pt
-* \paperheight=845.04694pt
-* \textwidth=455.24417pt
-* \textheight=702.78317pt
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-39.03812pt
-* \headheight=17.5pt
-* \headsep=20.40001pt
-* \topskip=11.0pt
-* \footskip=47.6pt
-* \marginparwidth=59.7508pt
-* \marginparsep=12.8401pt
+* \topmargin=-33.5119pt
+* \headheight=13.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=38.0pt
+* \marginparsep=7.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -595,152 +582,188 @@ G,.JBIG2,.JB2,.eps]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count133
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 85.
-("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmss.fd"
-File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
+\c@lstlisting=\count137
 (wissenschaftliche-vertiefung-Ausarbeitung.toc)
 \tf@toc=\write3
 \openout3 = `wissenschaftliche-vertiefung-Ausarbeitung.toc'.
 
- [1{C:/Users/swissi/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+ [1
 
-] [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 110.
+{C:/Users/swissi/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(wissenschaftliche-vertiefung-Ausarbeitung.lof)
+\tf@lof=\write4
+\openout4 = `wissenschaftliche-vertiefung-Ausarbeitung.lof'.
 
+
+(wissenschaftliche-vertiefung-Ausarbeitung.lol)
+\tf@lol=\write5
+\openout5 = `wissenschaftliche-vertiefung-Ausarbeitung.lol'.
+
+ [2]
+Kapitel 1.
+[3
+
+]
+Kapitel 2.
+[4
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (13.0pt): 
+Make it at least 14.49998pt.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however.
+
+[5]
+Kapitel 3.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 145.
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
-<Figure-1-Docker-container-architecture.jpg, id=13, 232.99847pt x 140.78197pt>
-File: Figure-1-Docker-container-architecture.jpg Graphic file (type jpg)
-<use Figure-1-Docker-container-architecture.jpg>
-Package pdftex.def Info: Figure-1-Docker-container-architecture.jpg  used on in
-put line 135.
-(pdftex.def)             Requested size: 465.99579pt x 281.56323pt.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 145.
 
-Overfull \hbox (10.75162pt too wide) in paragraph at lines 135--136
-[][] 
- []
+[6
 
-[3] [4 <./Figure-1-Docker-container-architecture.jpg>]
-<Test-C-Plattform-Arch.jpg, id=21, 1436.36626pt x 756.8275pt>
+] [7]
+Kapitel 4.
+<Test-C-Plattform-Arch.jpg, id=30, 1436.36626pt x 756.8275pt>
 File: Test-C-Plattform-Arch.jpg Graphic file (type jpg)
 <use Test-C-Plattform-Arch.jpg>
-Package pdftex.def Info: Test-C-Plattform-Arch.jpg  used on input line 165.
-(pdftex.def)             Requested size: 497.91396pt x 369.89021pt.
-
-Overfull \hbox (42.66978pt too wide) in paragraph at lines 165--166
- [] 
- []
-
+Package pdftex.def Info: Test-C-Plattform-Arch.jpg  used on input line 166.
+(pdftex.def)             Requested size: 455.24124pt x 455.24329pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<FrontEnd.png, id=22, 683.55376pt x 221.82875pt>
+<FrontEnd.png, id=31, 683.55376pt x 221.82875pt>
 File: FrontEnd.png Graphic file (type png)
 <use FrontEnd.png>
-Package pdftex.def Info: FrontEnd.png  used on input line 178.
+Package pdftex.def Info: FrontEnd.png  used on input line 179.
 (pdftex.def)             Requested size: 497.93665pt x 199.16675pt.
 
-Overfull \hbox (42.69247pt too wide) in paragraph at lines 178--179
+Overfull \hbox (42.69254pt too wide) in paragraph at lines 179--180
  [] 
  []
 
-[5]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[8
 
-Overfull \hbox (8.65923pt too wide) in paragraph at lines 187--199
-\T1/cmr/m/n/10.95 Die Remote-Testumgebung be-steht aus drei mit-ein-an-der ver-
-bun-de-nen Docker-Containern (Jenkins-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 187--199
+] [9 <./Test-C-Plattform-Arch.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 188--200
 
  []
 
-[6 <./Test-C-Plattform-Arch.jpg>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 199.
+[10 <./FrontEnd.png>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 200.
 
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-[7 <./FrontEnd.png>] [8] [9]
-<Ldap-Auth.jpg, id=42, 924.45375pt x 733.74126pt>
+Overfull \hbox (4.81255pt too wide) in paragraph at lines 213--217
+\T1/cmr/m/n/12 ver-wen-det. Do-cker Com-po-se wird zum De-fi-nie-ren und Aus-fü
+h-ren von Docker-Anwendungen
+ []
+
+
+Overfull \hbox (33.032pt too wide) in paragraph at lines 213--217
+\T1/cmr/m/n/12 mit meh-re-ren Con-tai-nern ver-wen-det. Mit Com-po-se wird ei-n
+e YAML-Datei (docker-compose.yml)
+ []
+
+[11] [12] [13]
+<Ldap-Auth.jpg, id=54, 924.45375pt x 733.74126pt>
 File: Ldap-Auth.jpg Graphic file (type jpg)
 <use Ldap-Auth.jpg>
-Package pdftex.def Info: Ldap-Auth.jpg  used on input line 331.
+Package pdftex.def Info: Ldap-Auth.jpg  used on input line 332.
 (pdftex.def)             Requested size: 426.79144pt x 483.69974pt.
- [10] [11 <./Ldap-Auth.jpg>] [12] [13]
-<Git-Konzept.jpg, id=57, 602.25pt x 725.71124pt>
+ [14]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15] [16 <./Ldap-Auth.jpg>] [17]
+<Git-Konzept.jpg, id=68, 602.25pt x 725.71124pt>
 File: Git-Konzept.jpg Graphic file (type jpg)
 <use Git-Konzept.jpg>
-Package pdftex.def Info: Git-Konzept.jpg  used on input line 407.
+Package pdftex.def Info: Git-Konzept.jpg  used on input line 408.
 (pdftex.def)             Requested size: 398.35004pt x 398.34512pt.
- [14 <./Git-Konzept.jpg>]
-Overfull \hbox (26.69606pt too wide) in paragraph at lines 440--443
-\T1/cmr/m/n/10.95 zum Test von Aufgabenblatt-1 hoch-ge-la-den wer-den, wer-den 
-sie un-ter 'aufgabenblaetter/Aufgabenblatt-
- []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 485--495
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[18] [19 <./Git-Konzept.jpg>] [20]
+Underfull \hbox (badness 10000) in paragraph at lines 486--496
 
  []
 
-[16]
-<Loesungupload.jpg, id=67, 874.26625pt x 1265.72874pt>
+[21] [22]
+<Loesungupload.jpg, id=85, 874.26625pt x 1265.72874pt>
 File: Loesungupload.jpg Graphic file (type jpg)
 <use Loesungupload.jpg>
-Package pdftex.def Info: Loesungupload.jpg  used on input line 514.
+Package pdftex.def Info: Loesungupload.jpg  used on input line 515.
 (pdftex.def)             Requested size: 426.79338pt x 483.6858pt.
- [17] [18 <./Loesungupload.jpg>]
-<GogsJenkins.jpg, id=74, 854.19125pt x 914.41624pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<GogsJenkins.jpg, id=86, 854.19125pt x 914.41624pt>
 File: GogsJenkins.jpg Graphic file (type jpg)
 <use GogsJenkins.jpg>
-Package pdftex.def Info: GogsJenkins.jpg  used on input line 532.
+Package pdftex.def Info: GogsJenkins.jpg  used on input line 533.
 (pdftex.def)             Requested size: 369.8758pt x 398.33992pt.
 
-Overfull \hbox (3.71217pt too wide) in paragraph at lines 527--539
-\T1/cmr/m/n/10.95 ein Jenkins-Multibranch-Pipeline-Projekt ge-ne-riert. Ein Mul
-tibranch-Pipeline-Projekt durch-sucht
+Overfull \hbox (15.45055pt too wide) in paragraph at lines 528--540
+\T1/cmr/m/n/12 Projekt durch-sucht ein-fach das Quellcode-Repository und er-ste
+llt au-to-ma-tisch einen Pipeline-
  []
 
-[19 <./GogsJenkins.jpg>] [20] (wissenschaftliche-vertiefung-Ausarbeitung.lof)
-\tf@lof=\write4
-\openout4 = `wissenschaftliche-vertiefung-Ausarbeitung.lof'.
+[23]
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[21] (wissenschaftliche-vertiefung-Ausarbeitung.aux) ) 
+[24 <./Loesungupload.jpg>] [25 <./GogsJenkins.jpg>]
+<Makefile.jpg, id=97, 764.8575pt x 794.97pt>
+File: Makefile.jpg Graphic file (type jpg)
+<use Makefile.jpg>
+Package pdftex.def Info: Makefile.jpg  used on input line 579.
+(pdftex.def)             Requested size: 398.33507pt x 426.80284pt.
+ [26] [27 <./Makefile.jpg>]
+[28]
+Kapitel 5.
+[29
+
+]
+
+LaTeX Warning: Empty `thebibliography' environment on input line 592.
+
+[30
+
+] (wissenschaftliche-vertiefung-Ausarbeitung.aux) ) 
 Here is how much of TeX's memory you used:
- 9598 strings out of 492895
- 150489 string characters out of 3123269
- 569499 words of memory out of 3000000
- 13352 multiletter control sequences out of 15000+200000
- 13086 words of font info for 35 fonts, out of 3000000 for 9000
+ 8579 strings out of 492895
+ 123272 string characters out of 3123269
+ 452115 words of memory out of 3000000
+ 12318 multiletter control sequences out of 15000+200000
+ 14620 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,12n,51p,9149b,1866s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\swissi\AppData
-\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\swi
-ssi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C
-:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx
-1200.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/
-dpi600\ecrm1095.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/j
-knappen/ec/dpi600\ecsx1095.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/
-pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\swissi\AppData\Local\MiKTeX
-\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk><C:/Users/swissi/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on wissenschaftliche-vertiefung-Ausarbeitung.pdf (21 pages, 8248
-77 bytes).
+ 48i,12n,47p,1102b,1839s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\swissi\AppData\Lo
+cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\swissi
+\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\U
+sers\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx144
+0.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi
+600\ecbx1728.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ecbx1200.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.
+9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk><C:/Users/swissi/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on wissenschaftliche-vertiefung-Ausarbeitung.pdf (30 pages, 8410
+79 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
+ 509 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

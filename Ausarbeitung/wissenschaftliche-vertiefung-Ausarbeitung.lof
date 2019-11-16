@@ -1,8 +1,13 @@
 \babel@toc {ngerman}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Docker Architektur}}{4}% 
-\contentsline {figure}{\numberline {2}{\ignorespaces Architektur Test-C-Plattform }}{6}% 
-\contentsline {figure}{\numberline {3}{\ignorespaces Front-End }}{7}% 
-\contentsline {figure}{\numberline {4}{\ignorespaces Ldap-Auth }}{11}% 
-\contentsline {figure}{\numberline {5}{\ignorespaces Git-Konzepte}}{14}% 
-\contentsline {figure}{\numberline {6}{\ignorespaces Hochladen von L\IeC {\"o}sungsdatei}}{18}% 
-\contentsline {figure}{\numberline {7}{\ignorespaces Multibranch Pipeline Projekt}}{19}% 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Architektur Test-C-Plattform }}{9}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Front-End }}{10}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Ldap-Auth }}{16}% 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Git-Konzepte}}{19}% 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Hochladen von L\IeC {\"o}sungsdatei}}{24}% 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Multibranch Pipeline Projekt}}{25}% 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Kompilieren des Programms}}{27}% 
+\addvspace {10\p@ }
