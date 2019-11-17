@@ -5,9 +5,10 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Architektur Test-C-Plattform }}{9}% 
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Front-End }}{10}% 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Ldap-Auth }}{16}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Ldap-Auth }}{15}% 
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Git-Konzepte}}{19}% 
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Hochladen von L\IeC {\"o}sungsdatei}}{24}% 
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Multibranch Pipeline Projekt}}{25}% 
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Kompilieren des Programms}}{27}% 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces jenkinsgetjobCosole}}{29}% 
 \addvspace {10\p@ }

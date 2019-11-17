@@ -176,7 +176,7 @@ Im folgenden Abschnitt werde ich jeden Teil des Architektur separat erklären.
 \subsection{Client-Seite (Front-End)}
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=17.5cm, height=7cm]{FrontEnd.png}
+		\includegraphics[width=14cm, height=7cm]{FrontEnd.png}
 		\caption{Front-End } 
 		\label{ Front-End } 
 	\end{center}
@@ -308,7 +308,6 @@ Die Serverseite stellt viele Dienste wie folgt bereit:
 <groupId>org.springframework.boot</groupId>
 <artifactId>spring-boot-starter-security</artifactId>
 </dependency>
-
 <dependency>
 <groupId>org.springframework.security</groupId>
 <artifactId>spring-security-ldap</artifactId>
@@ -512,7 +511,7 @@ Bevor zu den folgenden Abschnitten übergangen wird, wird erläutert,wie der Stu
 Der Student lädt die zu testende Datei über die Frontend-Seite. Er wählt die Datei aus und drückt dann die Upload-Taste. Das Backend erhält also eine Anfrage zum Hochladen von Dateien. Um diese Aufgabe auszuführen, muss das BackEnd die folgenden Schritte ausführen: Angenommen, der Benutzer möchte seine Aufgabenblatt-1-Lösung zum ersten Mal testen. Anschließend wird aus dem lokalen Git-Repository von Aufgabenblatt-1 ein Branch mit dem Benutzernamen als Namen erstellt. Dann wird Die Datei durch Ausführen der Methoden Jgit-add und -commit an den angegebenen Branch gesendet. Der Benutzer hat nun die Möglichkeit, entweder den Test abzubrechen, was bedeutet, dass die hochgeladene Datei gelöscht wird, oder fortzufahren und den Testknopf zu drücken. Angenommen, der Benutzer hat den Test abgeschlossen und die Testtaste gedrückt. Dann wird der Student-Branch durch eine Jgit-Push-Methode an das Remote-Repository übertragen. Zur weiteren Verdeutlichung wird eine grafische Darstellung angezeigt, die diesen Vorgang erläutert.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=15cm, height=17cm]{Loesungupload.jpg}
+		\includegraphics[width=16cm, height=17cm]{Loesungupload.jpg}
 		\caption{Hochladen von Lösungsdatei} 
 		\label{ Hochladen von Lösungsdatei } 
 	\end{center}
@@ -523,14 +522,14 @@ Für jedes Aufgabenblatt wird ein lokales und ein remote Git-Repository erstellt
 Es wird beispielsweise davon ausgegangen, dass der Administrator drei Aufgabenblätter hinzufügt. Das heißt, es werden drei Git-Repositorys erstellt, von denen jedes ein Arbeitsblatt darstellt. Drei Studenten möchten ihre Lösungen testen. Zwei von ihnen haben die drei Übungsblätter gelöst und einer hat nur das erste und das zweite Aufgabenblatt gelöst. Anschließend werden aus den für die Aufgabenblätter 1 und 2 erzeugten Git-Repositorys drei Branchs erstellt. Weil die drei Studenten die ersten beiden Übungsblätter gelöst und getestet haben. Aus dem dritten Repositroy werden jedoch nur zwei Branchs erzeugt, da nur zwei Studenten ihre Aufgabenblatt-3-Lösung getestet haben.
 \newline
 Nun wird besprochen, wie nach Erhalt der Lösungsdatei der Test Prossez automatisch gestartet und das Ergebnis dem Student angezeigt wird.
-
+\newpage
 \paragraph{Test Starten (jenkins Job Build)}
 Wie bereits erwähnt, wird für jedes Repository automatisch ein Jenkins-Multibranch-Pipeline-Projekt generiert. Ein Multibranch-Pipeline-Projekt durchsucht einfach das Quellcode-Repository und erstellt automatisch einen Pipeline-Job für jedes Branch, das eine Jenkinsfile-Datei enthält. 
 \newline
 Eine Jenkinsfile-Datei ist eine Textdatei, die die Pipeline als Code enthält, der den gesamten Job-Workflow festschreibt. Daher lädt der Administrator diese Datei bei jeder Erstellung eines neuen Aufgabenblatts hoch. Dieser Vorgang ist in der folgenden Grafik dargestellt.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=13cm, height=14cm]{GogsJenkins.jpg}
+		\includegraphics[width=13cm, height=13cm]{GogsJenkins.jpg}
 		\caption{Multibranch Pipeline Projekt} 
 		\label{ Multibranch Pipeline Projek } 
 	\end{center}
@@ -581,6 +580,50 @@ Beim Kompilieren des Makefiles werden die Testdateien und die zu testenden Datei
 		\label{Kompilieren des Programms} 
 	\end{center}
 \end{figure}
+\newline
+Nach Abschluss des Build-Prozesses wird das Testergebnis im Build-Verlauf des Jenkins-Servers gespeichert. Was jetzt fehlt, ist das Testergebnis dem Benutzer anzuzeigen. Darüber wird im nächsten Absatz besprochen.
+\paragraph{Testergebnis anzeigen}
+ Der Multibranch-Pipeline-Job speichert einen Build-Verlauf für jeden Zweig (Branch). Der Buildverlauf enthält Builddetails. Aus Build-Details kann ConsoleOutputText abgerufen werden. In diesem Fall enthält dieser 'ConsoleOutputText' das Testergebnis.
+ \begin{lstlisting}[language=JAVA,caption=Testergebnis Anfrage ]
+public StringBuilder jenkinsgetjobCosole(String jobName, String branchName ) throws JenkinsException {
+String buildLog = "";
+int i = 0;
+StringBuilder buildLogBuilder = null;
+try {
+JenkinsServer jenkinsServer = new JenkinsServer(new URI(jenkinsUrl), jenkinsUser, jenkinsPassword);
+Map<String, Job> jobs = jenkinsServer.getJobs();
+
+JobWithDetails job = jobs.get(jobName).details();
+Optional<FolderJob> folderJob = jenkinsServer.getFolderJob(job);
+Map<String, Job> branchs = jenkinsServer.getJobs(folderJob.get());
+JobWithDetails branch = branchs.get(branchName).details();
+
+Build build = branch.getLastBuild();
+if (build != null) {
+BuildWithDetails buildWithDetails = build.details();
+buildLog = buildWithDetails.getConsoleOutputText();
+Reader inputString = new StringReader(buildLog);
+BufferedReader reader = new BufferedReader(inputString);
+buildLogBuilder = new StringBuilder();  
+/*
+Hier wird der 'buildLogBuilder' bearbeitet, um ihn dem Benutzer klar zu zeigen.
+*/
+return buildLogBuilder;
+} catch (Exception e) {
+throw new JenkinsException(e);
+}
+}
+ \end{lstlisting}
+ Zunächst werden alle Jobs abgerufen, die sich auf dem Jenkins-Server befinden. Innerhalb dieser Jobs wird der gewünschte Job identifiziert, zum Beispiel 'Aufgabenblatt-1'. Dann werden alle Job-Zweige, die in diesem Job sind, gebracht und daraus der gewünschte Job-Zweig festgestellt. Von diesem Job-Zweig wird das letzte Build-Detail abgerufen. Schließlich wird das Testergebnis (ConsoleOutputText) aus dieses Build-Detail erhalten. Die folgende Abbildung zeigt diesen Vorgang grafisch.
+ \begin{figure}[h!]
+ 	\begin{center}
+ 		\includegraphics[width=15cm, height=18cm]{TestergebnisOutput.jpg}
+ 		\caption{jenkinsgetjobCosole} 
+ 		\label{jenkinsgetjobCosole} 
+ 	\end{center}
+ \end{figure}
+\newline
+Das Testergebnis wird dann an das Front-End gesendet, um es dem Benutzer anzuzeigen.
 \subsection{Interne Prozesse}
 \section{Alternativen}
 \section{Ablauf des Testverfahrens}
