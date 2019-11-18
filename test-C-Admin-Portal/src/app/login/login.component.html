@@ -1,0 +1,42 @@
+
+<div class="container4">
+    <img class ="img" src="../../assets/images/c-programming.png"/>
+    <h1 class="titel">Test-C</h1> 
+ </div>
+<div class="vertical-center"> 
+<div class="container">
+
+  <form class="logim" [formGroup]="loginForm" (ngSubmit)="login()">
+
+    <div class="alert alert-danger" *ngIf="message.length">
+      <strong>{{message}}</strong>
+    </div>
+
+    
+    <div class="form-group">
+    <label for="username" class="sr-only">User name</label>
+    <input type="text" class="form-control" formControlName="username"
+           placeholder="Username"
+           required autofocus [ngClass]="{ 'is-invalid': submitted && f.username.errors }"/>
+           <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+              <div *ngIf="f.username.errors.required">Username is required</div>
+          </div>
+     </div>
+
+ <div class="form-group">
+           <label for="password" class="sr-only">Password</label>
+    <input type="password" class="form-control" formControlName="password"
+           placeholder="Password" required  [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+           <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">Password is required</div>
+          </div>
+          </div>
+
+          <div class="form-group">
+           <button class="btn btn-lg btn-success btn-block" type="submit">Sign in</button>
+
+          </div>
+  </form>
+
+</div>
+</div>

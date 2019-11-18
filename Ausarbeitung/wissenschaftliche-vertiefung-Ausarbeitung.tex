@@ -173,7 +173,7 @@ Wie in der Abbildung 2 gezeigt, ist die Test-C-Plattformarchitektur in drei Haup
 Die Wahl der Technologien beruhte auf ihrer Modernität und ihrer Verbreitung auf dem Arbeitsmarkt. In Teil eins des Projekts (Client-Seite/Frontend) wurde die folgenden Techniken verwendet : Angular 7, NGX-Bootstrap, Html, Css, im zweiten Teil des Projekts (Serverseite / BackEnd) wurden Maven und Spring Boot, Spring Security und Ldap ... verwendet. Der dritte Teil des Projekts, in dem der Testprozess durch Jenkins abgeschlossen ist.
 \newline
 Im folgenden Abschnitt werde ich jeden Teil des Architektur separat erklären.
-\subsection{Client-Seite (Front-End)}
+\section{Client-Seite (Front-End)}
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=14cm, height=7cm]{FrontEnd.png}
@@ -184,7 +184,7 @@ Im folgenden Abschnitt werde ich jeden Teil des Architektur separat erklären.
 In diesem Projekt ist die Benutzeroberfläche in zwei Teile unterteilt: das Administrationsportal und das Studentenportal. Beide Portale wurden mit Angular 7, Html, Css und NGX-Bootstrap erstellt.
 Über das Administrations Portal kann der Admin Benutzer ein neues Aufgabenblatt erstellen, dies bedeutet, dass ein virtueller Bereich für den Aufgabenblatttest erstellt wird, in dem die Studenten ihre Lösungen für Aufgaben testen können. Der Administrator kann alle Testdateien für jedes Aufgabenblatt in den entsprechenden Testbereich hochladen. Der Administrator kann auch die Testbereiche anzeigen. Jeder Testbereich ist mit dem Namen des zu testenden Aufgabenblatts gekennzeichnet. Für jeden Testbereich werden die spezifischen Testdateien angezeigt und der Administrator kann davon Dateien löschen oder andere hinzufügen.
 Über das Studentenportal kann der Student die zu testende Lösungsdatei hochladen und dann an den Testbereich senden, der den Test automatisch durchführt und dem Studenten das Testergebnis anzeigt.
-\subsection{Remote TestUmgebung}
+\section{Remote TestUmgebung}
 Die Erklärung dieses Teils des Projekts vor der Erklärung des Mittelteils 'Serverseite' ist eine absichtliche Sache, damit der Leser einfach verstehen kann, was im Back-End passieren wird.
 \newline
 Die Remote-Testumgebung besteht aus drei miteinander verbundenen Docker-Containern (Jenkins-Container / Gogs-Container / PostgreSql-Container). Jeder Container verfügt über ein eigenes Datenvolumen zum Speichern der Daten. Dadurch wird vermieden, dass Informationen gelöscht werden, wenn der Container ausgeschaltet oder gelöscht wird.
@@ -297,11 +297,11 @@ Damit Docker-Container über den Host-Computer miteinander und mit der Außenwel
 \end{lstlisting}
 
 
-\subsubsection{Serverseite (Back-End)}
+\section{Serverseite (Back-End)}
 Nun wird über die Serverseite gesprochen, die für die Kommunikation des Benutzers mit der Testumgebung verantwortlich ist.
 \newline
-Die Serverseite stellt viele Dienste wie folgt bereit:
-\paragraph{Benutzererkennung} In der westfälischen Hochschule Gelsenkirchen basiert die Speicherung der Hauptbenutzeridentitäten auf LDAP-Protokolls (Lightweight Directory Access Protocol) und gespeicherter LDAP-Datenbank. Dies hilft dabei, die Single Sign-On-Technologie (SSO) zu nutzen, die dadurch sich der Benutzer mit derselben ID und denselben Kennwörtern bei allen Anwendungen im selben Netzwerk anmelden kann. Um dies zu erreichen, sind 'spring-boot-starter-security' und 'spring-security-ldap' und 'unboundid-ldapsdk' in diesem Projekt verwendet.
+Die Serverseite stellt viele Dienste wie folgt bereit.
+\subsection{Benutzererkennung} In der westfälischen Hochschule Gelsenkirchen basiert die Speicherung der Hauptbenutzeridentitäten auf LDAP-Protokolls (Lightweight Directory Access Protocol) und gespeicherter LDAP-Datenbank. Dies hilft dabei, die Single Sign-On-Technologie (SSO) zu nutzen, die dadurch sich der Benutzer mit derselben ID und denselben Kennwörtern bei allen Anwendungen im selben Netzwerk anmelden kann. Um dies zu erreichen, sind 'spring-boot-starter-security' und 'spring-security-ldap' und 'unboundid-ldapsdk' in diesem Projekt verwendet.
 
 \begin{lstlisting}[language=XML,caption=pom.xml - security dependencies]
 <dependency>
@@ -334,9 +334,9 @@ Wird eine Anfrage geschickt, wird vom Backend dann überprüft, ob das Token gü
 	\end{center}
 \end{figure}
 
-\paragraph{Erstellung eines neuen Aufgabenblatts (Admin)}
+\subsection{Erstellung eines neuen Aufgabenblatts (Admin)}
 Wie oben erläutert, ist die Erstellung eines neuen Aufgabenblatts in der Tat eine Einrichtung eines neuen Testbereichs, an dem die Studenten ihre Aufgabenlösungsdateien testen können. Mit anderen Worten, das Erstellen eines neuen Aufgabenblatts hängt vom Erstellen eines neuen Git-Repository ab, das denselben Namen wie das Aufgabenblatt hat. Zum Beispiel (Aufgabenblatt-1) über die Gogs-Oberfläche, die dem Administrator zur Verfügung steht. In diesem Git-Gogs-Repository werden alle zum Testen erforderlichen Dateien gespeichert. Anschließend wird ein Jenkins Multibranch-Pipeline-Job erstellt, der auch denselben Namen wie das Aufgabenblatt hat.
-\paragraph{Schaffung von Jenkins Job (Admin)}
+\subsection{Schaffung von Jenkins Job (Admin)}
 Für die Erstellung von Multibranch-Pipeline-Job bietet Jenkins eine REST-API an, die viele Dienste bereitstellt, z. B. das Erstellen und Löschen von Job und viele andere Dinge. Um diese Jenkins-API zu verwenden, muss eine Maven-Abhängigkeit in pom.xml hinzugefügt werden.
 \begin{lstlisting}[language=XML,caption=pom.xml - Jenkins-Api]
 <dependency>
@@ -393,7 +393,7 @@ return null;
 \end{lstlisting} 
 Was jetzt fehlt, um den neuen Testberich zu vervollständigen ist, die zum Testen notwendigen Dateien hochzuladen. Diese Dateien und ihre Rolle beim Abschließen des Testprozesses werden später ausführlich besprochen, aber jetzt geht es darum, wie sie hochgeladen und an die Remote-Testumgebung gesendet werden.
 
-\paragraph{Zum Testen notwendigen Dateien hochzuladen}
+\subsection{Zum Testen notwendigen Dateien hochzuladen}
 Nach dem Hochladen werden die Dateien in ihrem jeweiligen Git-Repository gespeichert. Um dies zu veranschaulichen, ist es wünschenswert, paar Git-Konzepte zu erwähnen.
 \newline
 Git hat zwei Repository-Typen: lokal und remote. Das lokales Repository wird aus einem Remote-Repository erstellt (Clone). Das Senden (Pushing) von Dateien und Code-Änderungen vom lokalen Repository bis zum Remote-Repository erfolgt in mehreren Schritten: 
@@ -481,7 +481,7 @@ throw new RuntimeException(e);
 \end{lstlisting} 
 
  
-\paragraph{Die zum Ausführen des Tests erforderlichen Dateien}
+\subsection{Die zum Ausführen des Tests erforderlichen Dateien}
 Jedes Git-Repository, das die Quellcodeverwaltung für ein bestimmtes Aufgabenblatt in der Remote-Testumgebung darstellt, hat die folgende Form und als Beispiel den folgenden Inhalt.
 \newline
 \dirtree{%
@@ -507,7 +507,7 @@ Jedes Repository, unabhängig davon, welchem Aufgabenblatt es zugewiesen ist, en
 	\item \textbf{Jenkinsfile: } Ist eine Textdatei, die die Definition einer Jenkins-Pipeline enthält und in die Quellcodeverwaltung eingecheckt wird. Die Rolle dieser Datei wird nachfolgend erläutert.
 	\end{itemize}
 Bevor zu den folgenden Abschnitten übergangen wird, wird erläutert,wie der Student seine Lösungsdatei hochladen kann.
-\paragraph{Student-Lösungsdatei hochladen}
+\subsection{Student-Lösungsdatei hochladen}
 Der Student lädt die zu testende Datei über die Frontend-Seite. Er wählt die Datei aus und drückt dann die Upload-Taste. Das Backend erhält also eine Anfrage zum Hochladen von Dateien. Um diese Aufgabe auszuführen, muss das BackEnd die folgenden Schritte ausführen: Angenommen, der Benutzer möchte seine Aufgabenblatt-1-Lösung zum ersten Mal testen. Anschließend wird aus dem lokalen Git-Repository von Aufgabenblatt-1 ein Branch mit dem Benutzernamen als Namen erstellt. Dann wird Die Datei durch Ausführen der Methoden Jgit-add und -commit an den angegebenen Branch gesendet. Der Benutzer hat nun die Möglichkeit, entweder den Test abzubrechen, was bedeutet, dass die hochgeladene Datei gelöscht wird, oder fortzufahren und den Testknopf zu drücken. Angenommen, der Benutzer hat den Test abgeschlossen und die Testtaste gedrückt. Dann wird der Student-Branch durch eine Jgit-Push-Methode an das Remote-Repository übertragen. Zur weiteren Verdeutlichung wird eine grafische Darstellung angezeigt, die diesen Vorgang erläutert.
 \begin{figure}[h!]
 	\begin{center}
@@ -523,7 +523,7 @@ Es wird beispielsweise davon ausgegangen, dass der Administrator drei Aufgabenbl
 \newline
 Nun wird besprochen, wie nach Erhalt der Lösungsdatei der Test Prossez automatisch gestartet und das Ergebnis dem Student angezeigt wird.
 \newpage
-\paragraph{Test Starten (jenkins Job Build)}
+\subsection{Test Starten (jenkins Job Build)}
 Wie bereits erwähnt, wird für jedes Repository automatisch ein Jenkins-Multibranch-Pipeline-Projekt generiert. Ein Multibranch-Pipeline-Projekt durchsucht einfach das Quellcode-Repository und erstellt automatisch einen Pipeline-Job für jedes Branch, das eine Jenkinsfile-Datei enthält. 
 \newline
 Eine Jenkinsfile-Datei ist eine Textdatei, die die Pipeline als Code enthält, der den gesamten Job-Workflow festschreibt. Daher lädt der Administrator diese Datei bei jeder Erstellung eines neuen Aufgabenblatts hoch. Dieser Vorgang ist in der folgenden Grafik dargestellt.
@@ -582,7 +582,7 @@ Beim Kompilieren des Makefiles werden die Testdateien und die zu testenden Datei
 \end{figure}
 \newline
 Nach Abschluss des Build-Prozesses wird das Testergebnis im Build-Verlauf des Jenkins-Servers gespeichert. Was jetzt fehlt, ist das Testergebnis dem Benutzer anzuzeigen. Darüber wird im nächsten Absatz besprochen.
-\paragraph{Testergebnis anzeigen}
+\subsection{Testergebnis anzeigen}
  Der Multibranch-Pipeline-Job speichert einen Build-Verlauf für jeden Zweig (Branch). Der Buildverlauf enthält Builddetails. Aus Build-Details kann ConsoleOutputText abgerufen werden. In diesem Fall enthält dieser 'ConsoleOutputText' das Testergebnis.
  \begin{lstlisting}[language=JAVA,caption=Testergebnis Anfrage ]
 public StringBuilder jenkinsgetjobCosole(String jobName, String branchName ) throws JenkinsException {
