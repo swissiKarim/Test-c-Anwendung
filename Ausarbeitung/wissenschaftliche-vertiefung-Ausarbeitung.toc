@@ -1,32 +1,29 @@
 \babel@toc {ngerman}{}
 \contentsline {section}{Abbildungsverzeichnis}{3}% 
 \contentsline {section}{listings}{3}% 
-\contentsline {chapter}{\numberline {1}Motivation}{4}% 
-\contentsline {chapter}{\numberline {2}Einleitung}{5}% 
-\contentsline {section}{\numberline {2.1}Aufgabenbeschreibung}{5}% 
-\contentsline {section}{\numberline {2.2}Herangehensweise}{5}% 
-\contentsline {chapter}{\numberline {3}Grundlagen}{7}% 
-\contentsline {section}{\numberline {3.1}Code Testing}{7}% 
-\contentsline {subsection}{\numberline {3.1.1}Manual testing( Statisches)}{7}% 
-\contentsline {subsection}{\numberline {3.1.2}Automated Testing(Dynamisches)}{7}% 
-\contentsline {chapter}{\numberline {4}Test-C Plattform}{9}% 
-\contentsline {section}{\numberline {4.1}Einf\IeC {\"u}hrung}{9}% 
-\contentsline {section}{\numberline {4.2}Architektur}{9}% 
-\contentsline {section}{\numberline {4.3}Client-Seite (Front-End)}{10}% 
-\contentsline {section}{\numberline {4.4}Remote TestUmgebung}{11}% 
-\contentsline {section}{\numberline {4.5}Serverseite (Back-End)}{15}% 
-\contentsline {subsection}{\numberline {4.5.1}Benutzererkennung}{15}% 
-\contentsline {subsection}{\numberline {4.5.2}Erstellung eines neuen Aufgabenblatts (Admin)}{16}% 
-\contentsline {subsection}{\numberline {4.5.3}Schaffung von Jenkins Job (Admin)}{16}% 
-\contentsline {subsection}{\numberline {4.5.4}Zum Testen notwendigen Dateien hochzuladen}{19}% 
-\contentsline {subsection}{\numberline {4.5.5}Die zum Ausf\IeC {\"u}hren des Tests erforderlichen Dateien}{23}% 
-\contentsline {subsection}{\numberline {4.5.6}Student-L\IeC {\"o}sungsdatei hochladen}{24}% 
-\contentsline {subsection}{\numberline {4.5.7}Test Starten (jenkins Job Build)}{26}% 
-\contentsline {subsection}{\numberline {4.5.8}Testergebnis anzeigen}{28}% 
-\contentsline {subsection}{\numberline {4.5.9}Interne Prozesse}{30}% 
-\contentsline {section}{\numberline {4.6}Alternativen}{30}% 
-\contentsline {section}{\numberline {4.7}Ablauf des Testverfahrens}{30}% 
-\contentsline {section}{\numberline {4.8}Installationsanleitung}{30}% 
-\contentsline {section}{\numberline {4.9}Verwendung}{30}% 
-\contentsline {chapter}{\numberline {5}Zusammenfassung}{32}% 
-\contentsline {chapter}{Literaturverzeichnis}{32}% 
+\contentsline {chapter}{\numberline {1}Motivation}{5}% 
+\contentsline {chapter}{\numberline {2}Einleitung}{6}% 
+\contentsline {section}{\numberline {2.1}Aufgabenbeschreibung}{6}% 
+\contentsline {section}{\numberline {2.2}Herangehensweise}{6}% 
+\contentsline {chapter}{\numberline {3}Grundlagen}{8}% 
+\contentsline {section}{\numberline {3.1}Code Testing}{8}% 
+\contentsline {subsection}{\numberline {3.1.1}Manual testing( Statisches)}{8}% 
+\contentsline {subsection}{\numberline {3.1.2}Automated Testing(Dynamisches)}{8}% 
+\contentsline {chapter}{\numberline {4}Test-C Plattform}{10}% 
+\contentsline {section}{\numberline {4.1}Einf\IeC {\"u}hrung}{10}% 
+\contentsline {section}{\numberline {4.2}Architektur}{10}% 
+\contentsline {section}{\numberline {4.3}Client-Seite (Front-End)}{11}% 
+\contentsline {section}{\numberline {4.4}Remote TestUmgebung}{12}% 
+\contentsline {section}{\numberline {4.5}Serverseite (Back-End)}{13}% 
+\contentsline {subsection}{\numberline {4.5.1}Benutzererkennung}{13}% 
+\contentsline {subsection}{\numberline {4.5.2}Erstellung eines neuen Aufgabenblatts (Admin)}{14}% 
+\contentsline {subsection}{\numberline {4.5.3}Schaffung von Jenkins Job (Admin)}{14}% 
+\contentsline {subsection}{\numberline {4.5.4}Zum Testen notwendigen Dateien hochzuladen}{17}% 
+\contentsline {subsection}{\numberline {4.5.5}Die zum Ausf\IeC {\"u}hren des Tests erforderlichen Dateien}{21}% 
+\contentsline {subsection}{\numberline {4.5.6}Student-L\IeC {\"o}sungsdatei hochladen}{22}% 
+\contentsline {subsection}{\numberline {4.5.7}Test Starten (jenkins Job Build)}{24}% 
+\contentsline {subsection}{\numberline {4.5.8}Testergebnis anzeigen}{27}% 
+\contentsline {section}{\numberline {4.6}Installationsanleitung}{30}% 
+\contentsline {section}{\numberline {4.7}Verwendung}{35}% 
+\contentsline {chapter}{\numberline {5}Zusammenfassung}{36}% 
+\contentsline {chapter}{Literaturverzeichnis}{36}% 

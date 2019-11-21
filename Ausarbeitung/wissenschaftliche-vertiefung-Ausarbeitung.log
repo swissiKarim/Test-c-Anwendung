@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.2)  18 NOV 2019 11:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.2)  21 NOV 2019 22:59
 entering extended mode
 **./wissenschaftliche-vertiefung-Ausarbeitung.tex
 (wissenschaftliche-vertiefung-Ausarbeitung.tex
@@ -583,13 +583,13 @@ G,.JBIG2,.JB2,.eps]
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count137
-(wissenschaftliche-vertiefung-Ausarbeitung.toc [1
-
-{C:/Users/swissi/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
+(wissenschaftliche-vertiefung-Ausarbeitung.toc)
 \tf@toc=\write3
 \openout3 = `wissenschaftliche-vertiefung-Ausarbeitung.toc'.
 
+ [1
 
+{C:/Users/swissi/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
 Package Fancyhdr Warning: \headheight is too small (13.0pt): 
 Make it at least 14.49998pt.
@@ -605,15 +605,15 @@ This may cause the page layout to be inconsistent, however.
 \tf@lol=\write5
 \openout5 = `wissenschaftliche-vertiefung-Ausarbeitung.lol'.
 
- [3]
+ [3] [4]
 Kapitel 1.
-[4
+[5
 
 ]
 Kapitel 2.
-[5
+[6
 
-] [6]
+] [7]
 Kapitel 3.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 145.
 
@@ -623,11 +623,11 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 145.
 
-[7
+[8
 
-] [8]
+] [9]
 Kapitel 4.
-<Test-C-Plattform-Arch.jpg, id=33, 1436.36626pt x 756.8275pt>
+<Test-C-Plattform-Arch.jpg, id=36, 1436.36626pt x 756.8275pt>
 File: Test-C-Plattform-Arch.jpg Graphic file (type jpg)
 <use Test-C-Plattform-Arch.jpg>
 Package pdftex.def Info: Test-C-Plattform-Arch.jpg  used on input line 166.
@@ -635,7 +635,7 @@ Package pdftex.def Info: Test-C-Plattform-Arch.jpg  used on input line 166.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<FrontEnd.png, id=34, 683.55376pt x 221.82875pt>
+<FrontEnd.png, id=37, 683.55376pt x 221.82875pt>
 File: FrontEnd.png Graphic file (type png)
 <use FrontEnd.png>
 Package pdftex.def Info: FrontEnd.png  used on input line 179.
@@ -643,126 +643,120 @@ Package pdftex.def Info: FrontEnd.png  used on input line 179.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9
+[10
 
-] [10 <./Test-C-Plattform-Arch.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 188--200
-
- []
-
-[11 <./FrontEnd.png>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 200.
+] [11 <./Test-C-Plattform-Arch.jpg>] [12 <./FrontEnd.png>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 203.
 
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (4.81255pt too wide) in paragraph at lines 213--217
-\T1/cmr/m/n/12 ver-wen-det. Do-cker Com-po-se wird zum De-fi-nie-ren und Aus-fü
-h-ren von Docker-Anwendungen
- []
-
-
-Overfull \hbox (33.032pt too wide) in paragraph at lines 213--217
-\T1/cmr/m/n/12 mit meh-re-ren Con-tai-nern ver-wen-det. Mit Com-po-se wird ei-n
-e YAML-Datei (docker-compose.yml)
- []
-
-[12] [13] [14]
-<Ldap-Auth.jpg, id=57, 924.45375pt x 733.74126pt>
+<Ldap-Auth.jpg, id=49, 924.45375pt x 733.74126pt>
 File: Ldap-Auth.jpg Graphic file (type jpg)
 <use Ldap-Auth.jpg>
-Package pdftex.def Info: Ldap-Auth.jpg  used on input line 331.
+Package pdftex.def Info: Ldap-Auth.jpg  used on input line 228.
 (pdftex.def)             Requested size: 426.79144pt x 483.69974pt.
- [15]
+
+[13]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16] [17 <./Ldap-Auth.jpg>] [18]
-<Git-Konzept.jpg, id=71, 602.25pt x 725.71124pt>
+[14] [15 <./Ldap-Auth.jpg>] [16]
+<Git-Konzept.jpg, id=65, 602.25pt x 725.71124pt>
 File: Git-Konzept.jpg Graphic file (type jpg)
 <use Git-Konzept.jpg>
-Package pdftex.def Info: Git-Konzept.jpg  used on input line 407.
-(pdftex.def)             Requested size: 398.35004pt x 398.34512pt.
+Package pdftex.def Info: Git-Konzept.jpg  used on input line 304.
+(pdftex.def)             Requested size: 398.35004pt x 426.8039pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19] [20 <./Git-Konzept.jpg>] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 485--495
+[17] [18 <./Git-Konzept.jpg>] [19] [20]
+Underfull \hbox (badness 10000) in paragraph at lines 382--392
 
  []
 
-[22] [23]
-<Loesungupload.jpg, id=88, 874.26625pt x 1265.72874pt>
+[21]
+<Loesungupload.jpg, id=82, 874.26625pt x 1265.72874pt>
 File: Loesungupload.jpg Graphic file (type jpg)
 <use Loesungupload.jpg>
-Package pdftex.def Info: Loesungupload.jpg  used on input line 514.
-(pdftex.def)             Requested size: 455.24806pt x 483.6858pt.
+Package pdftex.def Info: Loesungupload.jpg  used on input line 411.
+(pdftex.def)             Requested size: 398.33871pt x 483.6858pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[24] [25 <./Loesungupload.jpg>]
-<GogsJenkins.jpg, id=96, 854.19125pt x 914.41624pt>
+[22] [23 <./Loesungupload.jpg>]
+<GogsJenkins.jpg, id=89, 854.19125pt x 914.41624pt>
 File: GogsJenkins.jpg Graphic file (type jpg)
 <use GogsJenkins.jpg>
-Package pdftex.def Info: GogsJenkins.jpg  used on input line 532.
-(pdftex.def)             Requested size: 369.8758pt x 369.87611pt.
+Package pdftex.def Info: GogsJenkins.jpg  used on input line 429.
+(pdftex.def)             Requested size: 369.8758pt x 455.23965pt.
 
-Overfull \hbox (27.98029pt too wide) in paragraph at lines 527--539
+Overfull \hbox (27.98029pt too wide) in paragraph at lines 424--436
 \T1/cmr/m/n/12 Pipeline-Projekt ge-ne-riert. Ein Multibranch-Pipeline-Projekt d
 urch-sucht ein-fach das Quellcode-
  []
 
 
-Overfull \hbox (11.59735pt too wide) in paragraph at lines 527--539
+Overfull \hbox (11.59735pt too wide) in paragraph at lines 424--436
 \T1/cmr/m/n/12 Repository und er-stellt au-to-ma-tisch einen Pipeline-Job für j
 e-des Branch, das ei-ne Jenkinsfile-
  []
 
-[26 <./GogsJenkins.jpg>] [27]
-<Makefile.jpg, id=103, 764.8575pt x 794.97pt>
+[24 <./GogsJenkins.jpg>] [25] [26]
+<Makefile.jpg, id=100, 764.8575pt x 794.97pt>
 File: Makefile.jpg Graphic file (type jpg)
 <use Makefile.jpg>
-Package pdftex.def Info: Makefile.jpg  used on input line 578.
-(pdftex.def)             Requested size: 398.33507pt x 426.80284pt.
+Package pdftex.def Info: Makefile.jpg  used on input line 476.
+(pdftex.def)             Requested size: 426.7884pt x 483.70584pt.
 
+Overfull \hbox (5.29189pt too wide) in paragraph at lines 482--483
+[]\T1/cmr/m/n/12 Nach Ab-schluss des Build-Prozesses wird das Tes-t-er-geb-nis 
+im Build-Verlauf des Jenkins-
+ []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[28] [29 <./Makefile.jpg>]
-<TestergebnisOutput.jpg, id=110, 784.9325pt x 996.72375pt>
+[27 <./Makefile.jpg>]
+<TestergebnisOutput.jpg, id=104, 784.9325pt x 996.72375pt>
 File: TestergebnisOutput.jpg Graphic file (type jpg)
 <use TestergebnisOutput.jpg>
-Package pdftex.def Info: TestergebnisOutput.jpg  used on input line 620.
-(pdftex.def)             Requested size: 426.80359pt x 512.155pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[30] [31 <./TestergebnisOutput.jpg>]
+Package pdftex.def Info: TestergebnisOutput.jpg  used on input line 518.
+(pdftex.def)             Requested size: 398.34602pt x 512.155pt.
+ [28]
+<Docker-components.jpg, id=108, 674.52pt x 584.1825pt>
+File: Docker-components.jpg Graphic file (type jpg)
+<use Docker-components.jpg>
+Package pdftex.def Info: Docker-components.jpg  used on input line 533.
+(pdftex.def)             Requested size: 369.88586pt x 199.17207pt.
+ [29 <./TestergebnisOutput.jpg>] [30 <./Docker-components.jpg>] [31]
+<Application-deployment.jpg, id=119, 815.045pt x 714.67pt>
+File: Application-deployment.jpg Graphic file (type jpg)
+<use Application-deployment.jpg>
+Package pdftex.def Info: Application-deployment.jpg  used on input line 556.
+(pdftex.def)             Requested size: 455.2406pt x 512.17381pt.
+ [32 <./Application-deployment.jpg>] [33] [34] [35]
 Kapitel 5.
-[32
+[36
 
 ]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 635.
+LaTeX Warning: Empty `thebibliography' environment on input line 643.
 
-[33
+[37
 
 ] (wissenschaftliche-vertiefung-Ausarbeitung.aux) ) 
 Here is how much of TeX's memory you used:
- 8602 strings out of 492895
- 123671 string characters out of 3123269
- 451115 words of memory out of 3000000
- 12340 multiletter control sequences out of 15000+200000
+ 8641 strings out of 492895
+ 124290 string characters out of 3123269
+ 454115 words of memory out of 3000000
+ 12377 multiletter control sequences out of 15000+200000
  14620 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,12n,47p,1102b,1839s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 48i,12n,47p,1102b,1892s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\swissi\AppData\Lo
-cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\swissi
-\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\U
+cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\swissi
+\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\U
 sers\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx144
 0.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi
 600\ecbx1728.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkna
@@ -770,10 +764,10 @@ ppen/ec/dpi600\ecbx1200.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/
 ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.
 9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk><C:/Users/swissi/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on wissenschaftliche-vertiefung-Ausarbeitung.pdf (33 pages, 9620
-21 bytes).
+Output written on wissenschaftliche-vertiefung-Ausarbeitung.pdf (37 pages, 1127
+608 bytes).
 PDF statistics:
- 548 PDF objects out of 1000 (max. 8388607)
+ 560 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

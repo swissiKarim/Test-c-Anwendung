@@ -187,115 +187,12 @@ In diesem Projekt ist die Benutzeroberfläche in zwei Teile unterteilt: das Admi
 \section{Remote TestUmgebung}
 Die Erklärung dieses Teils des Projekts vor der Erklärung des Mittelteils 'Serverseite' ist eine absichtliche Sache, damit der Leser einfach verstehen kann, was im Back-End passieren wird.
 \newline
-Die Remote-Testumgebung besteht aus drei miteinander verbundenen Docker-Containern (Jenkins-Container / Gogs-Container / PostgreSql-Container). Jeder Container verfügt über ein eigenes Datenvolumen zum Speichern der Daten. Dadurch wird vermieden, dass Informationen gelöscht werden, wenn der Container ausgeschaltet oder gelöscht wird.
+Die Remote-Testumgebung besteht aus drei miteinander verbundenen Teilen (Jenkins/ Gogs / PostgreSql).
 \newline
-Um einen Docker-Container in diesem Teil des Projekts zu erstellen, werden zwei verschiedene Methoden verwendet, entweder über eine Dockerfile Datei oder über eine Docker-Compose Datei.
+Jenkins ist ein beliebtes Open-Source-Tool für die kontinuierliche Integration und Build-Automatisierung. Die Grundfunktionalität von Jenkins besteht darin, eine vordefinierte Liste von Schritten auszuführen, z. B. Java-Quellcode zu kompilieren und eine JAR aus den resultierenden Klassen zu erstellen. Der Auslöser für diese Ausführung kann zeit- oder ereignisbasiert sein. Zum Beispiel alle 20 Minuten oder nach einem neuen Commit in einem Git-Repository oder auf Wunsch des Programmierers. 
 \newline
-Für den Jenkins-Container wurde eine Dockerfile Datei verwendet. Der Jenkins-Container besteht hauptsächlich aus einem Jenkins, den Compilern: gcc und g ++, die für den Build verantwortlich sind, und doxygen, das für den Testbericht verantwortlich ist.
-\newline
-Die Frage, die sich jetzt stellt, ist: Was ist eine Dockerfile Datei?
-\newline
-Ein Dockerfile ist einfach eine Textdatei mit einer Reihe von Anweisungen (instructions), die genutzt werden können, um ein Docker-Image zu erzeugen.
-\newline
-\begin{lstlisting}[caption=Dockerfile - jenkins]
-FROM jenkins/jenkins
-
-USER root
-
-RUN apt-get -y update && apt-get -y upgrade
-
-# install gcc g++ gfortran
-RUN apt-get -y install build-essential
-
-# install static analysis
-RUN apt-get -y install doxygen graphviz
-\end{lstlisting}
-Die FROM-Anweisung legt fest, welches Basisimage zu verwenden ist, wie in diesem Fall Jenkins. RUN-Anweisunggen geben einen Schell-Befehl an, der im Image ausgeführt werden soll. In diesem Fall werden g++, gcc und doxygen ausgeführt.
-\newline
-Für den Gogs-Container und den PostgreSql-Container wurde eine Docker-Compose Datei verwendet.
-Docker Compose wird zum Definieren und Ausführen von Docker-Anwendungen mit mehreren Containern verwendet. Mit Compose wird eine YAML-Datei (docker-compose.yml) verwendet, um die Dienste (services) von der Anwendung zu konfigurieren, wobei jeder Dienst (service) einen Container mit der zum Erstellen erforderlichen Konfiguration darstellt.
-\begin{lstlisting}[caption=docker-compose.yml - Gogs/PostgreSql]
-version: '2'
-services:
-app:
-image: gogs/gogs:latest
-volumes:
-- /tmp/gogs-data:/data
-ports:
-- "3000:3000"
-links:
-- postgres:postgres
-postgres:
-image: postgres:alpine
-volumes:
-- /tmp/gogs-postgres:/var/lib/postgresql/data
-environment:
-- POSTGRES_USER=postgres
-- POSTGRES_PASSWORD=password123
-- POSTGRES_DB=gogs
-\end{lstlisting}
 Gogs ist ein einfacher selbst-gehosteter Git Service, der einfach einzurichten und zu betreiben ist und auf fast allem ausgeführt werden kann. Es ist zu Hundertprozent Open Source unter der MIT OSS-Lizenz. Gogs bietet die Anzeige und Bearbeitung von Repository-Dateien, die Verfolgung von Projektproblemen und ein eingebautes Wiki für die Projektdokumentation.
 Gogs benötigt eine Datenbank, um den Quellcode zu speichern, daher wurde hier postgresql ausgewählt.
-\newline
-Nun stellt sich die Frage, wie die Container miteinander kommunizieren ?
-\newline
-Damit Docker-Container über den Host-Computer miteinander und mit der Außenwelt kommunizieren können, wird in diesem Fall eine Netzwerkschicht (Docker Networking) eingesetzt. Docker unterstützt verschiedene Arten von Netzwerken, die jeweils für bestimmte Anwendungsfälle geeignet sind: Bridge mode, Host mode, Container mode, und No networking.
-
-\begin{lstlisting}[caption=Docker Network]
-[
-{
-"Name": "gogs-compose_default",
-"Id": "e19d76ee7d9f4132329d44e618bea3c5d93466527dd991d35b01fe4262ba6d73",
-"Created": "2019-09-09T17:14:13.0772793Z",
-"Scope": "local",
-"Driver": "bridge",
-"EnableIPv6": false,
-"IPAM": {
-"Driver": "default",
-"Options": null,
-"Config": [
-{
-"Subnet": "172.23.0.0/16",
-"Gateway": "172.23.0.1"
-}
-]
-},
-"Internal": false,
-"Attachable": false,
-"Ingress": false,
-"ConfigFrom": {
-"Network": ""
-},
-"ConfigOnly": false,
-"Containers": {
-"0e69b0fffaf865665b4c2788f0d43a450301dff06ab1d50fedc4d24c0c97f0b4": {
-"Name": "jenkins/jenkins",
-"EndpointID": "0fc2f145af6d60b8da71e592299d9a0e2d7f578a392832baa0eb4f9e33b1c6e0",
-"MacAddress": "02:42:ac:17:00:04",
-"IPv4Address": "172.23.0.4/16",
-"IPv6Address": ""
-},
-"264529e624168c9a64a308f2bbadeb26eb3676e54935de87f42675c114721754": {
-"Name": "gogs-compose_app_1",
-"EndpointID": "3309a74372ac94794dcf1e6f7df21cda2a54c1b98a608e3a5b9922098831d894",
-"MacAddress": "02:42:ac:17:00:03",
-"IPv4Address": "172.23.0.3/16",
-"IPv6Address": ""
-},
-"6d04174448af71fd4a5de8735f5ad46e52145f933a3c5fbaa3ea53052eccf168": {
-"Name": "gogs-compose_postgres_1",
-"EndpointID": "e48d315587aa881a2d77984cb856a446d1c5fb74f6fa2f95bb3be6671b90dba7",
-"MacAddress": "02:42:ac:17:00:02",
-"IPv4Address": "172.23.0.2/16",
-"IPv6Address": ""
-}
-},
-"Options": {},
-"Labels": {}
-}
-]
-\end{lstlisting}
-
 
 \section{Serverseite (Back-End)}
 Nun wird über die Serverseite gesprochen, die für die Kommunikation des Benutzers mit der Testumgebung verantwortlich ist.
@@ -404,7 +301,7 @@ Git hat zwei Repository-Typen: lokal und remote. Das lokales Repository wird aus
 \end{itemize}
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=14cm, height=14cm]{Git-Konzept.jpg}
+		\includegraphics[width=14cm, height=15cm]{Git-Konzept.jpg}
 		\caption{Git-Konzepte} 
 		\label{ Git-Konzepte} 
 	\end{center}
@@ -511,7 +408,7 @@ Bevor zu den folgenden Abschnitten übergangen wird, wird erläutert,wie der Stu
 Der Student lädt die zu testende Datei über die Frontend-Seite. Er wählt die Datei aus und drückt dann die Upload-Taste. Das Backend erhält also eine Anfrage zum Hochladen von Dateien. Um diese Aufgabe auszuführen, muss das BackEnd die folgenden Schritte ausführen: Angenommen, der Benutzer möchte seine Aufgabenblatt-1-Lösung zum ersten Mal testen. Anschließend wird aus dem lokalen Git-Repository von Aufgabenblatt-1 ein Branch mit dem Benutzernamen als Namen erstellt. Dann wird Die Datei durch Ausführen der Methoden Jgit-add und -commit an den angegebenen Branch gesendet. Der Benutzer hat nun die Möglichkeit, entweder den Test abzubrechen, was bedeutet, dass die hochgeladene Datei gelöscht wird, oder fortzufahren und den Testknopf zu drücken. Angenommen, der Benutzer hat den Test abgeschlossen und die Testtaste gedrückt. Dann wird der Student-Branch durch eine Jgit-Push-Methode an das Remote-Repository übertragen. Zur weiteren Verdeutlichung wird eine grafische Darstellung angezeigt, die diesen Vorgang erläutert.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=16cm, height=17cm]{Loesungupload.jpg}
+		\includegraphics[width=14cm, height=17cm]{Loesungupload.jpg}
 		\caption{Hochladen von Lösungsdatei} 
 		\label{ Hochladen von Lösungsdatei } 
 	\end{center}
@@ -529,7 +426,7 @@ Wie bereits erwähnt, wird für jedes Repository automatisch ein Jenkins-Multibr
 Eine Jenkinsfile-Datei ist eine Textdatei, die die Pipeline als Code enthält, der den gesamten Job-Workflow festschreibt. Daher lädt der Administrator diese Datei bei jeder Erstellung eines neuen Aufgabenblatts hoch. Dieser Vorgang ist in der folgenden Grafik dargestellt.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=13cm, height=13cm]{GogsJenkins.jpg}
+		\includegraphics[width=13cm, height=16cm]{GogsJenkins.jpg}
 		\caption{Multibranch Pipeline Projekt} 
 		\label{ Multibranch Pipeline Projek } 
 	\end{center}
@@ -573,14 +470,15 @@ Wenn Jenkins Server eine Build-Anfrage für einen Multibranch-Pipeline-Job erhä
 In diesem Fall ist das Erstellen eines Jenkins-Builds in der Tat eine Kompilierung des Makefiles. um den Testprozess abzuschließen.
 \newline
 Beim Kompilieren des Makefiles werden die Testdateien und die zu testenden Dateien vom GCC-Compiler in Objektdateien bzw. Programmmodule umgewandelt. Dann wird der Verknüpfungsschritt ausgeführt und eine Binärdatei (executable) erzeugt. In diesem Fall ist die Binärdatei das Testergebnis. Diesen Vorgang wird in der nächsten Grafik veranschaulicht.
+\newpage
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=14cm, height=15cm]{Makefile.jpg}
+		\includegraphics[width=15cm, height=17cm]{Makefile.jpg}
 		\caption{Kompilieren des Programms} 
 		\label{Kompilieren des Programms} 
 	\end{center}
 \end{figure}
-\newline
+
 Nach Abschluss des Build-Prozesses wird das Testergebnis im Build-Verlauf des Jenkins-Servers gespeichert. Was jetzt fehlt, ist das Testergebnis dem Benutzer anzuzeigen. Darüber wird im nächsten Absatz besprochen.
 \subsection{Testergebnis anzeigen}
  Der Multibranch-Pipeline-Job speichert einen Build-Verlauf für jeden Zweig (Branch). Der Buildverlauf enthält Builddetails. Aus Build-Details kann ConsoleOutputText abgerufen werden. In diesem Fall enthält dieser 'ConsoleOutputText' das Testergebnis.
@@ -617,17 +515,128 @@ throw new JenkinsException(e);
  Zunächst werden alle Jobs abgerufen, die sich auf dem Jenkins-Server befinden. Innerhalb dieser Jobs wird der gewünschte Job identifiziert, zum Beispiel 'Aufgabenblatt-1'. Dann werden alle Job-Zweige, die in diesem Job sind, gebracht und daraus der gewünschte Job-Zweig festgestellt. Von diesem Job-Zweig wird das letzte Build-Detail abgerufen. Schließlich wird das Testergebnis (ConsoleOutputText) aus dieses Build-Detail erhalten. Die folgende Abbildung zeigt diesen Vorgang grafisch.
  \begin{figure}[h!]
  	\begin{center}
- 		\includegraphics[width=15cm, height=18cm]{TestergebnisOutput.jpg}
+ 		\includegraphics[width=14cm, height=18cm]{TestergebnisOutput.jpg}
  		\caption{jenkinsgetjobCosole} 
  		\label{jenkinsgetjobCosole} 
  	\end{center}
  \end{figure}
-\newline
+
 Das Testergebnis wird dann an das Front-End gesendet, um es dem Benutzer anzuzeigen.
-\subsection{Interne Prozesse}
-\section{Alternativen}
-\section{Ablauf des Testverfahrens}
 \section{Installationsanleitung}
+Im Abschnitt 'Architektur' wurde bereits erwähnt, dass die Komponenten des Projekts in Docker bereitgestellt werden. Dies wird in diesem Abschnitt mit der Erklärung der für den Installationsprozess erforderlichen Einstellungen erläutert.
+\newline
+Docker ist eine container-basierte Technologie und Container sind nur der Benutzerbereich des Betriebssystems. Auf der niedrigen Ebene ist ein Container nur eine Reihe von Prozessen, die vom Rest des Systems isoliert sind und von einem separaten Image ausgeführt werden, das alle zur Unterstützung der Prozesse erforderlichen Dateien enthält. Es wurde für das Ausführen von Anwendungen entwickelt. In Docker teilen sich die ausgeführten Container den Kernel des Host-Betriebssystems. Docker ist ein Open-Source-Projekt, das auf Linux-Containern basiert. Es verwendet Linux-Kernel-Funktionen wie Namespaces und Kontrollgruppen, um Container auf einem Betriebssystem zu erstellen. Docker fügt die Software einer Anwendung in eine unsichtbare Box ein, in der alles enthalten ist, was zum Ausführen erforderlich ist, z. B. Betriebssystem, Anwendungscode, Laufzeit, Systemtools und Bibliotheken usw.
+\newline
+Um zu verstehen, wie Docker am besten eingesetzt wird, ist es hilfreich, sich einen groben Überblick darüber zu verschaffen, wie die Docker-Plattform aufgebaut ist.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=13cm, height=7cm]{Docker-components.jpg}
+		\caption{Docker-Komponenten} 
+		\label{Docker-Komponenten} 
+	\end{center}
+\end{figure}
+\begin{itemize}
+	\item \textbf{Docker-Daemon: }der Docker-Daemon ist für das Erstellen, Ausführen und Überwachen von Containern, Netzwerke und Volumes sowie für das Erstellen und Speichern von Images zuständig.
+	\item \textbf{Docker-Client: }Dies ist das Command Line Interface (CLI)-Tool, das zur Konfiguration und Interaktion mit Docker verwendet wird. Zum Beispiel wenn Entwickler oder Benutzer Befehle wie Docker Run verwenden, sendet der Client diese Befehle an den Docker-Daemon, der sie ausführt.
+	\item \textbf{Images: }
+	\item \textbf{Docker file: }Ein Dockerfile ist einfach eine Textdatei mit einer Reihe von Anweisungen (instructions), die genutzt werden können, um ein Docker-Image zu erzeugen.
+	\item \textbf{Containers: }Container ist die ausgeführte Instanz eines Images.
+	\item \textbf{Docker Registries: }Dies ist die Distributionskomponente von Docker oder wird als zentrales Repository für Docker-Images bezeichnet, in dem Docker-Images gespeichert sind. Docker Hub und Docker Cloud sind öffentliche Registrierungen, die von jedem Benutzer verwendet werden können. 
+\end{itemize}
+Nun wird erläutert, wie Docker in diesem Fall zum Bereitstellen der Anwendung verwendet wird. Die Anwendung 'Test-C-Plattform' wird in sechs Containern bereitgestellt. Zwei Container für das Front-End (AdminPortal-Container / Student Portal-Container), ein Container für das Back-End (Test C-Back-End-Container) und drei Container für die Remote-Testumgebung (Jenkins-Container / Gogs-Container / Postgresql-Container).
+\newline
+Wie bereits gesagt, ist ein Container die ausgeführte Instanz eines Images. Hier stellt sich die Frage, wie ein Image erstellt wird ?
+\newline
+In diesem Fall werden zwei verschiedene Typen von Images verwendet. Gebrauchsfertige Images, die in einem öffentlichen Repository wie Docker-Hub gespeichert sind, und mit Hilfe von Dockerfile selbst erstellte Images.
+\newline
+Die folgende Abbildung zeigt den Bereitstellungsprozess im Detail.
+\newpage
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=16cm, height=18cm]{Application-deployment.jpg}
+		\caption{Bereitstellungsprozess} 
+		\label{Bereitstellungsprozess} 
+	\end{center}
+\end{figure}
+\newpage
+Dockerfile-Admin-FrontEnd und Dockerfile-Student-FrontEnd sind zuständig für die Erstellung von der beiden Angular Applications Images (AdminProtal und StudentenPortal).
+\begin{lstlisting}[language=JAVA,caption=Dockerfile für Angular Application]
+FROM node:lts-alpine as build-step
+WORKDIR /app
+COPY package.json ./
+COPY . .
+RUN npm install --save-dev node-sass
+EXPOSE 4200
+CMD npm run start
+\end{lstlisting}
+Die FROM-Anweisung legt fest, welches Basisimage von Docker-Hub zu verwenden ist,  wie in diesem Fall 'node'. RUN-Anweisunggen geben einen Schell-Befehl an, der im Image ausgeführt werden soll. COPY-Anweisunggen kopieren Dateien, die für die Umsetzung eines Images benötigen. CMD-Anweisung enthält CMD-Befehl, der nur ausgeführt wird, wenn ein Container ausgeführt wird.
+\newline
+Dockerfile-BackEnd ist für Erzeugung von BackEndTest-C Image verantwortlich.
+\begin{lstlisting}[language=JAVA,caption=Dockerfile für BackEnd]
+FROM maven:3-jdk-8-alpine
+VOLUME /tmp
+COPY ./target/backend-Test-C-1.5.8.RELEASE.jar /
+RUN ls -l
+CMD ["mvn","spring-boot:run"]
+\end{lstlisting}
+Das Basisimage hier ist maven:3-jdk-8-alpine. Das Jar Datei wird kopiert und durch Maven und Jdk ausgeführt.
+\newline
+Zum Definieren und Ausführen von Docker-Anwendungen mit mehreren Containern, wird Docker Compose verwendet.  Mit Compose wird eine YAML-Datei (docker-compose.yml) eingesetzt, um die Dienste (services) von der Anwendung zu konfigurieren, wobei jeder Dienst (service) einen Container mit der zum Erstellen erforderlichen Konfiguration darstellt.
+\begin{lstlisting}[language=JAVA,caption= Docker Compose]
+version: '2'
+services:
+app:
+image: gogs/gogs:latest
+volumes:
+- /tmp/gogs-data:/data
+ports:
+- "3000:3000"
+links:
+- postgres:postgres
+postgres:
+image: postgres:alpine
+volumes:
+- /tmp/gogs-postgres:/var/lib/postgresql/data
+environment:
+- POSTGRES_USER=postgres
+- POSTGRES_PASSWORD=password123
+- POSTGRES_DB=gogs
+jenkins:
+build:
+context: .
+dockerfile: ../jenkins-Dockerfile/Dockerfile
+ports:
+- "50000:50000"
+- "8080:8080"
+volumes:
+- /var/jenkins_home  
+image: jenkins/jenkins
+adminPortal:
+build:
+context: .
+dockerfile: ../test-C-Admin-Portal/Dockerfile
+ports:
+- "50001:50001"
+- "4200:4200" 
+image: adminportal  
+studentenPortal:
+build:
+context: .
+dockerfile: ../test-C-Studenten-Portal/Dockerfile
+ports:
+- "50003:50003"
+- "8886:8886" 
+image: studentenporstltest  
+backendtestc:
+build:
+context: .
+dockerfile: ../backend-Test-C/Dockerfile
+ports:
+- "50004:50004"
+- "8088:8088" 
+image: backend-test-c     
+\end{lstlisting}
+
 \section{Verwendung}
 \chapter{Zusammenfassung}
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
