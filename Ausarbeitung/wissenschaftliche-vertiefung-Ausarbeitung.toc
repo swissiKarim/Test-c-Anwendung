@@ -1,6 +1,6 @@
 \babel@toc {ngerman}{}
 \contentsline {section}{Abbildungsverzeichnis}{3}% 
-\contentsline {section}{listings}{3}% 
+\contentsline {section}{listings}{4}% 
 \contentsline {chapter}{\numberline {1}Motivation}{5}% 
 \contentsline {chapter}{\numberline {2}Einleitung}{6}% 
 \contentsline {section}{\numberline {2.1}Aufgabenbeschreibung}{6}% 
@@ -20,10 +20,14 @@
 \contentsline {subsection}{\numberline {4.5.3}Schaffung von Jenkins Job (Admin)}{14}% 
 \contentsline {subsection}{\numberline {4.5.4}Zum Testen notwendigen Dateien hochzuladen}{17}% 
 \contentsline {subsection}{\numberline {4.5.5}Die zum Ausf\IeC {\"u}hren des Tests erforderlichen Dateien}{21}% 
-\contentsline {subsection}{\numberline {4.5.6}Student-L\IeC {\"o}sungsdatei hochladen}{22}% 
+\contentsline {subsection}{\numberline {4.5.6}Student-L\IeC {\"o}sungsdatei hochladen}{23}% 
 \contentsline {subsection}{\numberline {4.5.7}Test Starten (jenkins Job Build)}{24}% 
-\contentsline {subsection}{\numberline {4.5.8}Testergebnis anzeigen}{27}% 
-\contentsline {section}{\numberline {4.6}Installationsanleitung}{30}% 
-\contentsline {section}{\numberline {4.7}Verwendung}{35}% 
-\contentsline {chapter}{\numberline {5}Zusammenfassung}{36}% 
-\contentsline {chapter}{Literaturverzeichnis}{36}% 
+\contentsline {subsection}{\numberline {4.5.8}Testergebnis anzeigen}{28}% 
+\contentsline {section}{\numberline {4.6}Installationsanleitung}{31}% 
+\contentsline {subsection}{\numberline {4.6.1}Projektbereitstellung (deployment)}{31}% 
+\contentsline {subsection}{\numberline {4.6.2}Einstellungen}{37}% 
+\contentsline {subsubsection}{\numberline {4.6.2.1}Konfigurieren von Gogs mit dem Web Installer}{37}% 
+\contentsline {subsubsection}{\numberline {4.6.2.2}Konfigurieren von Jenkins}{39}% 
+\contentsline {section}{\numberline {4.7}Verwendung}{42}% 
+\contentsline {chapter}{\numberline {5}Zusammenfassung}{44}% 
+\contentsline {chapter}{Literaturverzeichnis}{44}% 

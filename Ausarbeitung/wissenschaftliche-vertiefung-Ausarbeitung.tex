@@ -2,6 +2,7 @@
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\catcode`\_=12 % change catcode of "_" to "other" (no. 12)
 \usepackage{csquotes}
 \usepackage{graphicx}
 \usepackage{subfigure}
@@ -44,7 +45,7 @@
 \definecolor{gris10}{gray}{0.9} %si on veut utiliser une nuance de la couleur grise
 \definecolor{bleufonce}{rgb}{0,0,0.55}
 \usepackage[top=25mm, bottom=25mm, left=25mm , right=25mm]{geometry}
-\linespread{1.3} %interligne
+\linespread{1.4} %interligne
 %\setlength{\parindent}{0 pt} %pas d'indentation
 \setlength{\parskip}{1.5ex plus 1ex minus 0.5ex}
 \addto\captionsfrench{%
@@ -111,12 +112,75 @@
 \date{01.07.2019} 
 \author{Mohamed Karim Swissi  }
 \begin{document}
-
+	
+\begin{titlepage}
+	\thispagestyle{empty}
+	\begin{center}
+		Westfälische Hochschule Gelsenkirchen
+		
+		
+		\includegraphics[scale=0.8, width=6cm, height=4cm]{w-hs_pagelogo.png}
+		
+		Fachbereich Informatik und Kommunikation 
+		
+		
+		\vskip 2cm
+		\centerline{\Large{\textbf{Wissenschaftliche Vertiefung }}}
+		
+		\vskip 0.5cm
+		\centerline{\Large{\textbf{  }}}
+		
+		%\centerline{\footnotesize{de} \small{\textbf{l'Ecole Nationale d'Ing\'enieurs de Tunis}}}
+		
+		
+		\vskip 1cm
+		
+		\fbox{
+			\begin{minipage}{10cm}
+				\vspace{0.5cm}
+				\begin{center}
+					{\LARGE  {\textbf {\textit{Testautomatisierung :  \newline Test-C Plattform}}}}
+					
+				\end{center}
+				\vspace{0.1cm}
+			\end{minipage}
+		}
+		\vskip 1cm
+		\centerline{Vorgelegt von:}
+		\vskip 0.4cm
+		\centerline{\Large \textbf{Mohamed Karim Swissi}}
+		\vskip 0.4cm
+		\centerline{\Large \textbf{Matrikel-Nr: 201610895}}
+		
+		
+		
+		\vskip 1cm
+		
+		
+		\centerline{Betreuender Professor:}
+		\vskip 0.4cm
+		\begin{center}
+			\large \textbf{Prof. Dr. Ulrike Griefahn} \\
+		\end{center}
+		
+		\vskip 0.4cm
+		
+		
+		
+		\vskip 1cm
+		\centerline{Wintersemester 2019/2020}
+		
+	\end{center}
+	
+\end{titlepage}
+\newpage
+	
 	
 \tableofcontents
 \newpage
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
 \listoffigures
+\newpage
 \addcontentsline{toc}{section}{listings}
 \lstlistoflistings
 \newpage
@@ -130,7 +194,7 @@ Dieses Test-Framework soll die studenten helfen, ihre Übungsaufgaben automatisi
 \newline
 Der Student lädt seinen Quellcode über eine Web-Benutzeroberfläche hoch, dieser Service steht den Studenten nach der Registrierung auf der Testplattform zur Verfügung.Für mich ist die Studenten Registrierung in der Tat eine Erstellung eines eigenen Remote-Testraums, der dadurch der Testprozess verwaltet wird, und das, was ich in dieser Ausarbeitung im Detail erklären werde. Nach Abschluss des Testprozesses erhält der Student einen Bericht mit dem Ergebnis seines Tests. Darüber hinaus sollte dieses Test-Framework der Lehrkraft  die Möglichkeit geben, die individuellen Testaufgaben der Studenten zu kontrollieren.
 \section{Herangehensweise}
-In diesem Abschnitt werde ich die Techniken und Technologien vorstellen, die in diesem Projekt verwendet werden. Daher wurde das Konzept des Code-Testens erläutert. Ebenso wird das in diesem Projekt verwendete Unit-Test-System besprochen. Anschließend werden die Rolle des Jenkins-Tools im Projekt und die Bedeutung dieses Tools für die Automatisierung des Testprozesses erläutert, dann folgt eine ausführliche Erläuterung der Verwendung von Docker im Projekt. Abschließend eine Erläuterung von Git-Hosting und Jgit, die einen der wichtigsten Teile des Projekts darstellen.
+In dieser Ausarbeitung werden die Techniken und Technologien vorgestellt, die in diesem Projekt verwendet werden. Daher wurde das Konzept des Code-Testens erläutert. Ebenso wird das in diesem Projekt verwendete Unit-Test-System besprochen. Anschließend werden die Rolle des Jenkins-Tools im Projekt und die Bedeutung dieses Tools für die Automatisierung des Testprozesses erläutert, dann folgt eine ausführliche Erläuterung der Verwendung von Docker im Projekt. Abschließend eine Erläuterung von Git-Hosting und Jgit, die einen der wichtigsten Teile des Projekts darstellen.
 \newline
 Im Hauptabschnitt wird dann die Erstellung der Testplattform erläutert. Es wird die Architektur beschrieben, und die Entscheidungen, die getroffen wurde, indem die Techniken ausgewählt wurde, mit denen das Projekt die Anforderungen erfüllt. Außerdem werden der Ablauf des Testverfahrens und die internen Prozesse des Bestandteils der Testplattform vorgestellt. Dann werden die Installationsanweisungen und Verzerrungen der Testplattform klarstellen.
 
@@ -153,7 +217,7 @@ Beim dynamischen Testen wird die Software auf die Eingabewerte geprüft und die 
 	\item System Testing
 	\item Acceptance Testing
 \end{itemize}
-In diesem Fall verwenden wir eines Dynamisches Testen, um die Programmieraufgaben der Studenten zu bewerten.
+In diesem Fall werden dynamische Tests verwendet, um die Programmieraufgaben der Schüler zu bewerten.
 
 \chapter{Test-C Plattform}
 \section{Einführung}
@@ -170,9 +234,9 @@ Wenn der Leser das oben Genannte versteht, kann er verstehen, was ich im Abschni
 \end{figure}
 Wie in der Abbildung 2 gezeigt, ist die Test-C-Plattformarchitektur in drei Hauptteile unterteilt: Client-Seite, Serverseite und Remote-TestUmgebung.
 \newline
-Die Wahl der Technologien beruhte auf ihrer Modernität und ihrer Verbreitung auf dem Arbeitsmarkt. In Teil eins des Projekts (Client-Seite/Frontend) wurde die folgenden Techniken verwendet : Angular 7, NGX-Bootstrap, Html, Css, im zweiten Teil des Projekts (Serverseite / BackEnd) wurden Maven und Spring Boot, Spring Security und Ldap ... verwendet. Der dritte Teil des Projekts, in dem der Testprozess durch Jenkins abgeschlossen ist.
+Die Wahl der Technologien beruhte auf ihrer Modernität und ihrer Verbreitung auf dem Arbeitsmarkt. In Teil eins des Projekts (Client-Seite/Frontend) wurde die folgenden Techniken verwendet : Angular 7, NGX-Bootstrap, Html, Css, im zweiten Teil des Projekts (Serverseite / BackEnd) wurden Maven und Spring Boot, Spring Security und Ldap ... verwendet. Der dritte Teil ist der Bereich, der für die Durchführung des Testprozesses verantwortlich ist.
 \newline
-Im folgenden Abschnitt werde ich jeden Teil des Architektur separat erklären.
+Im folgenden Abschnitt wird jeden Teil des Architektur separat erklärt.
 \section{Client-Seite (Front-End)}
 \begin{figure}[h!]
 	\begin{center}
@@ -524,7 +588,7 @@ throw new JenkinsException(e);
 Das Testergebnis wird dann an das Front-End gesendet, um es dem Benutzer anzuzeigen.
 \section{Installationsanleitung}
 Im Abschnitt 'Architektur' wurde bereits erwähnt, dass die Komponenten des Projekts in Docker bereitgestellt werden. Dies wird in diesem Abschnitt mit der Erklärung der für den Installationsprozess erforderlichen Einstellungen erläutert.
-\newline
+\subsection{Projektbereitstellung (deployment)}
 Docker ist eine container-basierte Technologie und Container sind nur der Benutzerbereich des Betriebssystems. Auf der niedrigen Ebene ist ein Container nur eine Reihe von Prozessen, die vom Rest des Systems isoliert sind und von einem separaten Image ausgeführt werden, das alle zur Unterstützung der Prozesse erforderlichen Dateien enthält. Es wurde für das Ausführen von Anwendungen entwickelt. In Docker teilen sich die ausgeführten Container den Kernel des Host-Betriebssystems. Docker ist ein Open-Source-Projekt, das auf Linux-Containern basiert. Es verwendet Linux-Kernel-Funktionen wie Namespaces und Kontrollgruppen, um Container auf einem Betriebssystem zu erstellen. Docker fügt die Software einer Anwendung in eine unsichtbare Box ein, in der alles enthalten ist, was zum Ausführen erforderlich ist, z. B. Betriebssystem, Anwendungscode, Laufzeit, Systemtools und Bibliotheken usw.
 \newline
 Um zu verstehen, wie Docker am besten eingesetzt wird, ist es hilfreich, sich einen groben Überblick darüber zu verschaffen, wie die Docker-Plattform aufgebaut ist.
@@ -541,6 +605,7 @@ Um zu verstehen, wie Docker am besten eingesetzt wird, ist es hilfreich, sich ei
 	\item \textbf{Images: }
 	\item \textbf{Docker file: }Ein Dockerfile ist einfach eine Textdatei mit einer Reihe von Anweisungen (instructions), die genutzt werden können, um ein Docker-Image zu erzeugen.
 	\item \textbf{Containers: }Container ist die ausgeführte Instanz eines Images.
+	\item \textbf{Networking: }Damit Docker-Container über den Host-Computer miteinander und mit der Außenwelt kommunizieren können, wird eine Netzwerkschicht (Docker Networking) eingesetzt. Docker unterstützt verschiedene Arten von Netzwerken, die jeweils für bestimmte Anwendungsfälle geeignet sind: Bridge mode, Host mode, Container mode, und No networking.
 	\item \textbf{Docker Registries: }Dies ist die Distributionskomponente von Docker oder wird als zentrales Repository für Docker-Images bezeichnet, in dem Docker-Images gespeichert sind. Docker Hub und Docker Cloud sind öffentliche Registrierungen, die von jedem Benutzer verwendet werden können. 
 \end{itemize}
 Nun wird erläutert, wie Docker in diesem Fall zum Bereitstellen der Anwendung verwendet wird. Die Anwendung 'Test-C-Plattform' wird in sechs Containern bereitgestellt. Zwei Container für das Front-End (AdminPortal-Container / Student Portal-Container), ein Container für das Back-End (Test C-Back-End-Container) und drei Container für die Remote-Testumgebung (Jenkins-Container / Gogs-Container / Postgresql-Container).
@@ -636,7 +701,115 @@ ports:
 - "8088:8088" 
 image: backend-test-c     
 \end{lstlisting}
-
+Für die ersten drei Dienste werden Docker Hub-Images gerippt und als Container an drei verschiedenen Ports ausgeführt. Für die anderen drei Dienste werden Dockerfiles aufgerufen, um zuerst die Images zu erstellen und dann jedes Image als Container auszuführen.
+\newline
+Standardmäßig richtet Compose ein einzelnes Netzwerk für die App ein. Jeder Container für einen Dienst tritt dem Standardnetzwerk bei und ist sowohl für andere Container in diesem Netzwerk erreichbar als unter einem Hostnamen erkennbar, der mit dem Containernamen identisch ist. 
+\newline
+Dazu muss Docker-Compose-file ausgeführt werden. Um eine Docker-Compose-Datei auszuführen, soll durch Docker-CLI (Command-line interface) das Command 'docker-compose up' an Docker-Deamon gesendet werden.
+\newline
+Nachdem der Daemon den Befehl erhalten hat, werden die Container ausgeführt und über ein Netzwerk miteinander kommuniziert.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=17cm, height=5cm]{composeUp.PNG}
+		\caption{docker-compose up} 
+		\label{docker-compose up} 
+	\end{center}
+\end{figure}
+\newline
+Um zu überprüfen, ob das Netzwerk bereits erstellt wurde, kann der Befehl 'docker network ls' getippt werden.
+\newpage
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=17cm, height=5cm]{docker-network-ls.PNG}
+		\caption{docker network ls} 
+		\label{docker network ls} 
+	\end{center}
+\end{figure}
+Mit dem Befehl 'docker network inspect <Name des Netzwerks>' wird überprüft, ob sich alle Container des Projekts bereits im Netzwerk befinden.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=14cm, height=14cm]{network-inspect.PNG}
+		\caption{docker network inspect} 
+		\label{docker network inspect} 
+	\end{center}
+\end{figure}
+\subsection{Einstellungen}
+\subsubsection{Konfigurieren von Gogs mit dem Web Installer}
+Öffnen Sie https://example.com:3000 in Ihrem Browser. Sie werden zur Installationsseite weitergeleitet:
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=15cm, height=17cm]{gogsWebInstaller.PNG}
+		\caption{Gogs-Installationsseite} 
+		\label{Gogs-Installationsseite} 
+	\end{center}
+\end{figure}
+\newpage
+Ändern Sie die Datenbankeinstellungen so, dass sie mit der zuvor erstellten PostgreSQL-Datenbank übereinstimmen:
+\begin{itemize}
+	\item \textbf{Datenbanktyp: }= PostgreSQL
+	\item \textbf{Host: }= test-c-app-compose_postgres_1:5432
+	\item \textbf{Benutzer: }= postgres
+	\item \textbf{Passwort: }= password123
+	\item \textbf{Datenbankname: }= gogs
+\end{itemize}
+Danach wird die Anmeldeseite angezeigt:
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=17cm, height=8cm]{anmeldeseite.PNG}
+		\caption{Gogs-Anmeldeseite} 
+		\label{Anmeldeseite} 
+	\end{center}
+\end{figure}
+\newpage
+Sie benötigen jetzt ein Gogs-Konto zu erstellen.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=17cm, height=8cm]{gogs-registrieren-seite.PNG}
+		\caption{Gogs Registrieren Seite} 
+		\label{Gogs Registrieren Seite} 
+	\end{center}
+\end{figure}
+\subsubsection{Konfigurieren von Jenkins}
+Wenn Sie zum ersten Mal auf eine neue Jenkins-Instanz zugreifen, werden Sie aufgefordert, diese mit einem automatisch generierten Kennwort zu entsperren.
+Navigieren Sie zu https://example.com:8080, und warten Sie, bis die Seite Jenkins entsperren angezeigt wird.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=17cm, height=7cm]{Jenkins-entsperren-seite.PNG}
+		\caption{Jenkins entsperren Seite} 
+		\label{Jenkins entsperren Seite} 
+	\end{center}
+\end{figure}
+\newline
+Das automatisch generierte Passwort finden Sie in den Protokollen von Jenkins-Container. Sie können dies mit dem folgenden Befehl tun: 'docker logs test-c-app-compose_jenkins_1'
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=15cm, height=17cm]{jenkins-logs.PNG}
+		\caption{Container Logs} 
+		\label{Container Logs} 
+	\end{center}
+\end{figure}
+\newpage
+Nach dem Entsperren von Jenkins wird die Seite 'Customize-Jenkins' angezeigt. Hier können Sie im Rahmen Ihrer Ersteinrichtung beliebig viele nützliche Plugins installieren.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=17cm, height=7cm]{customize-jenkins.PNG}
+		\caption{Jenkins entsperren Seite} 
+		\label{Jenkins entsperren Seite} 
+	\end{center}
+\end{figure}
+\newline
+Klicken Sie auf eine der beiden angezeigten Optionen:
+\begin{itemize}
+	\item \textbf{Install suggested plugins: } Um die empfohlenen Plugins zu installieren, die auf den häufigsten Anwendungsfällen basieren.
+	\item \textbf{Select plugins to install}um auszuwählen, welche Plugins zuerst installiert werden sollen. Wenn Sie zum ersten Mal auf die Plugin-Auswahlseite zugreifen, werden standardmäßig die vorgeschlagenen Plugins ausgewählt.
+\end{itemize}
+Der Setup-Assistent zeigt den Fortschritt der Konfiguration von Jenkins und die Installation der ausgewählten Jenkins-Plugins an. Dieser Vorgang kann einige Minuten dauern.
+\newline
+Nachdem Sie Jenkins mit Plugins angepasst haben, werden Sie von Jenkins aufgefordert, Ihren ersten Administratorbenutzer zu erstellen.
+\begin{itemize}
+	\item Geben Sie auf der Seite Create First Admin User (Erster Administratorbenutzer erstellen) die Details für Ihren Administratorbenutzer in die entsprechenden Felder ein und klicken Sie auf Save and Finish (Speichern und Fertig stellen).
+	\item Wenn die Seite 'Jenkins is ready' angezeigt wird, klicken Sie auf 'Start using Jenkins'.
+\end{itemize}
 \section{Verwendung}
 \chapter{Zusammenfassung}
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
