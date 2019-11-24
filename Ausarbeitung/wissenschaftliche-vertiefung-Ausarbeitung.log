@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.2)  22 NOV 2019 22:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.2)  24 NOV 2019 21:23
 entering extended mode
 **./wissenschaftliche-vertiefung-Ausarbeitung.tex
 (wissenschaftliche-vertiefung-Ausarbeitung.tex
@@ -624,138 +624,126 @@ Kapitel 1.
 Kapitel 2.
 [6
 
-] [7]
+]
 Kapitel 3.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 209.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 214.
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 209.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 214.
 
-[8
+[7
 
-] [9]
+] [8]
 Kapitel 4.
-<Test-C-Plattform-Arch.jpg, id=43, 1436.36626pt x 755.82375pt>
+<Test-C-Plattform-Arch.jpg, id=40, 1436.36626pt x 755.82375pt>
 File: Test-C-Plattform-Arch.jpg Graphic file (type jpg)
 <use Test-C-Plattform-Arch.jpg>
-Package pdftex.def Info: Test-C-Plattform-Arch.jpg  used on input line 230.
-(pdftex.def)             Requested size: 455.24124pt x 455.23921pt.
+Package pdftex.def Info: Test-C-Plattform-Arch.jpg  used on input line 234.
+(pdftex.def)             Requested size: 483.68971pt x 312.98056pt.
+
+Overfull \hbox (28.4456pt too wide) in paragraph at lines 234--235
+ [] 
+ []
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[9
+
+]
 <FrontEnd.png, id=44, 683.55376pt x 221.82875pt>
 File: FrontEnd.png Graphic file (type png)
 <use FrontEnd.png>
-Package pdftex.def Info: FrontEnd.png  used on input line 243.
-(pdftex.def)             Requested size: 398.34932pt x 199.16675pt.
-[10
-
-]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[11 <./Test-C-Plattform-Arch.jpg>] [12 <./FrontEnd.png>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 267.
+Package pdftex.def Info: FrontEnd.png  used on input line 248.
+(pdftex.def)             Requested size: 398.34932pt x 170.71387pt.
+ [10 <./Test-C-Plattform-Arch.jpg> <./FrontEnd.png>] [11]
+<Ldap-Auth.jpg, id=52, 924.45375pt x 733.74126pt>
+File: Ldap-Auth.jpg Graphic file (type jpg)
+<use Ldap-Auth.jpg>
+Package pdftex.def Info: Ldap-Auth.jpg  used on input line 274.
+(pdftex.def)             Requested size: 426.79144pt x 483.69974pt.
+ [12 <./Ldap-Auth.jpg>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 281.
 
 
 ("C:\Users\swissi\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-[13]
-<Ldap-Auth.jpg, id=60, 924.45375pt x 733.74126pt>
-File: Ldap-Auth.jpg Graphic file (type jpg)
-<use Ldap-Auth.jpg>
-Package pdftex.def Info: Ldap-Auth.jpg  used on input line 292.
-(pdftex.def)             Requested size: 426.79144pt x 483.69974pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[14] [15 <./Ldap-Auth.jpg>] [16] [17]
-<Git-Konzept.jpg, id=74, 602.25pt x 725.71124pt>
+[13] [14] [15] [16]
+<Git-Konzept.jpg, id=71, 602.25pt x 725.71124pt>
 File: Git-Konzept.jpg Graphic file (type jpg)
 <use Git-Konzept.jpg>
-Package pdftex.def Info: Git-Konzept.jpg  used on input line 368.
-(pdftex.def)             Requested size: 398.35004pt x 426.8039pt.
- [18 <./Git-Konzept.jpg>] [19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 446--456
+Package pdftex.def Info: Git-Konzept.jpg  used on input line 376.
+(pdftex.def)             Requested size: 341.44815pt x 369.88637pt.
+ [17 <./Git-Konzept.jpg>] [18] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 455--465
 
  []
 
-[21]
-<Loesungupload.jpg, id=88, 874.26625pt x 1265.72874pt>
+[20]
+<Loesungupload.jpg, id=85, 874.26625pt x 1265.72874pt>
 File: Loesungupload.jpg Graphic file (type jpg)
 <use Loesungupload.jpg>
-Package pdftex.def Info: Loesungupload.jpg  used on input line 475.
-(pdftex.def)             Requested size: 398.33871pt x 483.6858pt.
- [22]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Package pdftex.def Info: Loesungupload.jpg  used on input line 484.
+(pdftex.def)             Requested size: 398.33871pt x 398.3397pt.
+ [21] [22 <./Loesungupload.jpg>]
+Overfull \hbox (11.59735pt too wide) in paragraph at lines 495--498
+\T1/cmr/m/n/12 Repository und er-stellt au-to-ma-tisch einen Pipeline-Job für j
+e-des Branch, das ei-ne Jenkinsfile-
+ []
 
 [23]
 <GogsJenkins.jpg, id=95, 854.19125pt x 914.41624pt>
 File: GogsJenkins.jpg Graphic file (type jpg)
 <use GogsJenkins.jpg>
-Package pdftex.def Info: GogsJenkins.jpg  used on input line 493.
+Package pdftex.def Info: GogsJenkins.jpg  used on input line 501.
 (pdftex.def)             Requested size: 369.8758pt x 455.23965pt.
-
-Overfull \hbox (27.98029pt too wide) in paragraph at lines 488--500
-\T1/cmr/m/n/12 Pipeline-Projekt ge-ne-riert. Ein Multibranch-Pipeline-Projekt d
-urch-sucht ein-fach das Quellcode-
- []
-
-
-Overfull \hbox (11.59735pt too wide) in paragraph at lines 488--500
-\T1/cmr/m/n/12 Repository und er-stellt au-to-ma-tisch einen Pipeline-Job für j
-e-des Branch, das ei-ne Jenkinsfile-
- []
-
-[24 <./Loesungupload.jpg>] [25 <./GogsJenkins.jpg>] [26] [27]
-<Makefile.jpg, id=109, 764.8575pt x 794.97pt>
+ [24 <./GogsJenkins.jpg>] [25] [26]
+<Makefile.jpg, id=106, 764.8575pt x 794.97pt>
 File: Makefile.jpg Graphic file (type jpg)
 <use Makefile.jpg>
-Package pdftex.def Info: Makefile.jpg  used on input line 540.
+Package pdftex.def Info: Makefile.jpg  used on input line 548.
 (pdftex.def)             Requested size: 426.7884pt x 483.70584pt.
 
-Overfull \hbox (5.29189pt too wide) in paragraph at lines 546--547
+Overfull \hbox (5.29189pt too wide) in paragraph at lines 554--555
 []\T1/cmr/m/n/12 Nach Ab-schluss des Build-Prozesses wird das Tes-t-er-geb-nis 
 im Build-Verlauf des Jenkins-
  []
 
-[28 <./Makefile.jpg>]
-<TestergebnisOutput.jpg, id=113, 784.9325pt x 996.72375pt>
+[27 <./Makefile.jpg>]
+<TestergebnisOutput.jpg, id=110, 784.9325pt x 996.72375pt>
 File: TestergebnisOutput.jpg Graphic file (type jpg)
 <use TestergebnisOutput.jpg>
-Package pdftex.def Info: TestergebnisOutput.jpg  used on input line 582.
+Package pdftex.def Info: TestergebnisOutput.jpg  used on input line 590.
 (pdftex.def)             Requested size: 398.34602pt x 512.155pt.
- [29] [30 <./TestergebnisOutput.jpg>]
-<Docker-components.jpg, id=121, 674.52pt x 584.1825pt>
+ [28] [29 <./TestergebnisOutput.jpg>]
+<Docker-components.jpg, id=117, 674.52pt x 584.1825pt>
 File: Docker-components.jpg Graphic file (type jpg)
 <use Docker-components.jpg>
-Package pdftex.def Info: Docker-components.jpg  used on input line 597.
+Package pdftex.def Info: Docker-components.jpg  used on input line 605.
 (pdftex.def)             Requested size: 369.88586pt x 199.17207pt.
- [31 <./Docker-components.jpg>] [32]
-<Application-deployment.jpg, id=128, 815.045pt x 714.67pt>
+ [30 <./Docker-components.jpg>] [31]
+<Application-deployment.jpg, id=125, 815.045pt x 714.67pt>
 File: Application-deployment.jpg Graphic file (type jpg)
 <use Application-deployment.jpg>
-Package pdftex.def Info: Application-deployment.jpg  used on input line 621.
+Package pdftex.def Info: Application-deployment.jpg  used on input line 629.
 (pdftex.def)             Requested size: 455.2406pt x 512.17381pt.
- [33 <./Application-deployment.jpg>] [34] [35]
-<composeUp.PNG, id=138, 505.89pt x 118.94438pt>
+ [32 <./Application-deployment.jpg>] [33] [34]
+<composeUp.PNG, id=135, 505.89pt x 118.94438pt>
 File: composeUp.PNG Graphic file (type png)
 <use composeUp.PNG>
-Package pdftex.def Info: composeUp.PNG  used on input line 713.
+Package pdftex.def Info: composeUp.PNG  used on input line 721.
 (pdftex.def)             Requested size: 483.70361pt x 142.27153pt.
 
-Overfull \hbox (28.4595pt too wide) in paragraph at lines 713--714
+Overfull \hbox (28.4595pt too wide) in paragraph at lines 721--722
  [] 
  []
 
 
-Overfull \hbox (1.12352pt too wide) in paragraph at lines 704--720
+Overfull \hbox (1.12352pt too wide) in paragraph at lines 712--728
 \T1/cmr/m/n/12 zu-füh-ren, soll durch Docker-CLI (Command-line in-ter-face) das
  Com-mand 'docker-compose
  []
@@ -763,83 +751,83 @@ Overfull \hbox (1.12352pt too wide) in paragraph at lines 704--720
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[36]
-<docker-network-ls.PNG, id=143, 439.14063pt x 106.89937pt>
+[35]
+<docker-network-ls.PNG, id=139, 439.14063pt x 106.89937pt>
 File: docker-network-ls.PNG Graphic file (type png)
 <use docker-network-ls.PNG>
-Package pdftex.def Info: docker-network-ls.PNG  used on input line 723.
+Package pdftex.def Info: docker-network-ls.PNG  used on input line 731.
 (pdftex.def)             Requested size: 483.71284pt x 142.27385pt.
 
-Overfull \hbox (28.46873pt too wide) in paragraph at lines 723--724
+Overfull \hbox (28.46873pt too wide) in paragraph at lines 731--732
  [] 
  []
 
-<network-inspect.PNG, id=144, 377.41pt x 381.425pt>
+<network-inspect.PNG, id=140, 377.41pt x 381.425pt>
 File: network-inspect.PNG Graphic file (type png)
 <use network-inspect.PNG>
-Package pdftex.def Info: network-inspect.PNG  used on input line 731.
+Package pdftex.def Info: network-inspect.PNG  used on input line 739.
 (pdftex.def)             Requested size: 398.33656pt x 398.35463pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<gogsWebInstaller.PNG, id=145, 487.32062pt x 440.64626pt>
+<gogsWebInstaller.PNG, id=141, 487.32062pt x 440.64626pt>
 File: gogsWebInstaller.PNG Graphic file (type png)
 <use gogsWebInstaller.PNG>
-Package pdftex.def Info: gogsWebInstaller.PNG  used on input line 741.
+Package pdftex.def Info: gogsWebInstaller.PNG  used on input line 749.
 (pdftex.def)             Requested size: 426.79115pt x 483.71725pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[37 <./composeUp.PNG> <./docker-network-ls.PNG>]
-Overfull \hbox (4.48799pt too wide) in paragraph at lines 747--748
+[36 <./composeUp.PNG> <./docker-network-ls.PNG>]
+Overfull \hbox (4.48799pt too wide) in paragraph at lines 755--756
 []\T1/cmr/m/n/12 Ändern Sie die Da-ten-bank-ein-stel-lun-gen so, dass sie mit d
 er zu-vor er-stell-ten PostgreSQL-
  []
 
-<anmeldeseite.PNG, id=151, 459.21562pt x 214.30063pt>
+<anmeldeseite.PNG, id=148, 459.21562pt x 214.30063pt>
 File: anmeldeseite.PNG Graphic file (type png)
 <use anmeldeseite.PNG>
-Package pdftex.def Info: anmeldeseite.PNG  used on input line 758.
+Package pdftex.def Info: anmeldeseite.PNG  used on input line 766.
 (pdftex.def)             Requested size: 483.72517pt x 227.62517pt.
 
-Overfull \hbox (28.48106pt too wide) in paragraph at lines 758--759
+Overfull \hbox (28.48106pt too wide) in paragraph at lines 766--767
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[38 <./network-inspect.PNG>]
-<gogs-registrieren-seite.PNG, id=156, 453.19313pt x 282.05376pt>
+[37 <./network-inspect.PNG>]
+<gogs-registrieren-seite.PNG, id=153, 453.19313pt x 282.05376pt>
 File: gogs-registrieren-seite.PNG Graphic file (type png)
 <use gogs-registrieren-seite.PNG>
-Package pdftex.def Info: gogs-registrieren-seite.PNG  used on input line 767.
+Package pdftex.def Info: gogs-registrieren-seite.PNG  used on input line 775.
 (pdftex.def)             Requested size: 483.69478pt x 227.62305pt.
 
-Overfull \hbox (28.45067pt too wide) in paragraph at lines 767--768
+Overfull \hbox (28.45067pt too wide) in paragraph at lines 775--776
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Jenkins-entsperren-seite.PNG, id=157, 464.23438pt x 234.37563pt>
+<Jenkins-entsperren-seite.PNG, id=154, 464.23438pt x 234.37563pt>
 File: Jenkins-entsperren-seite.PNG Graphic file (type png)
 <use Jenkins-entsperren-seite.PNG>
-Package pdftex.def Info: Jenkins-entsperren-seite.PNG  used on input line 777.
+Package pdftex.def Info: Jenkins-entsperren-seite.PNG  used on input line 785.
 (pdftex.def)             Requested size: 483.70615pt x 199.16655pt.
 
-Overfull \hbox (28.46204pt too wide) in paragraph at lines 777--778
+Overfull \hbox (28.46204pt too wide) in paragraph at lines 785--786
  [] 
  []
 
-<jenkins-logs.PNG, id=158, 350.81062pt x 375.90437pt>
+<jenkins-logs.PNG, id=155, 350.81062pt x 375.90437pt>
 File: jenkins-logs.PNG Graphic file (type png)
 <use jenkins-logs.PNG>
-Package pdftex.def Info: jenkins-logs.PNG  used on input line 786.
+Package pdftex.def Info: jenkins-logs.PNG  used on input line 794.
 (pdftex.def)             Requested size: 426.82138pt x 483.73132pt.
 
-Overfull \hbox (0.77478pt too wide) in paragraph at lines 773--791
+Overfull \hbox (0.77478pt too wide) in paragraph at lines 781--799
 \T1/cmr/m/n/12 Sie kön-nen dies mit dem fol-gen-den Be-fehl tun: 'do-cker logs 
 test-c-app-compose_jenkins_1'
  []
@@ -847,34 +835,34 @@ test-c-app-compose_jenkins_1'
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[39 <./gogsWebInstaller.PNG>]
+[38 <./gogsWebInstaller.PNG>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[40 <./anmeldeseite.PNG> <./gogs-registrieren-seite.PNG>]
-<customize-jenkins.PNG, id=168, 451.18562pt x 234.37563pt>
+[39 <./anmeldeseite.PNG> <./gogs-registrieren-seite.PNG>]
+<customize-jenkins.PNG, id=165, 451.18562pt x 234.37563pt>
 File: customize-jenkins.PNG Graphic file (type png)
 <use customize-jenkins.PNG>
-Package pdftex.def Info: customize-jenkins.PNG  used on input line 795.
+Package pdftex.def Info: customize-jenkins.PNG  used on input line 804.
 (pdftex.def)             Requested size: 483.72078pt x 199.16655pt.
 
-Overfull \hbox (28.47667pt too wide) in paragraph at lines 795--796
+Overfull \hbox (28.47667pt too wide) in paragraph at lines 804--805
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[41 <./Jenkins-entsperren-seite.PNG>] [42 <./jenkins-logs.PNG>] [43 <./customiz
+[40 <./Jenkins-entsperren-seite.PNG>] [41 <./jenkins-logs.PNG>] [42 <./customiz
 e-jenkins.PNG>]
 Kapitel 5.
-[44
+[43
 
 ]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 817.
+LaTeX Warning: Empty `thebibliography' environment on input line 826.
 
-[45
+[44
 
 ] (wissenschaftliche-vertiefung-Ausarbeitung.aux)
 
@@ -883,12 +871,12 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  8709 strings out of 492895
- 125779 string characters out of 3123269
+ 125776 string characters out of 3123269
  454117 words of memory out of 3000000
  12431 multiletter control sequences out of 15000+200000
  16872 words of font info for 40 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,12n,47p,1102b,1839s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 48i,12n,47p,1107b,1880s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
 \ectt1095.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappe
 n/ec/dpi600\ectt1200.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
@@ -900,10 +888,10 @@ swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk>
  <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
 crm1200.pk><C:/Users/swissi/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmsy10.pfb>
-Output written on wissenschaftliche-vertiefung-Ausarbeitung.pdf (46 pages, 1467
-066 bytes).
+Output written on wissenschaftliche-vertiefung-Ausarbeitung.pdf (45 pages, 1466
+679 bytes).
 PDF statistics:
- 649 PDF objects out of 1000 (max. 8388607)
+ 646 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

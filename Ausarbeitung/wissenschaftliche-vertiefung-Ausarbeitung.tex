@@ -185,24 +185,29 @@
 \lstlistoflistings
 \newpage
 \chapter{Motivation}
+Bei der Computerprogrammierung handelt es sich beim 'unit testing' um eine Software-Testmethode, mit der einzelne Einheiten des Quellcodes,  Verwendungsverfahren und Betriebsverfahren getestet werden, um festzustellen, ob sie zur Verwendung geeignet sind.
+\newline
+Unit-Tests sind typischerweise automatisierte Tests, die von Softwareentwicklern geschrieben und ausgeführt werden, um sicherzustellen, dass ein Teil einer Anwendung dem Design entspricht und sich wie vorgesehen verhält.
+\newline
+Beim Testen von Software wird bei der Testautomatisierung eine spezielle Software (unabhängig von der getesteten Software) verwendet, um die Ausführung von Tests und den Vergleich der tatsächlichen Ergebnisse mit den prognostizierten Ergebnissen zu steuern.
+\newline
+In diesem Projekt wird eine andere Art der Verwendung eines solchen Automatisierungsframeworks erörtert.
 \chapter{Einleitung}
 \section{Aufgabenbeschreibung}
 
-Am Anfang stand die Idee, dass ich mich immer tiefer mit Automatisierung beschäftige. Deshalb fiel die Wahl auf ein Projekt in diese Richtung.
-Im Rahmen dieser wissenschaftliche Vertiefung Modul wird ein auf Docker basierendes Testsystem entwickelt.
-Dieses Test-Framework soll die studenten helfen, ihre Übungsaufgaben automatisiert zu testen.
+Im Rahmen dieses wissenschaftlichen Vertiefungsprojekts wird ein, wird ein Testplattform basierend auf Docker 'Virtualisierung' , Unit Tests und Automatisierung entwickelt.
 \newline
-Der Student lädt seinen Quellcode über eine Web-Benutzeroberfläche hoch, dieser Service steht den Studenten nach der Registrierung auf der Testplattform zur Verfügung.Für mich ist die Studenten Registrierung in der Tat eine Erstellung eines eigenen Remote-Testraums, der dadurch der Testprozess verwaltet wird, und das, was ich in dieser Ausarbeitung im Detail erklären werde. Nach Abschluss des Testprozesses erhält der Student einen Bericht mit dem Ergebnis seines Tests. Darüber hinaus sollte dieses Test-Framework der Lehrkraft  die Möglichkeit geben, die individuellen Testaufgaben der Studenten zu kontrollieren.
+Mit dieser Testplattform können die Schüler ihre Aufgabenblätter-Lösungen testen, um einen Testbericht zu erhalten.
 \section{Herangehensweise}
 In dieser Ausarbeitung werden die Techniken und Technologien vorgestellt, die in diesem Projekt verwendet werden. Daher wurde das Konzept des Code-Testens erläutert. Ebenso wird das in diesem Projekt verwendete Unit-Test-System besprochen. Anschließend werden die Rolle des Jenkins-Tools im Projekt und die Bedeutung dieses Tools für die Automatisierung des Testprozesses erläutert, dann folgt eine ausführliche Erläuterung der Verwendung von Docker im Projekt. Abschließend eine Erläuterung von Git-Hosting und Jgit, die einen der wichtigsten Teile des Projekts darstellen.
 \newline
-Im Hauptabschnitt wird dann die Erstellung der Testplattform erläutert. Es wird die Architektur beschrieben, und die Entscheidungen, die getroffen wurde, indem die Techniken ausgewählt wurde, mit denen das Projekt die Anforderungen erfüllt. Außerdem werden der Ablauf des Testverfahrens und die internen Prozesse des Bestandteils der Testplattform vorgestellt. Dann werden die Installationsanweisungen und Verzerrungen der Testplattform klarstellen.
+Im Hauptabschnitt wird dann die Erstellung der Testplattform erläutert. Die Architektur wird detailliert beschrieben und anschließend werden die Komponenten des Projekts separat besprochen. Außerdem werden die Installationsanweisungen und die Verwendung der Testplattform vorgestellt.
 
 \chapter{Grundlagen}
 \section{Code Testing}
 Beim Softwaretesten wird ein Programm oder eine Anwendung ausgeführt, um die Fehler zu ermitteln und um zu überprüfen, ob die erforderlichen Bedingungen erfüllt sind.
 \newline
-Softwaretestverfahren können in 2 Gruppen unterteilt werden:Statisches / Statisches Testen.
+Softwaretestverfahren können in 2 Gruppen unterteilt werden:Statisches und Dynamisches Testen.
 \subsection{Manual testing( Statisches)}
 Eine Softwaretesttechnik, bei der die Software getestet wird, ohne den Code auszuführen. Es besteht aus zwei Teilen:
 \begin{itemize}
@@ -210,50 +215,51 @@ Eine Softwaretesttechnik, bei der die Software getestet wird, ohne den Code ausz
 	\item Statische Analyse - Der von Entwicklern geschriebene Code wird (normalerweise mithilfe von Werkzeugen) auf strukturelle Fehler analysiert. 
 \end{itemize}
 \subsection{Automated Testing(Dynamisches)}
-Beim dynamischen Testen wird die Software auf die Eingabewerte geprüft und die Ausgabewerte analysiert. Es gibt verschiedene Stufen dynamischer Testtechniken: 
+Beim dynamischen Testen wird die Software auf die Eingabewerte geprüft und werden die Ausgabewerte analysiert. Es gibt verschiedene Arten dynamischer Testtechniken: 
 \begin{itemize}
 	\item Unit Testing
 	\item Integration Testing
 	\item System Testing
 	\item Acceptance Testing
 \end{itemize}
-In diesem Fall werden dynamische Tests verwendet, um die Programmieraufgaben der Schüler zu bewerten.
+In diesem Fall werden dynamische Tests verwendet, um die Programmieraufgaben der Studenten zu bewerten.
 
 \chapter{Test-C Plattform}
 \section{Einführung}
-In diesem Abschnitt wird die Test C-Plattform detailliert beschrieben, wobei zunächst die Zusammensetzung der gesamten Programmarchitektur erörtert wird, anhand derer die Programmkomponenten separat diskutiert werden können. Nach der Erklärung der Komponenten des Programms auf separate Weise, wird im Abschnitt (Interne Prozesse) genau erläutert, wie sie zusammenarbeiten.
-\newline
-Wenn der Leser das oben Genannte versteht, kann er verstehen, was ich im Abschnitt  (Ablauf des Testverfahrens) erläutert wird.
+In diesem Abschnitt wird die Test C-Plattform detailliert beschrieben, wobei zunächst die Zusammensetzung der gesamten Programmarchitektur erörtert wird, wodurch die Programmkomponenten separat diskutiert werden können.Nach einer separaten Erläuterung der Programmkomponenten wird im Abschnitt (Installationsanleitung) genau erklärt, wie die Test-C-Plattform installiert und konfiguriert wird. Schließlich folgt ein Abschnitt, der die Verwendung des Projekts erläutert.
+
 \section{Architektur}
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=16cm, height=16cm]{Test-C-Plattform-Arch.jpg}
+		\includegraphics[width=17cm, height=11cm]{Test-C-Plattform-Arch.jpg}
 		\caption{Architektur Test-C-Plattform } 
 		\label{ Architektur Test-C-Plattform } 
 	\end{center}
 \end{figure}
-Wie in der Abbildung 2 gezeigt, ist die Test-C-Plattformarchitektur in drei Hauptteile unterteilt: Client-Seite, Serverseite und Remote-TestUmgebung.
+Wie in der Abbildung 2 wird gezeigt, ist die Test-C-Plattformarchitektur in drei Hauptteile unterteilt: Client-Seite, Serverseite und Remote-TestUmgebung.
 \newline
-Die Wahl der Technologien beruhte auf ihrer Modernität und ihrer Verbreitung auf dem Arbeitsmarkt. In Teil eins des Projekts (Client-Seite/Frontend) wurde die folgenden Techniken verwendet : Angular 7, NGX-Bootstrap, Html, Css, im zweiten Teil des Projekts (Serverseite / BackEnd) wurden Maven und Spring Boot, Spring Security und Ldap ... verwendet. Der dritte Teil ist der Bereich, der für die Durchführung des Testprozesses verantwortlich ist.
+Die Wahl der Technologien beruhte auf ihrer Modernität und ihrer Verbreitung auf dem Arbeitsmarkt. In dem ersten Teil des Projekts (Client-Seite/Frontend) wurde die folgenden Techniken verwendet : Angular 7, NGX-Bootstrap, Html, Css. Im zweiten Teil des Projekts (Serverseite / BackEnd) wurden Maven und Spring Boot, Spring Security und Ldap bzw Spring Stack verwendet.Der dritte Teil enthält die Komponenten, die für die Durchführung des Testprozesses verantwortlich sind.
 \newline
-Im folgenden Abschnitt wird jeden Teil des Architektur separat erklärt.
+Im folgenden Abschnitt wird jeder Teil der Architektur separat erklärt.
+\newpage
 \section{Client-Seite (Front-End)}
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=14cm, height=7cm]{FrontEnd.png}
+		\includegraphics[width=14cm, height=6cm]{FrontEnd.png}
 		\caption{Front-End } 
 		\label{ Front-End } 
 	\end{center}
 \end{figure}
-In diesem Projekt ist die Benutzeroberfläche in zwei Teile unterteilt: das Administrationsportal und das Studentenportal. Beide Portale wurden mit Angular 7, Html, Css und NGX-Bootstrap erstellt.
-Über das Administrations Portal kann der Admin Benutzer ein neues Aufgabenblatt erstellen, dies bedeutet, dass ein virtueller Bereich für den Aufgabenblatttest erstellt wird, in dem die Studenten ihre Lösungen für Aufgaben testen können. Der Administrator kann alle Testdateien für jedes Aufgabenblatt in den entsprechenden Testbereich hochladen. Der Administrator kann auch die Testbereiche anzeigen. Jeder Testbereich ist mit dem Namen des zu testenden Aufgabenblatts gekennzeichnet. Für jeden Testbereich werden die spezifischen Testdateien angezeigt und der Administrator kann davon Dateien löschen oder andere hinzufügen.
+In diesem Projekt ist das Frontend in zwei Komponenten unterteilt: das Administrationsportal und das Studentenportal. Beide Portale wurden mit Angular 7, Html, Css und NGX-Bootstrap entwickelt.
+\newline
+Über das Administrationsportal kann der Admin Benutzer ein neues Aufgabenblatt erstellen. Dies bedeutet, dass ein virtueller Bereich für den Aufgabenblatttest erstellt wird, in dem die Studenten ihre Lösungen für Aufgaben testen können. Der Administrator kann alle Testdateien für jedes Aufgabenblatt in den entsprechenden Testbereich hochladen. Der Administrator hat auch einer Zugriff auf die Testbereiche. Jeder Testbereich ist mit dem Namen des zu testenden Aufgabenblatts gekennzeichnet. Für jeden Testbereich werden die spezifischen Testdateien angezeigt und der Administrator kann davon Dateien löschen oder andere hinzufügen.
 Über das Studentenportal kann der Student die zu testende Lösungsdatei hochladen und dann an den Testbereich senden, der den Test automatisch durchführt und dem Studenten das Testergebnis anzeigt.
 \section{Remote TestUmgebung}
-Die Erklärung dieses Teils des Projekts vor der Erklärung des Mittelteils 'Serverseite' ist eine absichtliche Sache, damit der Leser einfach verstehen kann, was im Back-End passieren wird.
+Die Erklärung dieses Teils des Projekts ist vor der Erklärung des Mittelteils 'Serverseite' eine absichtliche Sache, damit der Leser einfach verstehen kann, was im Back-End passieren wird.
 \newline
 Die Remote-Testumgebung besteht aus drei miteinander verbundenen Teilen (Jenkins/ Gogs / PostgreSql).
 \newline
-Jenkins ist ein beliebtes Open-Source-Tool für die kontinuierliche Integration und Build-Automatisierung. Die Grundfunktionalität von Jenkins besteht darin, eine vordefinierte Liste von Schritten auszuführen, z. B. Java-Quellcode zu kompilieren und eine JAR aus den resultierenden Klassen zu erstellen. Der Auslöser für diese Ausführung kann zeit- oder ereignisbasiert sein. Zum Beispiel alle 20 Minuten oder nach einem neuen Commit in einem Git-Repository oder auf Wunsch des Programmierers. 
+Jenkins ist ein beliebtes Open-Source-Tool für die kontinuierliche Integration und Build-Automatisierung. Die Grundfunktionalität von Jenkins besteht darin, eine vordefinierte Liste von Schritten auszuführen, z. B. Java-Quellcode zu kompilieren und eine JAR aus den resultierenden Klassen zu erstellen. Der Auslöser für diese Ausführung kann zeit- oder ereignisbasiert sein. Zum Beispiel alle 20 Minuten oder nach einem neuen Push in einem Git-Repository oder auf Wunsch des Programmierers. 
 \newline
 Gogs ist ein einfacher selbst-gehosteter Git Service, der einfach einzurichten und zu betreiben ist und auf fast allem ausgeführt werden kann. Es ist zu Hundertprozent Open Source unter der MIT OSS-Lizenz. Gogs bietet die Anzeige und Bearbeitung von Repository-Dateien, die Verfolgung von Projektproblemen und ein eingebautes Wiki für die Projektdokumentation.
 Gogs benötigt eine Datenbank, um den Quellcode zu speichern, daher wurde hier postgresql ausgewählt.
@@ -262,7 +268,15 @@ Gogs benötigt eine Datenbank, um den Quellcode zu speichern, daher wurde hier p
 Nun wird über die Serverseite gesprochen, die für die Kommunikation des Benutzers mit der Testumgebung verantwortlich ist.
 \newline
 Die Serverseite stellt viele Dienste wie folgt bereit.
-\subsection{Benutzererkennung} In der westfälischen Hochschule Gelsenkirchen basiert die Speicherung der Hauptbenutzeridentitäten auf LDAP-Protokolls (Lightweight Directory Access Protocol) und gespeicherter LDAP-Datenbank. Dies hilft dabei, die Single Sign-On-Technologie (SSO) zu nutzen, die dadurch sich der Benutzer mit derselben ID und denselben Kennwörtern bei allen Anwendungen im selben Netzwerk anmelden kann. Um dies zu erreichen, sind 'spring-boot-starter-security' und 'spring-security-ldap' und 'unboundid-ldapsdk' in diesem Projekt verwendet.
+\subsection{Benutzererkennung}
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=15cm, height=17cm]{Ldap-Auth.jpg}
+		\caption{Ldap-Auth } 
+		\label{ Ldap-Auth } 
+	\end{center}
+\end{figure}
+In der westfälischen Hochschule Gelsenkirchen basiert die Speicherung der Hauptbenutzeridentitäten auf LDAP-Protokolls (Lightweight Directory Access Protocol) und gespeicherter LDAP-Datenbank. Dies hilft dabei, die Single Sign-On-Technologie (SSO) zu nutzen, die dadurch sich der Benutzer mit derselben ID und denselben Kennwörtern bei allen Anwendungen im selben Netzwerk anmelden kann. Um dies zu erreichen, sind 'spring-boot-starter-security' und 'spring-security-ldap' und 'unboundid-ldapsdk' in diesem Projekt verwendet.
 
 \begin{lstlisting}[language=XML,caption=pom.xml - security dependencies]
 <dependency>
@@ -287,18 +301,12 @@ Unter Verwendung der obigen Abhängigkeiten werden Sicherheitsrichtlinienkonfigu
 Es wird nun davon ausgegangen, dass der Benutzer gültige Daten eingegeben hat. dh diese Daten sind identisch mit den in der LDAP-Datenbank gespeicherten Daten. Dann wird ein Token generiert und als Antwort auf die Authentifikation-Anfrage zurückgesendet. Dieses Token wird dann vom Frontend verwendet und mit jeder Anfrage gesendet.
 \newline
 Wird eine Anfrage geschickt, wird vom Backend dann überprüft, ob das Token gültig ist. Ist das der Fall, wird dann die Anfrage an den entsprechenden Controller weitergeleitet und damit die passende Funktion ausgeführt.
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=15cm, height=17cm]{Ldap-Auth.jpg}
-		\caption{Ldap-Auth } 
-		\label{ Ldap-Auth } 
-	\end{center}
-\end{figure}
+
 
 \subsection{Erstellung eines neuen Aufgabenblatts (Admin)}
 Wie oben erläutert, ist die Erstellung eines neuen Aufgabenblatts in der Tat eine Einrichtung eines neuen Testbereichs, an dem die Studenten ihre Aufgabenlösungsdateien testen können. Mit anderen Worten, das Erstellen eines neuen Aufgabenblatts hängt vom Erstellen eines neuen Git-Repository ab, das denselben Namen wie das Aufgabenblatt hat. Zum Beispiel (Aufgabenblatt-1) über die Gogs-Oberfläche, die dem Administrator zur Verfügung steht. In diesem Git-Gogs-Repository werden alle zum Testen erforderlichen Dateien gespeichert. Anschließend wird ein Jenkins Multibranch-Pipeline-Job erstellt, der auch denselben Namen wie das Aufgabenblatt hat.
 \subsection{Schaffung von Jenkins Job (Admin)}
-Für die Erstellung von Multibranch-Pipeline-Job bietet Jenkins eine REST-API an, die viele Dienste bereitstellt, z. B. das Erstellen und Löschen von Job und viele andere Dinge. Um diese Jenkins-API zu verwenden, muss eine Maven-Abhängigkeit in pom.xml hinzugefügt werden.
+Für die Erstellung von Multibranch-Pipeline-Job, Jenkins bietet eine REST-API an, die viele Dienste bereitstellt, z. B. das Erstellen und Löschen von Job und viele andere Dinge. Um diese Jenkins-API zu verwenden, muss eine Maven-Abhängigkeit in pom.xml hinzugefügt werden.
 \begin{lstlisting}[language=XML,caption=pom.xml - Jenkins-Api]
 <dependency>
 <groupId>com.offbytwo.jenkins</groupId>
@@ -320,7 +328,7 @@ throw new JenkinsException(e);
 } 
 }
 \end{lstlisting}
-Die Idee dabei ist, dass in diesem Fall jeder Jenkins-Job die gleichen Einstellungen wie die anderen hat. Unabhängig davon, für welches Aufgabenblatt der Job erstellt wurde. Daher ist es ausreichend, bei jeder Erstellung eines Jenkins-Jobs dieselbe Konfigurationsdatei (XML-Datei) zu verwenden. Natürlich mit einigen Änderungen, die behoben werden, wie die Git Repository URL. Zu diesem Zweck wird ein Java-XML-Parser eingesetzt. Es sind viele Java XML-Parser verfügbar. In diesem Fall wird der DOM-Parser benutzt. Der DOM-Parser lädt die XML-Datei in den Speicher und gibt er dem Programmierer dann die Möglichkeit die XML-Datei Knoten für Knoten durchlaufen, um das sie zu analysieren. DOM-Parser eignet sich für kleine Dateien. Mit zunehmender Dateigröße verlangsamt sich die Leistung und der Arbeitsspeicher wird erhöht.
+Die Idee dabei ist, dass in diesem Fall jeder Jenkins-Job die gleichen Einstellungen wie die anderen hat. Unabhängig davon, für welches Aufgabenblatt der Job erstellt wurde. Daher ist es ausreichend, bei jeder Erstellung eines Jenkins-Jobs dieselbe Konfigurationsdatei (XML-Datei) zu verwenden. Natürlich mit einigen Änderungen, die behoben werden, wie die Git Repository URL. Zu diesem Zweck wird ein Java-XML-Parser eingesetzt. Es sind viele Java XML-Parser verfügbar. In diesem Fall wird der DOM-Parser benutzt. Der DOM-Parser lädt die XML-Datei in den Speicher und gibt dem Programmierer dann die Möglichkeit die XML-Datei Knoten für Knoten durchzulaufen, um sie zu analysieren. DOM-Parser eignet sich für kleine Dateien. Mit zunehmender Dateigröße verlangsamt sich die Leistung und der Arbeitsspeicher wird erhöht.
 \begin{lstlisting}[language=JAVA,caption=modifyXmlFil]
 public String modifyXmlFile(String jobname) throws ParserConfigurationException, SAXException, IOException {
 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -352,7 +360,7 @@ return null;
 
 }
 \end{lstlisting} 
-Was jetzt fehlt, um den neuen Testberich zu vervollständigen ist, die zum Testen notwendigen Dateien hochzuladen. Diese Dateien und ihre Rolle beim Abschließen des Testprozesses werden später ausführlich besprochen, aber jetzt geht es darum, wie sie hochgeladen und an die Remote-Testumgebung gesendet werden.
+Was jetzt fehlt, um den neuen Testberich zu vervollständigen ist, das Hochladen der zum Testen notwendigen Dateien. Diese Dateien und ihre Rolle beim Abschließen des Testprozesses werden später ausführlich besprochen, aber jetzt geht es darum, wie sie hochgeladen und an die Remote-Testumgebung gesendet werden.
 
 \subsection{Zum Testen notwendigen Dateien hochzuladen}
 Nach dem Hochladen werden die Dateien in ihrem jeweiligen Git-Repository gespeichert. Um dies zu veranschaulichen, ist es wünschenswert, paar Git-Konzepte zu erwähnen.
@@ -365,7 +373,7 @@ Git hat zwei Repository-Typen: lokal und remote. Das lokales Repository wird aus
 \end{itemize}
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=14cm, height=15cm]{Git-Konzept.jpg}
+		\includegraphics[width=12cm, height=13cm]{Git-Konzept.jpg}
 		\caption{Git-Konzepte} 
 		\label{ Git-Konzepte} 
 	\end{center}
@@ -424,6 +432,7 @@ System.out.println("Committed all changes to repository at ");
 return true;
 }
 \end{lstlisting} 
+\newpage
 Drittens werden Commits vom lokalen Repository an das Remote-Repository übertragen.
 \begin{lstlisting}[language=JAVA,caption=Push Changes ]
 public static boolean pushChanges(Git repository) throws GitAPIException, URISyntaxException, IOException {
@@ -469,33 +478,32 @@ Jedes Repository, unabhängig davon, welchem Aufgabenblatt es zugewiesen ist, en
 	\end{itemize}
 Bevor zu den folgenden Abschnitten übergangen wird, wird erläutert,wie der Student seine Lösungsdatei hochladen kann.
 \subsection{Student-Lösungsdatei hochladen}
-Der Student lädt die zu testende Datei über die Frontend-Seite. Er wählt die Datei aus und drückt dann die Upload-Taste. Das Backend erhält also eine Anfrage zum Hochladen von Dateien. Um diese Aufgabe auszuführen, muss das BackEnd die folgenden Schritte ausführen: Angenommen, der Benutzer möchte seine Aufgabenblatt-1-Lösung zum ersten Mal testen. Anschließend wird aus dem lokalen Git-Repository von Aufgabenblatt-1 ein Branch mit dem Benutzernamen als Namen erstellt. Dann wird Die Datei durch Ausführen der Methoden Jgit-add und -commit an den angegebenen Branch gesendet. Der Benutzer hat nun die Möglichkeit, entweder den Test abzubrechen, was bedeutet, dass die hochgeladene Datei gelöscht wird, oder fortzufahren und den Testknopf zu drücken. Angenommen, der Benutzer hat den Test abgeschlossen und die Testtaste gedrückt. Dann wird der Student-Branch durch eine Jgit-Push-Methode an das Remote-Repository übertragen. Zur weiteren Verdeutlichung wird eine grafische Darstellung angezeigt, die diesen Vorgang erläutert.
+Der Student lädt die zu testende Datei über die Frontend-Seite. Er wählt die Datei aus und drückt dann die Upload-Button. Das Backend erhält also eine Anfrage zum Hochladen von Dateien. Um diese Aufgabe auszuführen, muss das BackEnd die folgenden Schritte ausführen: Angenommen, der Benutzer möchte seine Aufgabenblatt-1-Lösung zum ersten Mal testen. Anschließend wird aus dem lokalen Git-Repository von Aufgabenblatt-1 ein Branch mit dem Benutzernamen als Namen erstellt. Dann wird Die Datei durch Ausführen der Methoden Jgit-add und -commit an den angegebenen Branch gesendet. Der Benutzer hat nun die Möglichkeit, entweder den Test abzubrechen, was bedeutet, dass die hochgeladene Datei gelöscht wird, oder fortzufahren hat und den Test-Button zu drücken. Angenommen, der Benutzer den Test abgeschlossen und die Test-Button gedrückt. Dann wird der Student-Branch durch eine Jgit-Push-Methode an das Remote-Repository übertragen. Zur weiteren Verdeutlichung wird eine grafische Darstellung angezeigt, die diesen Vorgang erläutert.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=14cm, height=17cm]{Loesungupload.jpg}
+		\includegraphics[width=14cm, height=14cm]{Loesungupload.jpg}
 		\caption{Hochladen von Lösungsdatei} 
 		\label{ Hochladen von Lösungsdatei } 
 	\end{center}
 \end{figure}
-
 Für jedes Aufgabenblatt wird ein lokales und ein remote Git-Repository erstellt. Für jeden Student wird aus jedem Aufgabenblatt-Repository ein Branch erzeugt. 
 \newline
-Es wird beispielsweise davon ausgegangen, dass der Administrator drei Aufgabenblätter hinzufügt. Das heißt, es werden drei Git-Repositorys erstellt, von denen jedes ein Arbeitsblatt darstellt. Drei Studenten möchten ihre Lösungen testen. Zwei von ihnen haben die drei Übungsblätter gelöst und einer hat nur das erste und das zweite Aufgabenblatt gelöst. Anschließend werden aus den für die Aufgabenblätter 1 und 2 erzeugten Git-Repositorys drei Branchs erstellt. Weil die drei Studenten die ersten beiden Übungsblätter gelöst und getestet haben. Aus dem dritten Repositroy werden jedoch nur zwei Branchs erzeugt, da nur zwei Studenten ihre Aufgabenblatt-3-Lösung getestet haben.
+Es wird beispielsweise davon ausgegangen, dass der Administrator drei Aufgabenblätter hinzufügt. Das heißt, es werden drei Git-Repositorys erstellt, jedes von denen ein Aufgabenblatt darstellt. Drei Studenten möchten ihre Lösungen testen. Zwei von ihnen haben die drei Übungsblätter gelöst und einer hat nur das erste und das zweite Aufgabenblatt gelöst. Anschließend werden aus den für die Aufgabenblätter 1 und 2 erzeugten Git-Repositorys drei Branchs erstellt. Weil die drei Studenten die ersten beiden Übungsblätter gelöst und getestet haben. Aus dem dritten Repositroy werden jedoch nur zwei Branchs erzeugt, da nur zwei Studenten ihre Aufgabenblatt-3-Lösung getestet haben.
 \newline
 Nun wird besprochen, wie nach Erhalt der Lösungsdatei der Test Prossez automatisch gestartet und das Ergebnis dem Student angezeigt wird.
-\newpage
 \subsection{Test Starten (jenkins Job Build)}
-Wie bereits erwähnt, wird für jedes Repository automatisch ein Jenkins-Multibranch-Pipeline-Projekt generiert. Ein Multibranch-Pipeline-Projekt durchsucht einfach das Quellcode-Repository und erstellt automatisch einen Pipeline-Job für jedes Branch, das eine Jenkinsfile-Datei enthält. 
+Wie bereits erwähnt, wird für jedes Repository automatisch ein Jenkins-Multibranch-Pipeline-Job generiert. Ein Multibranch-Pipeline-Job durchsucht einfach das Quellcode-Repository und erstellt automatisch einen Pipeline-Job für jedes Branch, das eine Jenkinsfile-Datei enthält. 
 \newline
-Eine Jenkinsfile-Datei ist eine Textdatei, die die Pipeline als Code enthält, der den gesamten Job-Workflow festschreibt. Daher lädt der Administrator diese Datei bei jeder Erstellung eines neuen Aufgabenblatts hoch. Dieser Vorgang ist in der folgenden Grafik dargestellt.
+Eine Jenkinsfile-Datei ist eine Textdatei, die die Pipeline als Skript enthält, der den gesamten Job-Workflow festschreibt. Daher lädt der Administrator diese Datei bei jeder Erstellung eines neuen Aufgabenblatts hoch. Dieser Vorgang ist in der folgenden Grafik dargestellt.
+\newpage
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=13cm, height=16cm]{GogsJenkins.jpg}
-		\caption{Multibranch Pipeline Projekt} 
-		\label{ Multibranch Pipeline Projek } 
+		\caption{Multibranch Pipeline Job} 
+		\label{ Multibranch Pipeline Job } 
 	\end{center}
 \end{figure}
-\newline
+
 In diesem Fall besteht die Job-Pipeline nur aus einer Phase (stage), in der das Makefile ausgeführt werden sollte, um den Testprozess zu starten. Genau das, was in der Jenkinsfile-Datei steht.
 \begin{lstlisting}[language=JAVA,caption=Jenkinsfile (Job-Pipeline-Skript) ]
 pipeline{
@@ -505,7 +513,7 @@ stages {
        steps {
          sh 'make'
              }
-                                 }
+       }
        }
       }
 \end{lstlisting} 
@@ -527,11 +535,11 @@ throw new JenkinsException(e);
 return buildNumber;
 }
 \end{lstlisting} 
-Wichtig: Wenn eine Lösungsdatei hochgeladen wurde, wird der Benutzer aufgefordert, den Namen des Aufgabenblatts einzugeben, zu dem die Lösungsdatei gehört. Somit kann das Backend unterscheiden, welches Git-Repository und welcher Jenkins-Job verwendet werden soll. Das beste Beispiel, um dies zu veranschaulichen, ist diese Build-Job-Methode (Listing 14), die den Namen des auszuführenden Jobs (JobName) als Parameter verwendet. In diesem Fall lautet der Jobname 'Aufgabenblatt-1', der von Student beim Hochladen der Datei angegeben wird.
+Wichtig: Wenn eine Lösungsdatei hochgeladen wurde, wird der Benutzer aufgefordert, den Namen des Aufgabenblatts einzugeben, zu dem die Lösungsdatei gehört. Somit kann das Backend unterscheiden, welches Git-Repository und welcher Jenkins-Job verwendet werden soll. Das beste Beispiel, um dies zu veranschaulichen, ist diese Build-Job-Methode (Listing 4.11), die den Namen des auszuführenden Jobs (JobName) als Parameter verwendet. In diesem Fall lautet der Jobname 'Aufgabenblatt-1', der von Student beim Hochladen der Datei angegeben wird.
 \newline
 Wenn Jenkins Server eine Build-Anfrage für einen Multibranch-Pipeline-Job erhält, sucht er nach neuen Branches im 'Git-Repository' oder nach Änderungen in alten Branches. Dann wird für jeden neuen Zweig (Branch) oder Zweig, der die Änderungen enthält, ein Build gebaut.
 \newline
-In diesem Fall ist das Erstellen eines Jenkins-Builds in der Tat eine Kompilierung des Makefiles. um den Testprozess abzuschließen.
+In diesem Fall ist das Erstellen eines Jenkins-Builds in der Tat eine Kompilierung des Makefiles, um den Testprozess abzuschließen.
 \newline
 Beim Kompilieren des Makefiles werden die Testdateien und die zu testenden Dateien vom GCC-Compiler in Objektdateien bzw. Programmmodule umgewandelt. Dann wird der Verknüpfungsschritt ausgeführt und eine Binärdatei (executable) erzeugt. In diesem Fall ist die Binärdatei das Testergebnis. Diesen Vorgang wird in der nächsten Grafik veranschaulicht.
 \newpage
@@ -543,7 +551,7 @@ Beim Kompilieren des Makefiles werden die Testdateien und die zu testenden Datei
 	\end{center}
 \end{figure}
 
-Nach Abschluss des Build-Prozesses wird das Testergebnis im Build-Verlauf des Jenkins-Servers gespeichert. Was jetzt fehlt, ist das Testergebnis dem Benutzer anzuzeigen. Darüber wird im nächsten Absatz besprochen.
+Nach Abschluss des Build-Prozesses wird das Testergebnis im Build-Verlauf des Jenkins-Servers gespeichert. Was jetzt fehlt, ist dem Benutzer das Testergebnis anzuzeigen. Darüber wird im nächsten Absatz besprochen.
 \subsection{Testergebnis anzeigen}
  Der Multibranch-Pipeline-Job speichert einen Build-Verlauf für jeden Zweig (Branch). Der Buildverlauf enthält Builddetails. Aus Build-Details kann ConsoleOutputText abgerufen werden. In diesem Fall enthält dieser 'ConsoleOutputText' das Testergebnis.
  \begin{lstlisting}[language=JAVA,caption=Testergebnis Anfrage ]
@@ -576,7 +584,7 @@ throw new JenkinsException(e);
 }
 }
  \end{lstlisting}
- Zunächst werden alle Jobs abgerufen, die sich auf dem Jenkins-Server befinden. Innerhalb dieser Jobs wird der gewünschte Job identifiziert, zum Beispiel 'Aufgabenblatt-1'. Dann werden alle Job-Zweige, die in diesem Job sind, gebracht und daraus der gewünschte Job-Zweig festgestellt. Von diesem Job-Zweig wird das letzte Build-Detail abgerufen. Schließlich wird das Testergebnis (ConsoleOutputText) aus dieses Build-Detail erhalten. Die folgende Abbildung zeigt diesen Vorgang grafisch.
+ Zunächst werden alle Jobs abgerufen, die sich auf dem Jenkins-Server befinden. Innerhalb dieser Jobs wird der gewünschte Job identifiziert, zum Beispiel 'Aufgabenblatt-1'. Dann werden alle UnterJobs-Zweige, die in diesem Job sind, gebracht und daraus der gewünschte UnterJobs-Zweig festgestellt. Von diesem  UnterJobs-Zweig wird das letzte Build-Detail abgerufen. Schließlich wird das Testergebnis (ConsoleOutputText) aus dieses Build-Detail erhalten. Die folgende Abbildung zeigt diesen Vorgang grafisch.
  \begin{figure}[h!]
  	\begin{center}
  		\includegraphics[width=14cm, height=18cm]{TestergebnisOutput.jpg}
@@ -589,7 +597,7 @@ Das Testergebnis wird dann an das Front-End gesendet, um es dem Benutzer anzuzei
 \section{Installationsanleitung}
 Im Abschnitt 'Architektur' wurde bereits erwähnt, dass die Komponenten des Projekts in Docker bereitgestellt werden. Dies wird in diesem Abschnitt mit der Erklärung der für den Installationsprozess erforderlichen Einstellungen erläutert.
 \subsection{Projektbereitstellung (deployment)}
-Docker ist eine container-basierte Technologie und Container sind nur der Benutzerbereich des Betriebssystems. Auf der niedrigen Ebene ist ein Container nur eine Reihe von Prozessen, die vom Rest des Systems isoliert sind und von einem separaten Image ausgeführt werden, das alle zur Unterstützung der Prozesse erforderlichen Dateien enthält. Es wurde für das Ausführen von Anwendungen entwickelt. In Docker teilen sich die ausgeführten Container den Kernel des Host-Betriebssystems. Docker ist ein Open-Source-Projekt, das auf Linux-Containern basiert. Es verwendet Linux-Kernel-Funktionen wie Namespaces und Kontrollgruppen, um Container auf einem Betriebssystem zu erstellen. Docker fügt die Software einer Anwendung in eine unsichtbare Box ein, in der alles enthalten ist, was zum Ausführen erforderlich ist, z. B. Betriebssystem, Anwendungscode, Laufzeit, Systemtools und Bibliotheken usw.
+Docker ist eine container-basierte Technologie und Container sind nur der Benutzerbereich des Betriebssystems. Auf der niedrigen Ebene ist ein Container nur eine Reihe von Prozessen, die vom Rest des Systems isoliert sind und von einem separaten Image ausgeführt werden, das alle zur Unterstützung der Prozesse erforderlichen Dateien enthält. In Docker teilen sich die ausgeführten Container den Kernel des Host-Betriebssystems. Docker ist ein Open-Source-Projekt, das auf Linux-Containern basiert. Es verwendet Linux-Kernel-Funktionen wie Namespaces und Kontrollgruppen, um Container auf einem Betriebssystem zu erstellen. Docker fügt die Software einer Anwendung in eine unsichtbare Box ein, in der alles enthalten ist, was zum Ausführen erforderlich ist, z. B. Betriebssystem, Anwendungscode, Laufzeit, Systemtools und Bibliotheken usw.
 \newline
 Um zu verstehen, wie Docker am besten eingesetzt wird, ist es hilfreich, sich einen groben Überblick darüber zu verschaffen, wie die Docker-Plattform aufgebaut ist.
 \begin{figure}[h!]
@@ -602,9 +610,9 @@ Um zu verstehen, wie Docker am besten eingesetzt wird, ist es hilfreich, sich ei
 \begin{itemize}
 	\item \textbf{Docker-Daemon: }der Docker-Daemon ist für das Erstellen, Ausführen und Überwachen von Containern, Netzwerke und Volumes sowie für das Erstellen und Speichern von Images zuständig.
 	\item \textbf{Docker-Client: }Dies ist das Command Line Interface (CLI)-Tool, das zur Konfiguration und Interaktion mit Docker verwendet wird. Zum Beispiel wenn Entwickler oder Benutzer Befehle wie Docker Run verwenden, sendet der Client diese Befehle an den Docker-Daemon, der sie ausführt.
-	\item \textbf{Images: }
+	\item \textbf{Images: }Sind abstrakte Container, die bestimmte Prozesse am Laufen halten. Diese Prozesse aus der Dockerfile abgelesen und als Read-Only Datei-Systemen angelegt.
 	\item \textbf{Docker file: }Ein Dockerfile ist einfach eine Textdatei mit einer Reihe von Anweisungen (instructions), die genutzt werden können, um ein Docker-Image zu erzeugen.
-	\item \textbf{Containers: }Container ist die ausgeführte Instanz eines Images.
+	\item \textbf{Containers: }Container ist die ausgeführte Instanz eines Images. Mit einen Read-Write Dateisystem, die Container spezifische Infos enthält (Ip Adresse , Ports, etc).
 	\item \textbf{Networking: }Damit Docker-Container über den Host-Computer miteinander und mit der Außenwelt kommunizieren können, wird eine Netzwerkschicht (Docker Networking) eingesetzt. Docker unterstützt verschiedene Arten von Netzwerken, die jeweils für bestimmte Anwendungsfälle geeignet sind: Bridge mode, Host mode, Container mode, und No networking.
 	\item \textbf{Docker Registries: }Dies ist die Distributionskomponente von Docker oder wird als zentrales Repository für Docker-Images bezeichnet, in dem Docker-Images gespeichert sind. Docker Hub und Docker Cloud sind öffentliche Registrierungen, die von jedem Benutzer verwendet werden können. 
 \end{itemize}
@@ -789,6 +797,7 @@ Das automatisch generierte Passwort finden Sie in den Protokollen von Jenkins-Co
 	\end{center}
 \end{figure}
 \newpage
+
 Nach dem Entsperren von Jenkins wird die Seite 'Customize-Jenkins' angezeigt. Hier können Sie im Rahmen Ihrer Ersteinrichtung beliebig viele nützliche Plugins installieren.
 \begin{figure}[h!]
 	\begin{center}
