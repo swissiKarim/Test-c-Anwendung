@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.2)  25 NOV 2019 18:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.2)  25 NOV 2019 19:05
 entering extended mode
 **./wissenschaftliche-vertiefung-Ausarbeitung.tex
 (wissenschaftliche-vertiefung-Ausarbeitung.tex
@@ -866,13 +866,8 @@ Package pdftex.def Info: Add-Aufgabenblatt.PNG  used on input line 879.
 File: aufgabenblaetter.PNG Graphic file (type png)
 <use aufgabenblaetter.PNG>
 Package pdftex.def Info: aufgabenblaetter.PNG  used on input line 894.
-(pdftex.def)             Requested size: 512.17241pt x 398.34868pt.
-
-Overfull \hbox (56.9283pt too wide) in paragraph at lines 894--895
- [] 
- []
-
-[46 <./aufgabenblaetter.PNG>]
+(pdftex.def)             Requested size: 426.793pt x 341.44084pt.
+ [46 <./aufgabenblaetter.PNG>]
 <Add-Aufgabenblatt-Loesung.PNG, id=199, 736.7525pt x 370.38374pt>
 File: Add-Aufgabenblatt-Loesung.PNG Graphic file (type png)
 <use Add-Aufgabenblatt-Loesung.PNG>
@@ -928,7 +923,7 @@ cbx1728.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
 ec/dpi600\ecrm1200.pk><C:/Users/swissi/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb>
 Output written on wissenschaftliche-vertiefung-Ausarbeitung.pdf (51 pages, 1714
-299 bytes).
+302 bytes).
 PDF statistics:
  721 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
