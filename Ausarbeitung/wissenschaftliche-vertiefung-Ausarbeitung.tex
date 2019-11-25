@@ -197,7 +197,7 @@ In diesem Projekt wird eine andere Art der Verwendung eines solchen Automatisier
 
 Im Rahmen dieses wissenschaftlichen Vertiefungsprojekts wird ein, wird ein Testplattform basierend auf Docker 'Virtualisierung' , Unit Tests und Automatisierung entwickelt.
 \newline
-Mit dieser Testplattform können die Schüler ihre Aufgabenblätter-Lösungen testen, um einen Testbericht zu erhalten.
+Mit dieser Testplattform können die Studenten ihre Aufgabenblätter-Lösungen testen, um einen Testbericht zu erhalten.
 \section{Herangehensweise}
 In dieser Ausarbeitung werden die Techniken und Technologien vorgestellt, die in diesem Projekt verwendet werden. Daher wurde das Konzept des Code-Testens erläutert. Ebenso wird das in diesem Projekt verwendete Unit-Test-System besprochen. Anschließend werden die Rolle des Jenkins-Tools im Projekt und die Bedeutung dieses Tools für die Automatisierung des Testprozesses erläutert, dann folgt eine ausführliche Erläuterung der Verwendung von Docker im Projekt. Abschließend eine Erläuterung von Git-Hosting und Jgit, die einen der wichtigsten Teile des Projekts darstellen.
 \newline
@@ -231,7 +231,7 @@ In diesem Abschnitt wird die Test C-Plattform detailliert beschrieben, wobei zun
 \section{Architektur}
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=17cm, height=14cm]{Test-C-Plattform-Arch.jpg}
+		\includegraphics[width=14cm, height=14cm]{Test-C-Plattform-Arch.jpg}
 		\caption{Architektur Test-C-Plattform } 
 		\label{ Architektur Test-C-Plattform } 
 	\end{center}
@@ -767,6 +767,7 @@ Mit dem Befehl 'docker network inspect <Name des Netzwerks>' wird überprüft, o
 		\label{docker network inspect} 
 	\end{center}
 \end{figure}
+\newpage
 \subsection{Einstellungen}
 \subsubsection{Konfigurieren von Gogs mit dem Web Installer}
 Öffnen Sie https://example.com:3000 in Ihrem Browser. Sie werden zur Installationsseite weitergeleitet:
@@ -789,7 +790,7 @@ Mit dem Befehl 'docker network inspect <Name des Netzwerks>' wird überprüft, o
 Danach wird die Anmeldeseite angezeigt:
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=17cm, height=8cm]{anmeldeseite.PNG}
+		\includegraphics[width=17cm, height=5cm]{anmeldeseite.PNG}
 		\caption{Gogs-Anmeldeseite} 
 		\label{Anmeldeseite} 
 	\end{center}
@@ -798,11 +799,12 @@ Danach wird die Anmeldeseite angezeigt:
 Sie benötigen jetzt ein Gogs-Konto zu erstellen.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=17cm, height=8cm]{gogs-registrieren-seite.PNG}
+		\includegraphics[width=17cm, height=5cm]{gogs-registrieren-seite.PNG}
 		\caption{Gogs Registrieren Seite} 
 		\label{Gogs Registrieren Seite} 
 	\end{center}
 \end{figure}
+\newpage
 \subsubsection{Konfigurieren von Jenkins}
 Wenn Sie zum ersten Mal auf eine neue Jenkins-Instanz zugreifen, werden Sie aufgefordert, diese mit einem automatisch generierten Kennwort zu entsperren.
 Navigieren Sie zu https://example.com:8080, und warten Sie, bis die Seite Jenkins entsperren angezeigt wird.
@@ -925,7 +927,36 @@ Nach einer kurzen Wartezeit wird dem Benutzer das Testergebnis angezeigt.
 	\end{center}
 \end{figure}
 \chapter{Zusammenfassung}
+In dieser Ausarbeitung wurde auf die wichtigsten Phasen der Projekterstellung (Test C-Plattform) hingewiesen. Im Allgemeinen wurden zuerst die Testtypen und die Unterschiede zwischen ihnen diskutiert. Dann wurde der Zweck dieses Projekts besprochen.
+\newline
+Der Hauptabschnitt konzentrierte sich darauf, wie das Projekt erstellt wird. Zunächst wurden die Architektur und die verwendeten Techniken diskutiert. Anschließend wurden die Architekturkomponenten einzeln und detailliert erläutert.
+Schließlich wurde erklärt, wie der Benutzer die Test-C-Plattform installiert und verwendet.
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
 \begin{thebibliography}{9}
+\bibitem{Docker} 
+Adrian Mouat 
+\newline
+\textit{Docker: Software entwickeln und deployen mit Containern}. 
+\newline
+Erscheinungsdatum: 2016-09-29.
+
+\bibitem{Jenkins} 
+Jonathan McAllister 
+\newline
+\textit{Mastering Jenkins: Configure and extend Jenkins to architect, build, and automate efficient software delivery pipelines}. 
+\newline
+Erscheinungsdatum: Oktober 2015.
+
+\bibitem{Docker docs} 
+Docker docs : Docker Documentation,
+\\\texttt{https://docs.docker.com/}, besucht am 25.10.2019
+
+\bibitem{Unit testing} 
+wikipedia :Unit testing,
+\\\texttt{https://en.wikipedia.org/wiki/Unit_testing}, besucht am 01.9.2019	
+
+\bibitem{using-docker} 
+oreilly: using-docker - Chapter 4. Docker Fundamentals,
+\\\texttt{https://www.oreilly.com/library/view/using-docker/9781491915752/ch04.html}, besucht am 10.10.2019	
 \end{thebibliography}
 \end{document}

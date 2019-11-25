@@ -25,8 +25,8 @@
 \contentsline {subsection}{\numberline {4.5.8}Testergebnis anzeigen}{29}% 
 \contentsline {section}{\numberline {4.6}Installationsanleitung}{31}% 
 \contentsline {subsection}{\numberline {4.6.1}Projektbereitstellung (deployment)}{31}% 
-\contentsline {subsection}{\numberline {4.6.2}Einstellungen}{38}% 
-\contentsline {subsubsection}{\numberline {4.6.2.1}Konfigurieren von Gogs mit dem Web Installer}{38}% 
+\contentsline {subsection}{\numberline {4.6.2}Einstellungen}{39}% 
+\contentsline {subsubsection}{\numberline {4.6.2.1}Konfigurieren von Gogs mit dem Web Installer}{39}% 
 \contentsline {subsubsection}{\numberline {4.6.2.2}Konfigurieren von Jenkins}{41}% 
 \contentsline {section}{\numberline {4.7}Verwendung}{43}% 
 \contentsline {subsection}{\numberline {4.7.1}Admin-Portal}{44}% 

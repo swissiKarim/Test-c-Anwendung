@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.2)  25 NOV 2019 17:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.7.2)  25 NOV 2019 18:51
 entering extended mode
 **./wissenschaftliche-vertiefung-Ausarbeitung.tex
 (wissenschaftliche-vertiefung-Ausarbeitung.tex
@@ -645,12 +645,7 @@ Kapitel 4.
 File: Test-C-Plattform-Arch.jpg Graphic file (type jpg)
 <use Test-C-Plattform-Arch.jpg>
 Package pdftex.def Info: Test-C-Plattform-Arch.jpg  used on input line 234.
-(pdftex.def)             Requested size: 483.68971pt x 398.33575pt.
-
-Overfull \hbox (28.4456pt too wide) in paragraph at lines 234--235
- [] 
- []
-
+(pdftex.def)             Requested size: 398.32239pt x 398.33575pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -776,67 +771,64 @@ File: network-inspect.PNG Graphic file (type png)
 <use network-inspect.PNG>
 Package pdftex.def Info: network-inspect.PNG  used on input line 765.
 (pdftex.def)             Requested size: 398.33656pt x 398.35463pt.
-<gogsWebInstaller.PNG, id=150, 487.32062pt x 440.64626pt>
+ [38 <./network-inspect.PNG>]
+<gogsWebInstaller.PNG, id=154, 487.32062pt x 440.64626pt>
 File: gogsWebInstaller.PNG Graphic file (type png)
 <use gogsWebInstaller.PNG>
-Package pdftex.def Info: gogsWebInstaller.PNG  used on input line 775.
+Package pdftex.def Info: gogsWebInstaller.PNG  used on input line 776.
 (pdftex.def)             Requested size: 426.79115pt x 483.71725pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[38 <./network-inspect.PNG>]
-Overfull \hbox (4.48799pt too wide) in paragraph at lines 781--782
+[39 <./gogsWebInstaller.PNG>]
+Overfull \hbox (4.48799pt too wide) in paragraph at lines 782--783
 []\T1/cmr/m/n/12 Ändern Sie die Da-ten-bank-ein-stel-lun-gen so, dass sie mit d
 er zu-vor er-stell-ten PostgreSQL-
  []
 
-[39 <./gogsWebInstaller.PNG>]
 <anmeldeseite.PNG, id=159, 459.21562pt x 214.30063pt>
 File: anmeldeseite.PNG Graphic file (type png)
 <use anmeldeseite.PNG>
-Package pdftex.def Info: anmeldeseite.PNG  used on input line 792.
-(pdftex.def)             Requested size: 483.72517pt x 227.62517pt.
+Package pdftex.def Info: anmeldeseite.PNG  used on input line 793.
+(pdftex.def)             Requested size: 483.72517pt x 142.26286pt.
 
-Overfull \hbox (28.48106pt too wide) in paragraph at lines 792--793
+Overfull \hbox (28.48106pt too wide) in paragraph at lines 793--794
  [] 
  []
 
 <gogs-registrieren-seite.PNG, id=160, 453.19313pt x 282.05376pt>
 File: gogs-registrieren-seite.PNG Graphic file (type png)
 <use gogs-registrieren-seite.PNG>
-Package pdftex.def Info: gogs-registrieren-seite.PNG  used on input line 801.
-(pdftex.def)             Requested size: 483.69478pt x 227.62305pt.
+Package pdftex.def Info: gogs-registrieren-seite.PNG  used on input line 802.
+(pdftex.def)             Requested size: 483.69478pt x 142.266pt.
 
-Overfull \hbox (28.45067pt too wide) in paragraph at lines 801--802
+Overfull \hbox (28.45067pt too wide) in paragraph at lines 802--803
  [] 
  []
 
-<Jenkins-entsperren-seite.PNG, id=161, 464.23438pt x 234.37563pt>
+[40 <./anmeldeseite.PNG> <./gogs-registrieren-seite.PNG>]
+<Jenkins-entsperren-seite.PNG, id=166, 464.23438pt x 234.37563pt>
 File: Jenkins-entsperren-seite.PNG Graphic file (type png)
 <use Jenkins-entsperren-seite.PNG>
-Package pdftex.def Info: Jenkins-entsperren-seite.PNG  used on input line 811.
+Package pdftex.def Info: Jenkins-entsperren-seite.PNG  used on input line 813.
 (pdftex.def)             Requested size: 483.70615pt x 199.16655pt.
 
-Overfull \hbox (28.46204pt too wide) in paragraph at lines 811--812
+Overfull \hbox (28.46204pt too wide) in paragraph at lines 813--814
  [] 
  []
 
-[40 <./anmeldeseite.PNG> <./gogs-registrieren-seite.PNG>] [41 <./Jenkins-entspe
-rren-seite.PNG>]
+[41 <./Jenkins-entsperren-seite.PNG>]
 <jenkins-logs.PNG, id=171, 350.81062pt x 375.90437pt>
 File: jenkins-logs.PNG Graphic file (type png)
 <use jenkins-logs.PNG>
-Package pdftex.def Info: jenkins-logs.PNG  used on input line 820.
+Package pdftex.def Info: jenkins-logs.PNG  used on input line 822.
 (pdftex.def)             Requested size: 426.82138pt x 483.73132pt.
 
-Overfull \hbox (14.31065pt too wide) in paragraph at lines 817--825
+Overfull \hbox (14.31065pt too wide) in paragraph at lines 819--827
 []\T1/cmr/m/n/12 Das au-to-ma-tisch ge-ne-rier-te Pass-wort fin-den Sie in den 
 Pro-to-kol-len von Jenkins-Container.
  []
 
 
-Overfull \hbox (4.03786pt too wide) in paragraph at lines 817--825
+Overfull \hbox (4.03786pt too wide) in paragraph at lines 819--827
 \T1/cmr/m/n/12 Sie kön-nen dies mit dem fol-gen-den Be-fehl tun: 'do-cker logs 
 test-c-app-compose_jenkins_1'.
  []
@@ -845,38 +837,38 @@ test-c-app-compose_jenkins_1'.
 <customize-jenkins.PNG, id=177, 451.18562pt x 234.37563pt>
 File: customize-jenkins.PNG Graphic file (type png)
 <use customize-jenkins.PNG>
-Package pdftex.def Info: customize-jenkins.PNG  used on input line 830.
+Package pdftex.def Info: customize-jenkins.PNG  used on input line 832.
 (pdftex.def)             Requested size: 483.72078pt x 170.71368pt.
 
-Overfull \hbox (28.47667pt too wide) in paragraph at lines 830--831
+Overfull \hbox (28.47667pt too wide) in paragraph at lines 832--833
  [] 
  []
 
 <AdminLogin.PNG, id=178, 472.26437pt x 291.58937pt>
 File: AdminLogin.PNG Graphic file (type png)
 <use AdminLogin.PNG>
-Package pdftex.def Info: AdminLogin.PNG  used on input line 856.
+Package pdftex.def Info: AdminLogin.PNG  used on input line 858.
 (pdftex.def)             Requested size: 398.34958pt x 142.26604pt.
 [43 <./customize-jenkins.PNG>]
 <Aufgabenblatt-Git-Repo.PNG, id=183, 445.665pt x 361.85187pt>
 File: Aufgabenblatt-Git-Repo.PNG Graphic file (type png)
 <use Aufgabenblatt-Git-Repo.PNG>
-Package pdftex.def Info: Aufgabenblatt-Git-Repo.PNG  used on input line 868.
+Package pdftex.def Info: Aufgabenblatt-Git-Repo.PNG  used on input line 870.
 (pdftex.def)             Requested size: 341.43584pt x 256.07736pt.
  [44 <./AdminLogin.PNG> <./Aufgabenblatt-Git-Repo.PNG>]
 <Add-Aufgabenblatt.PNG, id=189, 735.74875pt x 381.92688pt>
 File: Add-Aufgabenblatt.PNG Graphic file (type png)
 <use Add-Aufgabenblatt.PNG>
-Package pdftex.def Info: Add-Aufgabenblatt.PNG  used on input line 877.
+Package pdftex.def Info: Add-Aufgabenblatt.PNG  used on input line 879.
 (pdftex.def)             Requested size: 455.26138pt x 284.53877pt.
  [45 <./Add-Aufgabenblatt.PNG>]
 <aufgabenblaetter.PNG, id=194, 852.18375pt x 405.515pt>
 File: aufgabenblaetter.PNG Graphic file (type png)
 <use aufgabenblaetter.PNG>
-Package pdftex.def Info: aufgabenblaetter.PNG  used on input line 892.
+Package pdftex.def Info: aufgabenblaetter.PNG  used on input line 894.
 (pdftex.def)             Requested size: 512.17241pt x 398.34868pt.
 
-Overfull \hbox (56.9283pt too wide) in paragraph at lines 892--893
+Overfull \hbox (56.9283pt too wide) in paragraph at lines 894--895
  [] 
  []
 
@@ -884,27 +876,29 @@ Overfull \hbox (56.9283pt too wide) in paragraph at lines 892--893
 <Add-Aufgabenblatt-Loesung.PNG, id=199, 736.7525pt x 370.38374pt>
 File: Add-Aufgabenblatt-Loesung.PNG Graphic file (type png)
 <use Add-Aufgabenblatt-Loesung.PNG>
-Package pdftex.def Info: Add-Aufgabenblatt-Loesung.PNG  used on input line 904.
+Package pdftex.def Info: Add-Aufgabenblatt-Loesung.PNG  used on input line 906.
 
 (pdftex.def)             Requested size: 455.24168pt x 227.62357pt.
 <tests-fuehren.PNG, id=200, 734.745pt x 274.52562pt>
 File: tests-fuehren.PNG Graphic file (type png)
 <use tests-fuehren.PNG>
-Package pdftex.def Info: tests-fuehren.PNG  used on input line 913.
+Package pdftex.def Info: tests-fuehren.PNG  used on input line 915.
 (pdftex.def)             Requested size: 455.2569pt x 170.71936pt.
  [47 <./Add-Aufgabenblatt-Loesung.PNG> <./tests-fuehren.PNG>]
 <Testergebnis.PNG, id=206, 732.7375pt x 389.95688pt>
 File: Testergebnis.PNG Graphic file (type png)
 <use Testergebnis.PNG>
-Package pdftex.def Info: Testergebnis.PNG  used on input line 922.
+Package pdftex.def Info: Testergebnis.PNG  used on input line 924.
 (pdftex.def)             Requested size: 455.25409pt x 455.25996pt.
  [48 <./Testergebnis.PNG>]
 Kapitel 5.
 [49
 
 ]
-
-LaTeX Warning: Empty `thebibliography' environment on input line 930.
+Overfull \hbox (16.95857pt too wide) in paragraph at lines 959--961
+\T1/cmtt/m/n/12 https://www.oreilly.com/library/view/using-docker/9781491915752
+/ch04.html\T1/cmr/m/n/12 ,
+ []
 
 [50
 
@@ -914,28 +908,29 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8779 strings out of 492895
- 127217 string characters out of 3123269
+ 8786 strings out of 492895
+ 127297 string characters out of 3123269
  454117 words of memory out of 3000000
- 12494 multiletter control sequences out of 15000+200000
- 16872 words of font info for 40 fonts, out of 3000000 for 9000
+ 12500 multiletter control sequences out of 15000+200000
+ 17556 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,12n,47p,909b,1837s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
-\ectt1095.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappe
-n/ec/dpi600\ectt1200.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
-our/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\f
-onts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\swissi\AppData\Local\M
-iKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\swissi\AppD
-ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi2074.pk> <C:\Users\
-swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk>
+\ecti1200.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappe
+n/ec/dpi600\ectt1095.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
+our/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\f
+onts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\swissi\AppData\Local\M
+iKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\swissi\AppD
+ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\
+swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi2074.pk>
  <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
-crm1200.pk><C:/Users/swissi/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb>
-Output written on wissenschaftliche-vertiefung-Ausarbeitung.pdf (51 pages, 1698
-632 bytes).
+cbx1728.pk> <C:\Users\swissi\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\ecrm1200.pk><C:/Users/swissi/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on wissenschaftliche-vertiefung-Ausarbeitung.pdf (51 pages, 1714
+299 bytes).
 PDF statistics:
- 678 PDF objects out of 1000 (max. 8388607)
+ 721 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
