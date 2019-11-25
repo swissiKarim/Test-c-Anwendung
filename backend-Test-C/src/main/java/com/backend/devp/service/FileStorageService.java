@@ -143,19 +143,26 @@ public class FileStorageService {
 		 // String currentUser = fileStorageService.printUser();
 		  Path currentPath = Paths.get("/");
 			String savePath ="/aufgabenblaette/" + aufgabenblattN ;
+			new File(savePath + "/src/").mkdir();
 			String savepathfile = savePath +"/src/";
 			Git myrepo = GogsGitVerwaltung.cloneRepo("http://localhost:3000/swissi/"+aufgabenblattN+".git", savePath, "swissi","Mh123456");
 		//	GogsGitVerwaltung.createBranch(myrepo, currentUser);
 			byte[] filebytes = file.getBytes();
-
+			
+			
 				Path filepath = Paths.get(savepathfile + file.getOriginalFilename());
 				System.out.println(filepath);
 				Files.write(filepath, filebytes);
+				
+				String currentUser = SecurityContextHolder.getContext().getAuthentication().getName();
+				
+			GogsGitVerwaltung.createBranch(myrepo, currentUser);
+			
 			System.out.println("File added  : " + GogsGitVerwaltung.addFileToIndex(myrepo));
 			System.out.println("File comiited  : " + GogsGitVerwaltung.commitChanges(myrepo, "Erste Commit"));
 			final Boolean ispushed = GogsGitVerwaltung.pushChanges(myrepo);
 			System.out.println("File pushed  : " + ispushed);
-			//kafkaTemplate.send("photoIn", path.normalize().toString());
+			
 		}
 	  
 	  
@@ -208,7 +215,7 @@ public class FileStorageService {
 		         Node  source =  branchSource.getChildNodes().item(1);
 		         NodeList sourceNodes = source.getChildNodes();
 		         Node remote = sourceNodes.item(3);
-		         remote.setTextContent("http://172.23.0.3:3000/swissi/"+jobname+".git");
+		         remote.setTextContent("http://172.24.0.4:3000/swissi/"+jobname+".git");
 		         DOMSource domSource = new DOMSource(doc);
 		         StringWriter writer = new StringWriter();
 		         StreamResult result = new StreamResult(writer);

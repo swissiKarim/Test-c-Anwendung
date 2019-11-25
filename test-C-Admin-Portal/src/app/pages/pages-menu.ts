@@ -14,9 +14,9 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
-    title: 'Aufgabenblaette',
+    title: 'Aufgabenblaetter',
     icon: 'nb-layout-default',
-    link: '/pages/aufgabenblaette',
+    link: '/pages/aufgabenblaetter',
     home: true,
   },
   

@@ -231,15 +231,15 @@ In diesem Abschnitt wird die Test C-Plattform detailliert beschrieben, wobei zun
 \section{Architektur}
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=17cm, height=11cm]{Test-C-Plattform-Arch.jpg}
+		\includegraphics[width=17cm, height=14cm]{Test-C-Plattform-Arch.jpg}
 		\caption{Architektur Test-C-Plattform } 
 		\label{ Architektur Test-C-Plattform } 
 	\end{center}
 \end{figure}
-Wie in der Abbildung 2 wird gezeigt, ist die Test-C-Plattformarchitektur in drei Hauptteile unterteilt: Client-Seite, Serverseite und Remote-TestUmgebung.
+Wie in der Abbildung 4.1 wird gezeigt, ist die Test-C-Plattformarchitektur in drei Hauptteile unterteilt: Client-Seite, Serverseite und Remote-TestUmgebung.
 \newline
 Die Wahl der Technologien beruhte auf ihrer Modernität und ihrer Verbreitung auf dem Arbeitsmarkt. In dem ersten Teil des Projekts (Client-Seite/Frontend) wurde die folgenden Techniken verwendet : Angular 7, NGX-Bootstrap, Html, Css. Im zweiten Teil des Projekts (Serverseite / BackEnd) wurden Maven und Spring Boot, Spring Security und Ldap bzw Spring Stack verwendet.Der dritte Teil enthält die Komponenten, die für die Durchführung des Testprozesses verantwortlich sind.
-\newline
+\newpage
 Im folgenden Abschnitt wird jeder Teil der Architektur separat erklärt.
 \newpage
 \section{Client-Seite (Front-End)}
@@ -269,14 +269,8 @@ Nun wird über die Serverseite gesprochen, die für die Kommunikation des Benutz
 \newline
 Die Serverseite stellt viele Dienste wie folgt bereit.
 \subsection{Benutzererkennung}
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=15cm, height=17cm]{Ldap-Auth.jpg}
-		\caption{Ldap-Auth } 
-		\label{ Ldap-Auth } 
-	\end{center}
-\end{figure}
-In der westfälischen Hochschule Gelsenkirchen basiert die Speicherung der Hauptbenutzeridentitäten auf LDAP-Protokolls (Lightweight Directory Access Protocol) und gespeicherter LDAP-Datenbank. Dies hilft dabei, die Single Sign-On-Technologie (SSO) zu nutzen, die dadurch sich der Benutzer mit derselben ID und denselben Kennwörtern bei allen Anwendungen im selben Netzwerk anmelden kann. Um dies zu erreichen, sind 'spring-boot-starter-security' und 'spring-security-ldap' und 'unboundid-ldapsdk' in diesem Projekt verwendet.
+
+In der westfälischen Hochschule Gelsenkirchen basiert die Speicherung der Hauptbenutzeridentitäten auf LDAP-Protokolls (Lightweight Directory Access Protocol) und gespeicherter LDAP-Datenbank. Dies hilft dabei, die Single-Sign-On Technologie (SSO) zu nutzen, die dadurch sich der Benutzer mit derselben ID und denselben Kennwörtern bei allen Anwendungen im selben Netzwerk anmelden kann. Um dies zu erreichen, sind 'spring-boot-starter-security' und 'spring-security-ldap' und 'unboundid-ldapsdk' in diesem Projekt verwendet.
 
 \begin{lstlisting}[language=XML,caption=pom.xml - security dependencies]
 <dependency>
@@ -301,8 +295,15 @@ Unter Verwendung der obigen Abhängigkeiten werden Sicherheitsrichtlinienkonfigu
 Es wird nun davon ausgegangen, dass der Benutzer gültige Daten eingegeben hat. dh diese Daten sind identisch mit den in der LDAP-Datenbank gespeicherten Daten. Dann wird ein Token generiert und als Antwort auf die Authentifikation-Anfrage zurückgesendet. Dieses Token wird dann vom Frontend verwendet und mit jeder Anfrage gesendet.
 \newline
 Wird eine Anfrage geschickt, wird vom Backend dann überprüft, ob das Token gültig ist. Ist das der Fall, wird dann die Anfrage an den entsprechenden Controller weitergeleitet und damit die passende Funktion ausgeführt.
-
-
+Zur weiteren Verdeutlichung wird eine grafische Darstellung angezeigt, die diesen Vorgang erläutert.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=15cm, height=15cm]{Ldap-Auth.jpg}
+		\caption{Ldap-Auth } 
+		\label{ Ldap-Auth } 
+	\end{center}
+\end{figure}
+\newpage
 \subsection{Erstellung eines neuen Aufgabenblatts (Admin)}
 Wie oben erläutert, ist die Erstellung eines neuen Aufgabenblatts in der Tat eine Einrichtung eines neuen Testbereichs, an dem die Studenten ihre Aufgabenlösungsdateien testen können. Mit anderen Worten, das Erstellen eines neuen Aufgabenblatts hängt vom Erstellen eines neuen Git-Repository ab, das denselben Namen wie das Aufgabenblatt hat. Zum Beispiel (Aufgabenblatt-1) über die Gogs-Oberfläche, die dem Administrator zur Verfügung steht. In diesem Git-Gogs-Repository werden alle zum Testen erforderlichen Dateien gespeichert. Anschließend wird ein Jenkins Multibranch-Pipeline-Job erstellt, der auch denselben Namen wie das Aufgabenblatt hat.
 \subsection{Schaffung von Jenkins Job (Admin)}
@@ -332,7 +333,6 @@ Die Idee dabei ist, dass in diesem Fall jeder Jenkins-Job die gleichen Einstellu
 \begin{lstlisting}[language=JAVA,caption=modifyXmlFil]
 public String modifyXmlFile(String jobname) throws ParserConfigurationException, SAXException, IOException {
 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-
 try {
 DocumentBuilder builder = factory.newDocumentBuilder();
 File file = new File("config.xml");
@@ -355,10 +355,7 @@ transformer.transform(domSource, result);
 return writer.toString();    
 } catch (Exception ex) {
 ex.printStackTrace();
-return null;
-}
-
-}
+return null;}}
 \end{lstlisting} 
 Was jetzt fehlt, um den neuen Testberich zu vervollständigen ist, das Hochladen der zum Testen notwendigen Dateien. Diese Dateien und ihre Rolle beim Abschließen des Testprozesses werden später ausführlich besprochen, aber jetzt geht es darum, wie sie hochgeladen und an die Remote-Testumgebung gesendet werden.
 
@@ -373,11 +370,12 @@ Git hat zwei Repository-Typen: lokal und remote. Das lokales Repository wird aus
 \end{itemize}
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=12cm, height=13cm]{Git-Konzept.jpg}
+		\includegraphics[width=12cm, height=8cm]{Git-Konzept.jpg}
 		\caption{Git-Konzepte} 
 		\label{ Git-Konzepte} 
 	\end{center}
 \end{figure}
+\newpage
 Nun wird erklärt, wie das oben Genannte Git-Konzepte in diesem Fall angewendet wird. 
 \newline
 Um Git aus einem Java-Programm zu verwenden, gibt es eine voll funktionsfähige Git-Bibliothek namens JGit. JGit ist eine relativ vollständige Implementierung von Git, die ursprünglich in Java geschrieben wurde und in der Java-Community weit verbreitet ist.
@@ -432,7 +430,6 @@ System.out.println("Committed all changes to repository at ");
 return true;
 }
 \end{lstlisting} 
-\newpage
 Drittens werden Commits vom lokalen Repository an das Remote-Repository übertragen.
 \begin{lstlisting}[language=JAVA,caption=Push Changes ]
 public static boolean pushChanges(Git repository) throws GitAPIException, URISyntaxException, IOException {
@@ -450,7 +447,7 @@ throw new RuntimeException(e);
 }
 \end{lstlisting} 
 
- 
+ \newpage
 \subsection{Die zum Ausführen des Tests erforderlichen Dateien}
 Jedes Git-Repository, das die Quellcodeverwaltung für ein bestimmtes Aufgabenblatt in der Remote-Testumgebung darstellt, hat die folgende Form und als Beispiel den folgenden Inhalt.
 \newline
@@ -478,14 +475,41 @@ Jedes Repository, unabhängig davon, welchem Aufgabenblatt es zugewiesen ist, en
 	\end{itemize}
 Bevor zu den folgenden Abschnitten übergangen wird, wird erläutert,wie der Student seine Lösungsdatei hochladen kann.
 \subsection{Student-Lösungsdatei hochladen}
-Der Student lädt die zu testende Datei über die Frontend-Seite. Er wählt die Datei aus und drückt dann die Upload-Button. Das Backend erhält also eine Anfrage zum Hochladen von Dateien. Um diese Aufgabe auszuführen, muss das BackEnd die folgenden Schritte ausführen: Angenommen, der Benutzer möchte seine Aufgabenblatt-1-Lösung zum ersten Mal testen. Anschließend wird aus dem lokalen Git-Repository von Aufgabenblatt-1 ein Branch mit dem Benutzernamen als Namen erstellt. Dann wird Die Datei durch Ausführen der Methoden Jgit-add und -commit an den angegebenen Branch gesendet. Der Benutzer hat nun die Möglichkeit, entweder den Test abzubrechen, was bedeutet, dass die hochgeladene Datei gelöscht wird, oder fortzufahren hat und den Test-Button zu drücken. Angenommen, der Benutzer den Test abgeschlossen und die Test-Button gedrückt. Dann wird der Student-Branch durch eine Jgit-Push-Methode an das Remote-Repository übertragen. Zur weiteren Verdeutlichung wird eine grafische Darstellung angezeigt, die diesen Vorgang erläutert.
+Der Student lädt die zu testende Datei über die Frontend-Seite. Er wählt die Datei aus und drückt dann die Upload-Button. Das Backend erhält also eine Anfrage zum Hochladen von Dateien. Um diese Aufgabe auszuführen, muss das BackEnd die folgenden Schritte ausführen: Angenommen, der Benutzer möchte seine Aufgabenblatt-1-Lösung zum ersten Mal testen. Anschließend wird aus dem lokalen Git-Repository von Aufgabenblatt-1 ein Branch mit dem Benutzernamen als Namen erstellt.
+
+\begin{lstlisting}[language=JAVA,caption= createBranch ]
+public static void createBranch(Git repository, String branchName) throws IOException, GitAPIException {
+String current = currentBranch(repository);
+if (Objects.equals(current, branchName)) {
+return;
+}
+System.out.println("Checking out branch: " + branchName);
+// lets check if the branch exists
+CheckoutCommand command = repository.checkout().setName(branchName);
+boolean exists = localBranchExists(repository, branchName);
+if (!exists) {
+command = command.setCreateBranch(true).setForce(true).
+setUpstreamMode(CreateBranchCommand.SetupUpstreamMode.TRACK);
+
+}
+Ref ref = command.call();
+if (LOG.isDebugEnabled()) {
+LOG.debug("Checked out branch " + branchName + " with results " + ref.getName());
+}
+configureBranch(repository, branchName);
+
+}
+\end{lstlisting} 
+
+Dann wird Die Datei durch Ausführen der Methoden Jgit-add und -commit an den angegebenen Branch gesendet. Der Benutzer hat nun die Möglichkeit, entweder den Test abzubrechen, was bedeutet, dass die hochgeladene Datei gelöscht wird, oder fortzufahren hat und den Test-Button zu drücken. Angenommen, der Benutzer den Test abgeschlossen und die Test-Button gedrückt. Dann wird der Student-Branch durch eine Jgit-Push-Methode an das Remote-Repository übertragen. Zur weiteren Verdeutlichung wird eine grafische Darstellung angezeigt, die diesen Vorgang erläutert.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=14cm, height=14cm]{Loesungupload.jpg}
+		\includegraphics[width=14cm, height=15cm]{Loesungupload.jpg}
 		\caption{Hochladen von Lösungsdatei} 
 		\label{ Hochladen von Lösungsdatei } 
 	\end{center}
 \end{figure}
+\newpage
 Für jedes Aufgabenblatt wird ein lokales und ein remote Git-Repository erstellt. Für jeden Student wird aus jedem Aufgabenblatt-Repository ein Branch erzeugt. 
 \newline
 Es wird beispielsweise davon ausgegangen, dass der Administrator drei Aufgabenblätter hinzufügt. Das heißt, es werden drei Git-Repositorys erstellt, jedes von denen ein Aufgabenblatt darstellt. Drei Studenten möchten ihre Lösungen testen. Zwei von ihnen haben die drei Übungsblätter gelöst und einer hat nur das erste und das zweite Aufgabenblatt gelöst. Anschließend werden aus den für die Aufgabenblätter 1 und 2 erzeugten Git-Repositorys drei Branchs erstellt. Weil die drei Studenten die ersten beiden Übungsblätter gelöst und getestet haben. Aus dem dritten Repositroy werden jedoch nur zwei Branchs erzeugt, da nur zwei Studenten ihre Aufgabenblatt-3-Lösung getestet haben.
@@ -495,15 +519,14 @@ Nun wird besprochen, wie nach Erhalt der Lösungsdatei der Test Prossez automati
 Wie bereits erwähnt, wird für jedes Repository automatisch ein Jenkins-Multibranch-Pipeline-Job generiert. Ein Multibranch-Pipeline-Job durchsucht einfach das Quellcode-Repository und erstellt automatisch einen Pipeline-Job für jedes Branch, das eine Jenkinsfile-Datei enthält. 
 \newline
 Eine Jenkinsfile-Datei ist eine Textdatei, die die Pipeline als Skript enthält, der den gesamten Job-Workflow festschreibt. Daher lädt der Administrator diese Datei bei jeder Erstellung eines neuen Aufgabenblatts hoch. Dieser Vorgang ist in der folgenden Grafik dargestellt.
-\newpage
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=13cm, height=16cm]{GogsJenkins.jpg}
+		\includegraphics[width=13cm, height=13cm]{GogsJenkins.jpg}
 		\caption{Multibranch Pipeline Job} 
 		\label{ Multibranch Pipeline Job } 
 	\end{center}
 \end{figure}
-
+\newpage
 In diesem Fall besteht die Job-Pipeline nur aus einer Phase (stage), in der das Makefile ausgeführt werden sollte, um den Testprozess zu starten. Genau das, was in der Jenkinsfile-Datei steht.
 \begin{lstlisting}[language=JAVA,caption=Jenkinsfile (Job-Pipeline-Skript) ]
 pipeline{
@@ -552,6 +575,7 @@ Beim Kompilieren des Makefiles werden die Testdateien und die zu testenden Datei
 \end{figure}
 
 Nach Abschluss des Build-Prozesses wird das Testergebnis im Build-Verlauf des Jenkins-Servers gespeichert. Was jetzt fehlt, ist dem Benutzer das Testergebnis anzuzeigen. Darüber wird im nächsten Absatz besprochen.
+\newpage
 \subsection{Testergebnis anzeigen}
  Der Multibranch-Pipeline-Job speichert einen Build-Verlauf für jeden Zweig (Branch). Der Buildverlauf enthält Builddetails. Aus Build-Details kann ConsoleOutputText abgerufen werden. In diesem Fall enthält dieser 'ConsoleOutputText' das Testergebnis.
  \begin{lstlisting}[language=JAVA,caption=Testergebnis Anfrage ]
@@ -562,12 +586,11 @@ StringBuilder buildLogBuilder = null;
 try {
 JenkinsServer jenkinsServer = new JenkinsServer(new URI(jenkinsUrl), jenkinsUser, jenkinsPassword);
 Map<String, Job> jobs = jenkinsServer.getJobs();
-
 JobWithDetails job = jobs.get(jobName).details();
 Optional<FolderJob> folderJob = jenkinsServer.getFolderJob(job);
 Map<String, Job> branchs = jenkinsServer.getJobs(folderJob.get());
-JobWithDetails branch = branchs.get(branchName).details();
-
+String currentUser = SecurityContextHolder.getContext().getAuthentication().getName();
+JobWithDetails branch = branchs.get(currentUser).details();
 Build build = branch.getLastBuild();
 if (build != null) {
 BuildWithDetails buildWithDetails = build.details();
@@ -575,25 +598,24 @@ buildLog = buildWithDetails.getConsoleOutputText();
 Reader inputString = new StringReader(buildLog);
 BufferedReader reader = new BufferedReader(inputString);
 buildLogBuilder = new StringBuilder();  
-/*
-Hier wird der 'buildLogBuilder' bearbeitet, um ihn dem Benutzer klar zu zeigen.
-*/
+/*Hier wird der 'buildLogBuilder' bearbeitet, um ihn dem Benutzer klar zu zeigen.*/
 return buildLogBuilder;
 } catch (Exception e) {
 throw new JenkinsException(e);
-}
-}
+}}
  \end{lstlisting}
+ \newpage
  Zunächst werden alle Jobs abgerufen, die sich auf dem Jenkins-Server befinden. Innerhalb dieser Jobs wird der gewünschte Job identifiziert, zum Beispiel 'Aufgabenblatt-1'. Dann werden alle UnterJobs-Zweige, die in diesem Job sind, gebracht und daraus der gewünschte UnterJobs-Zweig festgestellt. Von diesem  UnterJobs-Zweig wird das letzte Build-Detail abgerufen. Schließlich wird das Testergebnis (ConsoleOutputText) aus dieses Build-Detail erhalten. Die folgende Abbildung zeigt diesen Vorgang grafisch.
  \begin{figure}[h!]
  	\begin{center}
- 		\includegraphics[width=14cm, height=18cm]{TestergebnisOutput.jpg}
+ 		\includegraphics[width=14cm, height=16cm]{TestergebnisOutput.jpg}
  		\caption{jenkinsgetjobCosole} 
  		\label{jenkinsgetjobCosole} 
  	\end{center}
  \end{figure}
 
 Das Testergebnis wird dann an das Front-End gesendet, um es dem Benutzer anzuzeigen.
+\newpage
 \section{Installationsanleitung}
 Im Abschnitt 'Architektur' wurde bereits erwähnt, dass die Komponenten des Projekts in Docker bereitgestellt werden. Dies wird in diesem Abschnitt mit der Erklärung der für den Installationsprozess erforderlichen Einstellungen erläutert.
 \subsection{Projektbereitstellung (deployment)}
@@ -655,6 +677,7 @@ CMD ["mvn","spring-boot:run"]
 Das Basisimage hier ist maven:3-jdk-8-alpine. Das Jar Datei wird kopiert und durch Maven und Jdk ausgeführt.
 \newline
 Zum Definieren und Ausführen von Docker-Anwendungen mit mehreren Containern, wird Docker Compose verwendet.  Mit Compose wird eine YAML-Datei (docker-compose.yml) eingesetzt, um die Dienste (services) von der Anwendung zu konfigurieren, wobei jeder Dienst (service) einen Container mit der zum Erstellen erforderlichen Konfiguration darstellt.
+\newpage
 \begin{lstlisting}[language=JAVA,caption= Docker Compose]
 version: '2'
 services:
@@ -716,6 +739,7 @@ Standardmäßig richtet Compose ein einzelnes Netzwerk für die App ein. Jeder C
 Dazu muss Docker-Compose-file ausgeführt werden. Um eine Docker-Compose-Datei auszuführen, soll durch Docker-CLI (Command-line interface) das Command 'docker-compose up' an Docker-Deamon gesendet werden.
 \newline
 Nachdem der Daemon den Befehl erhalten hat, werden die Container ausgeführt und über ein Netzwerk miteinander kommuniziert.
+\newpage
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=17cm, height=5cm]{composeUp.PNG}
@@ -723,9 +747,9 @@ Nachdem der Daemon den Befehl erhalten hat, werden die Container ausgeführt und
 		\label{docker-compose up} 
 	\end{center}
 \end{figure}
-\newline
+
 Um zu überprüfen, ob das Netzwerk bereits erstellt wurde, kann der Befehl 'docker network ls' getippt werden.
-\newpage
+\newline
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=17cm, height=5cm]{docker-network-ls.PNG}
@@ -733,7 +757,9 @@ Um zu überprüfen, ob das Netzwerk bereits erstellt wurde, kann der Befehl 'doc
 		\label{docker network ls} 
 	\end{center}
 \end{figure}
+\newline
 Mit dem Befehl 'docker network inspect <Name des Netzwerks>' wird überprüft, ob sich alle Container des Projekts bereits im Netzwerk befinden.
+\newpage
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=14cm, height=14cm]{network-inspect.PNG}
@@ -768,7 +794,7 @@ Danach wird die Anmeldeseite angezeigt:
 		\label{Anmeldeseite} 
 	\end{center}
 \end{figure}
-\newpage
+\newline
 Sie benötigen jetzt ein Gogs-Konto zu erstellen.
 \begin{figure}[h!]
 	\begin{center}
@@ -787,8 +813,8 @@ Navigieren Sie zu https://example.com:8080, und warten Sie, bis die Seite Jenkin
 		\label{Jenkins entsperren Seite} 
 	\end{center}
 \end{figure}
-\newline
-Das automatisch generierte Passwort finden Sie in den Protokollen von Jenkins-Container. Sie können dies mit dem folgenden Befehl tun: 'docker logs test-c-app-compose_jenkins_1'
+\newpage
+Das automatisch generierte Passwort finden Sie in den Protokollen von Jenkins-Container. Sie können dies mit dem folgenden Befehl tun: 'docker logs test-c-app-compose_jenkins_1'.
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=15cm, height=17cm]{jenkins-logs.PNG}
@@ -797,16 +823,17 @@ Das automatisch generierte Passwort finden Sie in den Protokollen von Jenkins-Co
 	\end{center}
 \end{figure}
 \newpage
-
 Nach dem Entsperren von Jenkins wird die Seite 'Customize-Jenkins' angezeigt. Hier können Sie im Rahmen Ihrer Ersteinrichtung beliebig viele nützliche Plugins installieren.
+
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=17cm, height=7cm]{customize-jenkins.PNG}
+		\includegraphics[width=17cm, height=6cm]{customize-jenkins.PNG}
 		\caption{Jenkins entsperren Seite} 
 		\label{Jenkins entsperren Seite} 
 	\end{center}
 \end{figure}
-\newline
+
+
 Klicken Sie auf eine der beiden angezeigten Optionen:
 \begin{itemize}
 	\item \textbf{Install suggested plugins: } Um die empfohlenen Plugins zu installieren, die auf den häufigsten Anwendungsfällen basieren.
@@ -819,7 +846,84 @@ Nachdem Sie Jenkins mit Plugins angepasst haben, werden Sie von Jenkins aufgefor
 	\item Geben Sie auf der Seite Create First Admin User (Erster Administratorbenutzer erstellen) die Details für Ihren Administratorbenutzer in die entsprechenden Felder ein und klicken Sie auf Save and Finish (Speichern und Fertig stellen).
 	\item Wenn die Seite 'Jenkins is ready' angezeigt wird, klicken Sie auf 'Start using Jenkins'.
 \end{itemize}
+
 \section{Verwendung}
+In diesem Abschnitt wird die Verwendung der Test C-Plattform erläutert.
+\subsection{Admin-Portal}
+Der Administrator meldet sich zuerst über die Anmeldeseite an.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=14cm, height=5cm]{AdminLogin.PNG}
+		\caption{Login Seite} 
+		\label{Login Seite} 
+	\end{center}
+\end{figure}
+\newline
+Nach der Anmeldung kann der Administrator die folgenden Dienste verwenden:
+\paragraph{Add-Aufgabenblatt: }Erstellung eines Testbereichs für das neue Aufgabenblatt.
+\newline
+Zunächst muss der Administrator über die Gogs-Oberfläche ein Remote-Git-Repository für das Aufgabenblatt erstellen.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=12cm, height=9cm]{Aufgabenblatt-Git-Repo.PNG}
+		\caption{Erstellung eines Remote-Git-Repository} 
+		\label{Erstellung eines Remote-Git-Repository} 
+	\end{center}
+\end{figure}
+\newpage
+Anschließend wendet sich der Administrator an Admin Portal FrontEnd, um die Erstellung des Arbeitsblatts abzuschließen.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=16cm, height=10cm]{Add-Aufgabenblatt.PNG}
+		\caption{Add-Aufgabenblatt} 
+		\label{Add-Aufgabenblatt} 
+	\end{center}
+\end{figure}
+\newline
+Der Administrator schreibt zuerst den Namen des Aufgabenblatts, das er erstellen möchte.Anschließend werden die für den Testprozess erforderlichen Dateien hochgeladen. Dieser Vorgang erfolgt in zwei Schritten:
+\begin{itemize}
+	\item Hochladen von Konfigurationsdateien (makefile und jenkinsfile).
+	\item Hochladen von Testdateien 
+\end{itemize}
+\newpage
+\paragraph{Aufgabenblatt Anzeigen: } Auf der Seite 'Augabenblaetter' kann der Administrator die erstellten Aufgabenblätter anzeigen und die gewünschte Datei löschen.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=18cm, height=14cm]{aufgabenblaetter.PNG}
+		\caption{Augabenblätter anzeigen} 
+		\label{Augabenblätter anzeigen} 
+	\end{center}
+\end{figure}
+\newpage
+\subsection{Studenten-Portal}
+Der Student meldet sich zuerst über die Anmeldeseite an. Anschließend kann er die zu testende Datei über die Seite 'Add-Aufgabenblatt-Lösung' hochladen.
+\newline
+Achtung: Bitte vergessen Sie nicht, den Namen des zu testenden Aufgabenblatts einzugeben.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=16cm, height=8cm]{Add-Aufgabenblatt-Loesung.PNG}
+		\caption{Add-Aufgabenblatt-Lösung} 
+		\label{Add-Aufgabenblatt-Lösung} 
+	\end{center}
+\end{figure}
+\newline
+Nach dem Hochladen der Datei kann der Benutzer den Befehl zum Starten des Testprozesses absetzen.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=16cm, height=6cm]{tests-fuehren.PNG}
+		\caption{Add-Aufgabenblatt-Lösung} 
+		\label{Add-Aufgabenblatt-Lösung} 
+	\end{center}
+\end{figure}
+\newpage
+Nach einer kurzen Wartezeit wird dem Benutzer das Testergebnis angezeigt.
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=16cm, height=16cm]{Testergebnis.PNG}
+		\caption{Testergebnis} 
+		\label{Testergebnis} 
+	\end{center}
+\end{figure}
 \chapter{Zusammenfassung}
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
 \begin{thebibliography}{9}

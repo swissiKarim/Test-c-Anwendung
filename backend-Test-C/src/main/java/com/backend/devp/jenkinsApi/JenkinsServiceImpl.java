@@ -28,7 +28,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.http.entity.ContentType;
+import org.springframework.security.core.context.SecurityContextHolder;
 
+import com.backend.devp.gitGogs.GogsGitVerwaltung;
 import com.google.common.base.Optional;
 import com.offbytwo.jenkins.JenkinsServer;
 import com.offbytwo.jenkins.client.JenkinsHttpClient;
@@ -375,7 +377,11 @@ public class JenkinsServiceImpl implements JenkinsService {
 			JobWithDetails job = jobs.get(jobName).details();
 			Optional<FolderJob> ggg = jenkinsServer.getFolderJob(job);
 			 Map<String, Job> branchs = jenkinsServer.getJobs(ggg.get());
-			 JobWithDetails branch = branchs.get("master").details();
+			 
+
+				String currentUser = SecurityContextHolder.getContext().getAuthentication().getName();
+				
+			 JobWithDetails branch = branchs.get(currentUser).details();
 			 
 			 Build build = branch.getLastBuild();
 				if (build != null) {
@@ -384,13 +390,13 @@ public class JenkinsServiceImpl implements JenkinsService {
 					Reader inputString = new StringReader(buildLog);
 					BufferedReader reader = new BufferedReader(inputString);
 				 buildLogBuilder = new StringBuilder();  
-				 buildLogBuilder.append(" protokoll_blatt01");
+				 buildLogBuilder.append(" protokoll " + jobName);
 				 buildLogBuilder.append(System.lineSeparator());
 				 buildLogBuilder.append(" ============================");
 				 buildLogBuilder.append(System.lineSeparator());
 				 buildLogBuilder.append("+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−+");
 				 buildLogBuilder.append(System.lineSeparator());
-				 buildLogBuilder.append("| ULAM (Blatt 01)");
+				 buildLogBuilder.append("| " + jobName);
 				 buildLogBuilder.append(System.lineSeparator());
 				 buildLogBuilder.append("+−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−+");
 				 buildLogBuilder.append(System.lineSeparator());

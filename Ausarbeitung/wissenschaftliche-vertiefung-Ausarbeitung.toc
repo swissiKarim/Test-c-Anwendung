@@ -12,22 +12,26 @@
 \contentsline {chapter}{\numberline {4}Test-C Plattform}{9}% 
 \contentsline {section}{\numberline {4.1}Einf\IeC {\"u}hrung}{9}% 
 \contentsline {section}{\numberline {4.2}Architektur}{9}% 
-\contentsline {section}{\numberline {4.3}Client-Seite (Front-End)}{10}% 
+\contentsline {section}{\numberline {4.3}Client-Seite (Front-End)}{11}% 
 \contentsline {section}{\numberline {4.4}Remote TestUmgebung}{11}% 
 \contentsline {section}{\numberline {4.5}Serverseite (Back-End)}{12}% 
 \contentsline {subsection}{\numberline {4.5.1}Benutzererkennung}{12}% 
 \contentsline {subsection}{\numberline {4.5.2}Erstellung eines neuen Aufgabenblatts (Admin)}{14}% 
-\contentsline {subsection}{\numberline {4.5.3}Schaffung von Jenkins Job (Admin)}{14}% 
-\contentsline {subsection}{\numberline {4.5.4}Zum Testen notwendigen Dateien hochzuladen}{16}% 
-\contentsline {subsection}{\numberline {4.5.5}Die zum Ausf\IeC {\"u}hren des Tests erforderlichen Dateien}{20}% 
-\contentsline {subsection}{\numberline {4.5.6}Student-L\IeC {\"o}sungsdatei hochladen}{21}% 
-\contentsline {subsection}{\numberline {4.5.7}Test Starten (jenkins Job Build)}{23}% 
-\contentsline {subsection}{\numberline {4.5.8}Testergebnis anzeigen}{27}% 
-\contentsline {section}{\numberline {4.6}Installationsanleitung}{30}% 
-\contentsline {subsection}{\numberline {4.6.1}Projektbereitstellung (deployment)}{30}% 
-\contentsline {subsection}{\numberline {4.6.2}Einstellungen}{36}% 
-\contentsline {subsubsection}{\numberline {4.6.2.1}Konfigurieren von Gogs mit dem Web Installer}{36}% 
-\contentsline {subsubsection}{\numberline {4.6.2.2}Konfigurieren von Jenkins}{38}% 
-\contentsline {section}{\numberline {4.7}Verwendung}{41}% 
-\contentsline {chapter}{\numberline {5}Zusammenfassung}{43}% 
-\contentsline {chapter}{Literaturverzeichnis}{43}% 
+\contentsline {subsection}{\numberline {4.5.3}Schaffung von Jenkins Job (Admin)}{15}% 
+\contentsline {subsection}{\numberline {4.5.4}Zum Testen notwendigen Dateien hochzuladen}{17}% 
+\contentsline {subsection}{\numberline {4.5.5}Die zum Ausf\IeC {\"u}hren des Tests erforderlichen Dateien}{21}% 
+\contentsline {subsection}{\numberline {4.5.6}Student-L\IeC {\"o}sungsdatei hochladen}{22}% 
+\contentsline {subsection}{\numberline {4.5.7}Test Starten (jenkins Job Build)}{25}% 
+\contentsline {subsection}{\numberline {4.5.8}Testergebnis anzeigen}{29}% 
+\contentsline {section}{\numberline {4.6}Installationsanleitung}{31}% 
+\contentsline {subsection}{\numberline {4.6.1}Projektbereitstellung (deployment)}{31}% 
+\contentsline {subsection}{\numberline {4.6.2}Einstellungen}{38}% 
+\contentsline {subsubsection}{\numberline {4.6.2.1}Konfigurieren von Gogs mit dem Web Installer}{38}% 
+\contentsline {subsubsection}{\numberline {4.6.2.2}Konfigurieren von Jenkins}{41}% 
+\contentsline {section}{\numberline {4.7}Verwendung}{43}% 
+\contentsline {subsection}{\numberline {4.7.1}Admin-Portal}{44}% 
+\contentsline {paragraph}{Add-Aufgabenblatt: }{44}% 
+\contentsline {paragraph}{Aufgabenblatt Anzeigen: }{46}% 
+\contentsline {subsection}{\numberline {4.7.2}Studenten-Portal}{47}% 
+\contentsline {chapter}{\numberline {5}Zusammenfassung}{49}% 
+\contentsline {chapter}{Literaturverzeichnis}{49}% 

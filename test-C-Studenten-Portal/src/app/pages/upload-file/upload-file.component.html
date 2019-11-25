@@ -6,8 +6,8 @@
         <nb-card-body>
           <nb-stepper orientation="horizontal">
             <nb-step [label]="labelOne" > 
-              <ng-template #labelOne>Erster Schritt</ng-template>
-              <h3>Aufgabenblatt Hochladen #1</h3>
+              <ng-template #labelOne>Lösung</ng-template>
+              <h3>Aufgabenblatt-Lösung Hochladen #1</h3>
               
     <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
       <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
@@ -24,21 +24,21 @@
               <button nbButton nbStepperNext disabled="isdes">next</button>
             </nb-step>
             <nb-step [label]="labelTwo" >
-              <ng-template #labelTwo>Zweiter schritt</ng-template>
+              <ng-template #labelTwo>Testen</ng-template>
               <h3>Führen Sie die Tests durch #2</h3>
              <div><button type="button" class="btn btn-success" nbStepperNext (click)="jenkinsbuildf(newAufgabenblatt.value)">Testen</button></div> 
               
             </nb-step>
 
             <nb-step [label]="labelThree">
-              <ng-template #labelThree>Dritte Schritt</ng-template>
+              <ng-template #labelThree>Ergebnis</ng-template>
               <div class="col-12 pt-3 pb-3" id="yui_3_17_2_1_1560256447708_38">
                 <div class="card">
                   <div class="card-body">
                     <div class="card text-center">
                       <div class="card-header">
           
-                        <div class="p-3 mb-2 bg-primary text-white">Test_Ergebnis</div>
+                        <div class="p-3 mb-2 bg-primary text-white">Testergebnis</div>
                       </div>
                       <nb-card [nbSpinner]="this.showSpinner" nbSpinnerSize="xxlarge">
                         <nb-card-body>

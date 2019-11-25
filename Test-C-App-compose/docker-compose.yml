@@ -26,27 +26,4 @@ services:
     volumes:
       - /var/jenkins_home  
     image: jenkins/jenkins
-  adminPortal:
-    build:
-      context: .
-      dockerfile: ../test-C-Admin-Portal/Dockerfile
-    ports:
-      - "50001:50001"
-      - "4200:4200" 
-    image: adminportal  
-  studentenPortal:
-    build:
-      context: .
-      dockerfile: ../test-C-Studenten-Portal/Dockerfile
-    ports:
-      - "50003:50003"
-      - "8886:8886" 
-    image: studentenporstltest  
-  backendtestc:
-    build:
-      context: .
-      dockerfile: ../backend-Test-C/Dockerfile
-    ports:
-      - "50004:50004"
-      - "8088:8088" 
-    image: backend-test-c     
+ 

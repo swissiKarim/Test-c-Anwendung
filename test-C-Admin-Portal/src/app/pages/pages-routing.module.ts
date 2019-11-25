@@ -17,7 +17,7 @@ const routes: Routes = [{
     path: 'teilnehmerliste',
     component: TeilnehmerlisteComponent,
   },{
-    path: 'aufgabenblaette',
+    path: 'aufgabenblaetter',
     component: AufgabenblaetteComponent,
   }
   ],

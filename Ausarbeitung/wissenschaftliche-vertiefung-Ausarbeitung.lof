@@ -4,22 +4,29 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Architektur Test-C-Plattform }}{10}% 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Front-End }}{10}% 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Ldap-Auth }}{12}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Front-End }}{11}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Ldap-Auth }}{14}% 
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Git-Konzepte}}{17}% 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Hochladen von L\IeC {\"o}sungsdatei}}{22}% 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Multibranch Pipeline Job}}{24}% 
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Kompilieren des Programms}}{27}% 
-\contentsline {figure}{\numberline {4.8}{\ignorespaces jenkinsgetjobCosole}}{29}% 
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Docker-Komponenten}}{30}% 
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Bereitstellungsprozess}}{32}% 
-\contentsline {figure}{\numberline {4.11}{\ignorespaces docker-compose up}}{36}% 
-\contentsline {figure}{\numberline {4.12}{\ignorespaces docker network ls}}{36}% 
-\contentsline {figure}{\numberline {4.13}{\ignorespaces docker network inspect}}{37}% 
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Gogs-Installationsseite}}{38}% 
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Gogs-Anmeldeseite}}{39}% 
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Gogs Registrieren Seite}}{39}% 
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Jenkins entsperren Seite}}{40}% 
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Container Logs}}{41}% 
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Jenkins entsperren Seite}}{42}% 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Hochladen von L\IeC {\"o}sungsdatei}}{24}% 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Multibranch Pipeline Job}}{25}% 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Kompilieren des Programms}}{28}% 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces jenkinsgetjobCosole}}{30}% 
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Docker-Komponenten}}{31}% 
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Bereitstellungsprozess}}{33}% 
+\contentsline {figure}{\numberline {4.11}{\ignorespaces docker-compose up}}{37}% 
+\contentsline {figure}{\numberline {4.12}{\ignorespaces docker network ls}}{37}% 
+\contentsline {figure}{\numberline {4.13}{\ignorespaces docker network inspect}}{38}% 
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Gogs-Installationsseite}}{39}% 
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Gogs-Anmeldeseite}}{40}% 
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Gogs Registrieren Seite}}{40}% 
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Jenkins entsperren Seite}}{41}% 
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Container Logs}}{42}% 
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Jenkins entsperren Seite}}{43}% 
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Login Seite}}{44}% 
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Erstellung eines Remote-Git-Repository}}{44}% 
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Add-Aufgabenblatt}}{45}% 
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Augabenbl\IeC {\"a}tter anzeigen}}{46}% 
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Add-Aufgabenblatt-L\IeC {\"o}sung}}{47}% 
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Add-Aufgabenblatt-L\IeC {\"o}sung}}{47}% 
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Testergebnis}}{48}% 
 \addvspace {10\p@ }

@@ -6,26 +6,20 @@
         <nb-card-body>
           <nb-stepper orientation="horizontal">
             <nb-step [label]="labelOne" > 
-              <ng-template #labelOne>Erster Schritt</ng-template>
-              <h3>Upload von konfigurationsDateien #1</h3>
+              <ng-template #labelOne>Konfig-Dateien</ng-template>
+              <h3>Laden Sie die Konfigurationsdateien hoch #1</h3>
               <button nbButton disabled nbStepperNext>prev</button>
-              <button nbButton nbStepperNext (click)="changeCurrency('src')">next</button>
-            </nb-step>
-            <nb-step [label]="labelTwo">
-              <ng-template #labelTwo>Zweiter Schritt</ng-template>
-              <h3>Upload von Src-Dateien #2</h3>
-              <button nbButton nbStepperPrevious (click)="changeCurrency('/')">prev</button>
               <button nbButton nbStepperNext (click)="changeCurrency('test')">next</button>
             </nb-step>
-           
-            <nb-step label="Dritter Schritt">
-                <ng-template #DritterSchrittr>Dritter Schritt</ng-template>
-              <h3>Upload von Test-Dateien #3</h3>
-              <button nbButton nbStepperPrevious (click)="changeCurrency('src')">prev</button>
-              <button nbButton nbStepperNext>next</button>
+            <nb-step [label]="labelTwo">
+              <ng-template #labelTwo>Testdateien</ng-template>
+              <h3>Laden Sie die Testdateien hoch #2</h3>
+              <button nbButton nbStepperPrevious (click)="changeCurrency('/')">prev</button>
+              <button nbButton nbStepperNext >next</button>
             </nb-step>
-            <nb-step [label]="labelFour">
-              <ng-template #labelFour>Vierter Schritt</ng-template>
+
+            <nb-step [label]="labelThree">
+              <ng-template #labelThree>Ende</ng-template>
               <h3 >Aufgabenblattdateien sind bereits hochgeladen #4</h3>
               <button nbButton nbStepperPrevious>prev</button>
               <button nbButton disabled nbStepperNext>next</button>
